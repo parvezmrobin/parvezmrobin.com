@@ -10,7 +10,7 @@
         <img
           class="border border-5"
           style="width: 200px; border-radius: 50%"
-          src="propic.jpg"
+          src="/propic.jpg"
           alt="It's me"
         />
       </div>

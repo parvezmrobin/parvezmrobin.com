@@ -1,5 +1,8 @@
 <template>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-md fixed-top">
+  <nav
+    id="navbar"
+    class="navbar navbar-dark bg-dark navbar-expand-md fixed-top"
+  >
     <div class="container-fluid">
       <button
         class="navbar-toggler border-0"
@@ -26,13 +29,11 @@
         </div>
         <div class="offcanvas-body bg-dark">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item active">
-              <a class="nav-link active" aria-current="page" href="#home">
-                Home
-              </a>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#home"> Home </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
+              <a class="nav-link" href="#skills">Skills</a>
             </li>
           </ul>
         </div>
@@ -41,7 +42,7 @@
   </nav>
 </template>
 <style scoped>
-.nav-item.active {
+.nav-link.active {
   border-bottom: 2px solid var(--bs-purple);
 }
 </style>

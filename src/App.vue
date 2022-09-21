@@ -1,9 +1,13 @@
 <template>
-  <View />
+  <div class="container">
+    <Navbar />
+    <Home />
+  </div>
 </template>
 
 <script setup lang="ts">
-import View from "./components/View.vue";
+import Home from "./components/Home.vue";
+import Navbar from "./components/Navbar.vue";
 </script>
 
 <style scoped></style>

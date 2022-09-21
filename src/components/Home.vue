@@ -44,10 +44,7 @@
       </div>
     </div>
 
-    <div
-      class="d-none d-lg-block position-absolute"
-      style="left: 1rem; bottom: 0"
-    >
+    <div class="d-none d-lg-block position-fixed" style="left: 1rem; bottom: 0">
       <div class="d-flex flex-column align-items-center">
         <Links />
         <div

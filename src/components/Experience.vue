@@ -5,8 +5,9 @@
     style="padding-top: 3rem"
   >
     <div class="experience">
-      <div>
-        <div class="display-6 pb-5">Experience</div>
+      <div class="d-flex align-items-center pb-5">
+        <div class="display-6">Experience</div>
+        <div class="flex-grow-1 border-bottom border-2 ms-3 pt-2"></div>
       </div>
       <div class="d-flex">
         <ul class="nav flex-column">
@@ -17,8 +18,12 @@
           >
             <a
               role="button"
-              class="nav-link text-info"
-              :class="{ active: experience === selectedExperience }"
+              class="nav-link"
+              :class="
+                experience === selectedExperience
+                  ? 'active text-info'
+                  : 'text-secondary'
+              "
               @click="selectedExperience = experience"
             >
               {{ experience }}

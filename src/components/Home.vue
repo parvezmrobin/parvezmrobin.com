@@ -15,6 +15,9 @@
           <h4 class="fw-light">Hey! I am</h4>
           <div class="display-2">Parvez M Robin</div>
           <h2 id="title" class="fw-light">Software Engineer</h2>
+          <a href="mailto:parvezmrobin@gmail.com" style="color: var(--bs-pink)">
+            parvezmrobin@gmail.com
+          </a>
           <div class="mt-4" style="text-align: justify">
             I am a polyglot machine learning engineer with extensive experience
             in web application and deep learning. I worked as a software

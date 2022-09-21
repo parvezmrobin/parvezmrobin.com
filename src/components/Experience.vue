@@ -5,10 +5,7 @@
     style="padding-top: 3rem"
   >
     <div class="central-box">
-      <div class="d-flex align-items-center pb-5">
-        <div class="display-6">Experience</div>
-        <div class="flex-grow-1 border-bottom border-2 ms-3 pt-2"></div>
-      </div>
+      <Heading class="pb-5">Experience</Heading>
       <div class="d-flex">
         <ul class="nav flex-column">
           <li
@@ -52,6 +49,7 @@
 <script lang="ts" setup>
 import { computed, ref } from "vue";
 import { formatString } from "../util";
+import Heading from "./Heading.vue";
 
 const experiences = {
   NerdDevs: {

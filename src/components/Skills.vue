@@ -1,10 +1,7 @@
 <template>
   <div id="skills" class="pt-5 row justify-content-center vh-100">
     <div class="central-box flex-column">
-      <div class="d-flex align-items-center pb-4">
-        <div class="display-6">Skills</div>
-        <div class="flex-grow-1 border-bottom border-2 ms-3"></div>
-      </div>
+      <Heading class="pb-4">Skills</Heading>
       <ul class="nav">
         <li
           v-for="(_, tab) in tabContents"
@@ -16,8 +13,9 @@
             :class="{ active: tab === activeTab }"
             role="button"
             @click="activeTab = tab"
-            >{{ tab }}</a
           >
+            {{ tab }}
+          </a>
         </li>
       </ul>
       <div id="skillset" class="d-flex pt-3">
@@ -48,6 +46,7 @@
 <script lang="ts" setup>
 import { computed, ref } from "vue";
 import { formatString } from "../util";
+import Heading from "./Heading.vue";
 
 const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
   "Programming Languages": {

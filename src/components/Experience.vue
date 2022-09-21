@@ -4,7 +4,7 @@
     class="vh-100 d-flex justify-content-center"
     style="padding-top: 3rem"
   >
-    <div class="experience" style="max-width: 768px">
+    <div class="experience">
       <div>
         <div class="display-6 pb-5">Experience</div>
       </div>
@@ -69,6 +69,18 @@ const experiences = {
         "accurate and concise explanations of bugs compared to human-written explanations.",
     ],
   },
+  "Dalhousie University": {
+    position: "Teaching Assistant",
+    time: "September 2021 — December 2022",
+    works: [
+      "_Process of Data Science (graduate course)_: Providing hands-on learning experience in " +
+        "cutting-edge data science technologies in labs, holding office hours to resolve " +
+        "difficulties for the students, and assisting the instructor during classes",
+      "_Intro to Software Project_: Taking classes on Docker and containerization, " +
+        "directly mentoring, and evaluating four groups in the agile process",
+      "_Software Development_: Taking labs and helping the students in resolving issues",
+    ],
+  },
 };
 const selectedExperience = ref<keyof typeof experiences>("NerdDevs");
 const experienceDescription = computed(() => {
@@ -76,8 +88,11 @@ const experienceDescription = computed(() => {
 });
 
 const linkRegex = /\[(.*?)]\((.*?)\)/g;
+const emRegex = /_(.*?)_/g;
 function formatWork(work: string) {
-  return work.replaceAll(linkRegex, '<a href="$2" target="_blank">$1</a>');
+  return work
+    .replaceAll(linkRegex, '<a href="$2" target="_blank">$1</a>')
+    .replaceAll(emRegex, "<em>$1</em>");
 }
 </script>
 
@@ -91,6 +106,10 @@ $grid-breakpoints: (
   xxl: 1400px,
 );
 
+.experience {
+  max-width: map-get($grid-breakpoints, md);
+}
+
 @each $breakpoint, $thresh in $grid-breakpoints {
   @media screen and (min-width: $thresh) {
     .experience {
@@ -101,6 +120,7 @@ $grid-breakpoints: (
 
 .nav-link {
   border-left: 3px solid rgb(var(--bs-secondary-rgb), 50%);
+  white-space: nowrap;
 
   &.active {
     border-left: 3px solid var(--bs-info);

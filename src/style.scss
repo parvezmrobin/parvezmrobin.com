@@ -55,6 +55,43 @@ $body-color: #f8f9fa;
 
 // 8. Add additional custom code here
 
+:root {
+  @each $bp, $value in $grid-breakpoints {
+    --bs-breakpoint-#{$bp}: #{$value};
+  }
+}
+
 body {
   background: radial-gradient(ellipse at top, #02152a, #062b31, #000) scroll;
+}
+
+.nav-link.underline.active {
+  border-bottom: 2px solid var(--bs-purple);
+}
+
+@each $breakpoint, $thresh in $grid-breakpoints {
+  @media screen and (min-width: $thresh) {
+    .central-box {
+      margin-top: calc($thresh / 10);
+    }
+  }
+}
+
+.central-box {
+  max-width: map-get($grid-breakpoints, md)
+}
+
+ul.triangle {
+  padding-left: 1rem;
+  li::marker {
+    content: "▹";
+  }
+
+  li {
+    padding-left: 1rem;
+  }
+}
+
+kbd {
+  color: var(--bs-pink);
 }

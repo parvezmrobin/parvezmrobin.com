@@ -27,13 +27,13 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#home"> Home </a>
+              <a class="nav-link underline" href="#home"> Home </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#skills">Skills</a>
+              <a class="nav-link underline" href="#skills">Skills</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#experience">Experience</a>
+              <a class="nav-link underline" href="#experience">Experience</a>
             </li>
           </ul>
         </div>
@@ -42,10 +42,6 @@
   </nav>
 </template>
 <style scoped>
-.nav-link.active {
-  border-bottom: 2px solid var(--bs-purple);
-}
-
 .navbar {
   background-color: transparent;
 }

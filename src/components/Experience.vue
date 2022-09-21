@@ -4,7 +4,7 @@
     class="vh-100 d-flex justify-content-center"
     style="padding-top: 3rem"
   >
-    <div class="experience">
+    <div class="central-box">
       <div class="d-flex align-items-center pb-5">
         <div class="display-6">Experience</div>
         <div class="flex-grow-1 border-bottom border-2 ms-3 pt-2"></div>
@@ -36,11 +36,11 @@
           <p>
             <em>{{ experienceDescription.time }}</em>
           </p>
-          <ul class="works">
+          <ul class="triangle">
             <li
               v-for="(work, i) in experienceDescription.works"
               :key="i"
-              v-html="formatWork(work)"
+              v-html="formatString(work)"
             />
           </ul>
         </div>
@@ -51,6 +51,7 @@
 
 <script lang="ts" setup>
 import { computed, ref } from "vue";
+import { formatString } from "../util";
 
 const experiences = {
   NerdDevs: {
@@ -91,55 +92,15 @@ const selectedExperience = ref<keyof typeof experiences>("NerdDevs");
 const experienceDescription = computed(() => {
   return experiences[selectedExperience.value];
 });
-
-const linkRegex = /\[(.*?)]\((.*?)\)/g;
-const emRegex = /_(.*?)_/g;
-function formatWork(work: string) {
-  return work
-    .replaceAll(linkRegex, '<a href="$2" target="_blank">$1</a>')
-    .replaceAll(emRegex, "<em>$1</em>");
-}
 </script>
 
 <style scoped lang="scss">
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px,
-);
-
-.experience {
-  max-width: map-get($grid-breakpoints, md);
-}
-
-@each $breakpoint, $thresh in $grid-breakpoints {
-  @media screen and (min-width: $thresh) {
-    .experience {
-      margin-top: calc($thresh / 10);
-    }
-  }
-}
-
 .nav-link {
-  border-left: 3px solid rgb(var(--bs-secondary-rgb), 50%);
+  border-left: 3px solid rgb(var(--bs-secondary-rgb), 33%);
   white-space: nowrap;
 
   &.active {
     border-left: 3px solid var(--bs-info);
-  }
-}
-
-ul.works {
-  padding-left: 1rem;
-  li::marker {
-    content: "▹";
-  }
-
-  li {
-    padding-left: 1rem;
   }
 }
 </style>

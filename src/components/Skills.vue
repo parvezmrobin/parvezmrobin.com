@@ -31,7 +31,7 @@ const tabs = [
   "ML/DL",
   "Cloud",
 ] as const;
-const activeTab = ref(tabs[0]);
+const activeTab = ref<typeof tabs[number]>(tabs[0]);
 const tabContents: Record<typeof tabs[number], string[]> = {
   "Programming Languages": [
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg",

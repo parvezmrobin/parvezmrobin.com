@@ -11,7 +11,7 @@
       <div class="d-flex">
         <ul class="nav flex-column">
           <li
-            v-for="experience in Object.keys(experiences)"
+            v-for="(_, experience) in experiences"
             :key="experience"
             class="nav-item"
           >
@@ -113,7 +113,7 @@ $grid-breakpoints: (
 @each $breakpoint, $thresh in $grid-breakpoints {
   @media screen and (min-width: $thresh) {
     .experience {
-      margin-top: $thresh / 10;
+      margin-top: calc($thresh / 10);
     }
   }
 }

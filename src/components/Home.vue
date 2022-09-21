@@ -17,7 +17,7 @@
       <div style="max-width: 750px">
         <h4 class="fw-light">Hey! I am</h4>
         <div class="display-2">Parvez M Robin</div>
-        <h2 id="title" class="fw-light">Software Engineer</h2>
+        <h2 id="title" class="fw-light">I make machines intelligent</h2>
         <div class="mt-4" style="text-align: justify">
           I am a polyglot machine learning engineer with extensive experience in
           web application and deep learning. I worked as a software engineer for
@@ -36,20 +36,5 @@
 </template>
 
 <script setup lang="ts">
-import Typewriter from "typewriter-effect/dist/core";
-import { onMounted } from "vue";
 import Navbar from "./Navbar.vue";
-
-onMounted(() => {
-  new Typewriter("#title", {
-    strings: [
-      "Software Engineer",
-      "Machine Learning Engineer",
-      "Data Scientist",
-    ],
-    autoStart: true,
-    pauseFor: 2500,
-    loop: true,
-  });
-});
 </script>

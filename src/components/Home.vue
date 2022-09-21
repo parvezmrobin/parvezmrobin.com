@@ -23,7 +23,7 @@
           web application and deep learning. I worked as a software engineer for
           more than two years with hands-on experience in <code>node.js</code>,
           <code>Vue JS</code>, <code>TypeScript</code> and
-          <code>Mongo DB</code>. Currently, I a part of pursuing my Master's in
+          <code>Mongo DB</code>. Currently, as a part of pursuing my Master's in
           Computer Science degree at Dalhousie University, I am working as a
           <em>Research Intern</em> at
           <a href="https://metabob.com/">Metabob</a>. My research domain

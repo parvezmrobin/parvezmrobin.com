@@ -41,9 +41,6 @@ import { onMounted } from "vue";
 import Navbar from "./Navbar.vue";
 
 onMounted(() => {
-  new Typewriter("#title", {
-    strings: ["I make machines intelligent"],
-    autoStart: true,
-  });
+  new Typewriter("#title").typeString("I make machines intelligent").start();
 });
 </script>

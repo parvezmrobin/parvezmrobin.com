@@ -1,0 +1,13 @@
+/// <reference types="vite/client" />
+
+declare module "*.vue" {
+  import type { DefineComponent } from "vue";
+  // eslint-disable-next-line @typescript-eslint/ban-types
+  const component: DefineComponent<{}, {}, any>;
+  export default component;
+}
+
+declare module "typewriter-effect/dist/core" {
+  import TypewriterClass from "typewriter-effect";
+  export default TypewriterClass;
+}

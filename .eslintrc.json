@@ -52,6 +52,7 @@
         "shouldMatchCase": true
       }
     ],
-    "vue/next-tick-style": ["error", "promise"]
+    "vue/next-tick-style": ["error", "promise"],
+    "vue/no-v-html": ["off"]
   }
 }

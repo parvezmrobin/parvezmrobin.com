@@ -54,3 +54,7 @@ $body-color: #f8f9fa;
 @import "~bootstrap/scss/utilities/api";
 
 // 8. Add additional custom code here
+
+body {
+  background: radial-gradient(ellipse at top, #02152a, #062b31, #000) scroll;
+}

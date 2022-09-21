@@ -1,8 +1,5 @@
 <template>
-  <nav
-    id="navbar"
-    class="navbar navbar-dark bg-dark navbar-expand-md fixed-top"
-  >
+  <nav id="navbar" class="navbar navbar-dark navbar-expand-md fixed-top">
     <div class="container-fluid">
       <button
         class="navbar-toggler border-0"
@@ -27,13 +24,16 @@
             aria-label="Close"
           ></button>
         </div>
-        <div class="offcanvas-body bg-dark">
+        <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="#home"> Home </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience">Experience</a>
             </li>
           </ul>
         </div>
@@ -44,5 +44,16 @@
 <style scoped>
 .nav-link.active {
   border-bottom: 2px solid var(--bs-purple);
+}
+
+.navbar {
+  background-color: transparent;
+}
+
+@media screen and (max-width: 767px) {
+  .offcanvas-body {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity));
+  }
 }
 </style>

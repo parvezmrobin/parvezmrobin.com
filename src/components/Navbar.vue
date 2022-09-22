@@ -1,3 +1,4 @@
+<!--suppress HtmlUnknownAnchorTarget -->
 <template>
   <nav id="navbar" class="navbar navbar-dark navbar-expand-md fixed-top">
     <div class="container-fluid">
@@ -38,6 +39,11 @@
             <li class="nav-item">
               <a class="nav-link underline" href="#certificates"
                 >Certifications</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link underline" href="#achievements"
+                >Achievements</a
               >
             </li>
           </ul>

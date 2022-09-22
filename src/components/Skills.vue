@@ -19,24 +19,32 @@
         </li>
       </ul>
       <div id="skillset" class="d-flex pt-3">
-        <ul
-          class="triangle ul-grid me-4"
-          :style="{ '--num-cols': Math.ceil(tabContent.skills.length / 10) }"
-        >
-          <li
-            v-for="skill in tabContent.skills"
-            :key="skill"
-            class="font-monospace text-nowrap"
-          >
-            {{ skill }}
-          </li>
-        </ul>
-        <div>
-          <p
-            v-for="desc in tabContent.desc"
-            :key="desc"
-            v-html="formatString(desc)"
-          />
+        <div class="skill box left">
+          <div>
+            <ul
+              class="triangle ul-grid"
+              :style="{
+                '--num-cols': Math.ceil(tabContent.skills.length / 10),
+              }"
+            >
+              <li
+                v-for="skill in tabContent.skills"
+                :key="skill"
+                class="font-monospace text-nowrap"
+              >
+                {{ skill }}
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="skill box right">
+          <div>
+            <p
+              v-for="desc in tabContent.desc"
+              :key="desc"
+              v-html="formatString(desc)"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -69,8 +77,6 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
         "[website](https://new.cseku.ac.bd/) of the CSE Department of Khulna University, " +
         "Bangladesh. My experience in <code>Java</code> and <code>C++</code> are mostly from " +
         "competitive programming.",
-      "I have _LinkedIn_ verified skill badge on <code>Python</code>, <code>JavaScript</code>, " +
-        "<code>C#</code> and <code>PHP</code>",
     ],
   },
   "Web Technology": {
@@ -104,8 +110,6 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
         "<code>WebRTC</code> to make a video calling service. I also developed a _novel_ " +
         "[visualization tool](http://129.173.67.225:8080/bug-localization) using <code>D3</code>. " +
         "In my research works, I used <code>Flask</code> to deploy machine learning models.",
-      "I have _LinkedIn_ verified skill badge on <code>Node JS</code>, <code>React</code>, " +
-        "<code>REST API</code> and <code>CSS</code>.",
     ],
   },
   "Database Systems": {
@@ -115,31 +119,20 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
         "database system. I also have used <code>redis</code> for caching in several" +
         "projects. Of course when performance is critical, I used <code>MySQL</code> " +
         "or <code>PostgreSQL</code> instead.",
-      "I have _LinkedIn_ verified skill badge on <code>MongoDB</code> and <code>MySQL</code>. " +
-        "I also have HackerRank certiation on [SQL]" +
-        "(https://www.hackerrank.com/certificates/69f1d00084f7)",
     ],
   },
   "ML/DL/Data Science": {
     skills: [
       "Neural Networks",
-      "NLP",
       "Transformers",
-      "pytorch",
-      "RNN (LSTM, GRU)",
-      "tensorflow",
+      "Recurrent Neural Networks",
       "Transfer Learning",
-      "keras",
       "Ensemble Learning",
-      "pandas",
       "Unsupervised Learning",
-      "numpy",
       "Decision Tree",
-      "scikit-learn",
-      "Logistic Regression",
-      "matplotlib",
       "Regression Models",
-      "SVM",
+      "Support Vector Machine",
+      "Natural Language Processing",
     ],
     desc: [
       "I have a deep dive into machine learning and deep learning during my research " +
@@ -151,23 +144,23 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
 
       "One of the early recognition of my Data Science skill is placing among the top 15 teams " +
         "in Datathon Bangladesh, 2019 — the biggest data-centric competition in the country. " +
-        "I have verified _LinkedIn_ badge in <code>Machine Learning</code>. I also have several " +
-        "relevant certification from Coursera (see Certifications).",
+        "I have several relevant certification from Coursera (see [Certifications](#certificates)).",
     ],
   },
-  DevOps: {
+  "Tools & Platform": {
     skills: [
       "Docker",
       "Docker Compose",
       "Google Cloud Platform",
       "Amazon Web Service",
-      "Netlify",
-      "Heroku",
+      "git",
+      "nano",
+      "Linux",
     ],
     desc: [
       "As a software engineer, in several cases I orchestrated my own cloud services as well. " +
-        "I also taught <code>GCP</code> in the Intro to Software Developer course. For personal " +
-        "projects, I tend to use a combination of <code>Netlify</code> and <code>Heroku</code>.",
+        "I also taught <code>GCP</code> in the Intro to Software Developer course. I use " +
+        `<code>git</code> for ${new Date().getFullYear() - 2015} years now.`,
 
       "I have _Coursera_ certification on [Google Cloud Fundamentals: Core Infrastructure]" +
         "(https://coursera.org/share/6d977fe14c15f5178dbee665b5f60482).",
@@ -175,7 +168,7 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
   },
 };
 const urlParams = new URLSearchParams(window.location.search);
-const activeTabValue = urlParams.get("activeSkillTab") ?? "Web Technology";
+const activeTabValue = urlParams.get("activeSkillTab") ?? "ML/DL/Data Science";
 const activeTab = ref<keyof typeof tabContents>(activeTabValue);
 const tabContent = computed(() => {
   return tabContents[activeTab.value];
@@ -199,5 +192,32 @@ const tabContent = computed(() => {
   display: grid;
   column-gap: 2rem;
   grid-template-columns: repeat(var(--num-cols), 1fr);
+  margin-bottom: 0;
+}
+
+.skill.box {
+  display: flex;
+  align-items: center;
+  &.left {
+    > div {
+      background: var(--bs-indigo-700);
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 50%);
+      z-index: 1;
+    }
+  }
+
+  &.right {
+    display: flex;
+    align-items: center;
+    > div {
+      background: var(--bs-purple-900);
+      padding: 10px 10px 10px 30px;
+      border-radius: 5px;
+      margin-left: -10px;
+      box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 25%);
+    }
+  }
 }
 </style>

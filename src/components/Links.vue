@@ -23,6 +23,11 @@ const links = [
     title: "LeetCode",
     link: "https://leetcode.com/parvezmrobin/",
   },
+  {
+    icon: "/medium.png",
+    title: "Medium",
+    link: "https://medium.com/@parvezmrobin",
+  },
 ];
 </script>
 <style lang="scss" scoped>
@@ -37,7 +42,11 @@ const links = [
   }
 
   img {
-    width: 2rem;
+    width: 2.5rem;
+
+    &[alt="LeetCode"] {
+      width: 2.25rem;
+    }
   }
 }
 </style>

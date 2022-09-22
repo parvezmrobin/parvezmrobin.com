@@ -1,13 +1,17 @@
 <template>
   <div id="home" class="vh-100">
     <div class="d-flex justify-content-center align-items-center h-100">
-      <div class="d-none d-lg-block me-5">
+      <div class="d-none d-lg-block position-relative me-5">
         <img
-          class="border border-5"
-          style="width: 200px; border-radius: 50%"
+          class="rounded-circle"
+          style="width: 200px; z-index: 1"
           src="/propic.jpg"
           alt="It's me"
         />
+        <div
+          class="bg-circle position-absolute rounded-circle h-100 w-100"
+          style="left: -5px; top: 5px"
+        ></div>
       </div>
       <div style="max-width: 750px">
         <h4 class="fw-light">Hey! I am</h4>
@@ -64,3 +68,17 @@ onMounted(() => {
   new Typewriter("#title").typeString("I make machines intelligent").start();
 });
 </script>
+
+<style lang="scss">
+.rounded-circle {
+  border: 10px solid #0c2a3a;
+}
+
+.bg-circle {
+  transition: 500ms ease-in-out;
+  &:hover {
+    left: 5px !important;
+    top: -5px !important;
+  }
+}
+</style>

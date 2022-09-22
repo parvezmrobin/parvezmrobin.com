@@ -59,6 +59,8 @@ $body-color: #f8f9fa;
   @each $bp, $value in $grid-breakpoints {
     --bs-breakpoint-#{$bp}: #{$value};
   }
+
+  --central-box-margin-top-ratio: 0.1
 }
 
 body {
@@ -72,7 +74,7 @@ body {
 @each $breakpoint, $thresh in $grid-breakpoints {
   @media screen and (min-width: $thresh) {
     .central-box {
-      margin-top: calc($thresh / 10);
+      margin-top: calc($thresh * var(--central-box-margin-top-ratio));
     }
   }
 }

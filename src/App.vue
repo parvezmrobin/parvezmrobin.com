@@ -4,12 +4,14 @@
     <Home />
     <Skills />
     <Experience />
+    <Education />
     <Certifications />
     <Achievements />
   </div>
 </template>
 
 <script setup lang="ts">
+import Education from "./components/Education.vue";
 import Experience from "./components/Experience.vue";
 import Home from "./components/Home.vue";
 import Navbar from "./components/Navbar.vue";

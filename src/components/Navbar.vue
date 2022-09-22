@@ -37,6 +37,9 @@
               <a class="nav-link underline" href="#experience">Experience</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link underline" href="#education">Education</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link underline" href="#certificates"
                 >Certifications</a
               >

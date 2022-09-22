@@ -33,7 +33,7 @@
           <em>Natural Language Processing</em>.
         </div>
 
-        <div class="d-flex d-lg-none pt-3">
+        <div class="d-flex pt-3">
           <div
             class="border"
             style="
@@ -48,24 +48,44 @@
       </div>
     </div>
 
-    <div class="d-none d-lg-block position-fixed" style="left: 1rem; bottom: 0">
-      <div class="d-flex flex-column align-items-center">
-        <Links />
-        <div
-          class="border"
-          style="height: 7.5rem; width: 0; margin-right: 1rem"
-        />
+    <Transition name="slide-fade">
+      <div
+        v-if="showLeftLinks"
+        class="d-none d-lg-block position-fixed"
+        style="left: 1rem; bottom: 0"
+      >
+        <div class="d-flex flex-column align-items-center">
+          <Links />
+          <div
+            class="border"
+            style="height: 7.5rem; width: 0; margin-right: 1rem"
+          />
+        </div>
       </div>
-    </div>
+    </Transition>
   </div>
 </template>
 <script lang="ts" setup>
 import Typewriter from "typewriter-effect/dist/core";
-import { onMounted } from "vue";
+import { onBeforeUnmount, onMounted, ref } from "vue";
 import Links from "./Links.vue";
 
+const showLeftLinks = ref(false);
+const scrollEventHandler = (event: Event) => {
+  const mouseEvent = event as MouseEvent;
+  showLeftLinks.value =
+    (mouseEvent.relatedTarget as HTMLAnchorElement).hash !== "#home";
+  console.log(event);
+  console.log("showLeftLinks", showLeftLinks.value);
+};
 onMounted(() => {
+  const scrollEl = document.getElementById("app") as HTMLDivElement;
+  scrollEl.addEventListener("activate.bs.scrollspy", scrollEventHandler);
   new Typewriter("#title").typeString("I make machines intelligent").start();
+});
+onBeforeUnmount(() => {
+  const scrollEl = document.getElementById("app") as HTMLDivElement;
+  scrollEl.removeEventListener("activate.bs.scrollspy", scrollEventHandler);
 });
 </script>
 
@@ -80,5 +100,18 @@ onMounted(() => {
     left: 5px !important;
     top: -5px !important;
   }
+}
+
+.slide-fade-enter-active {
+  transition: all 1s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 1s ease-in;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateY(350px);
 }
 </style>

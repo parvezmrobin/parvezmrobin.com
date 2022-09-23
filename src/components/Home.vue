@@ -69,6 +69,7 @@
   </div>
 </template>
 <script lang="ts" setup>
+import type { TypewriterState } from "typewriter-effect";
 import Typewriter from "typewriter-effect/dist/core";
 import { onBeforeUnmount, onMounted, ref } from "vue";
 import Links from "./Links.vue";
@@ -78,13 +79,15 @@ const scrollEventHandler = (event: Event) => {
   const mouseEvent = event as MouseEvent;
   showLeftLinks.value =
     (mouseEvent.relatedTarget as HTMLAnchorElement).hash !== "#home";
-  console.log(event);
-  console.log("showLeftLinks", showLeftLinks.value);
 };
 onMounted(() => {
   const scrollEl = document.getElementById("app") as HTMLDivElement;
   scrollEl.addEventListener("activate.bs.scrollspy", scrollEventHandler);
-  new Typewriter("#title").typeString("I make machines intelligent").start();
+  const typewriter = new Typewriter("#title");
+  typewriter
+    .typeString("I make machines intelligent")
+    .start()
+    .callFunction(({ elements }: TypewriterState) => elements.cursor.remove());
 });
 onBeforeUnmount(() => {
   const scrollEl = document.getElementById("app") as HTMLDivElement;

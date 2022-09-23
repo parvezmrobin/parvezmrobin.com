@@ -14,15 +14,42 @@
         ></div>
       </div>
       <div style="max-width: 750px">
-        <h4 class="fw-light">Hey! I am</h4>
-        <div class="d-flex align-items-end">
-          <div class="display-2">Parvez M Robin</div>
-          <div class="h2 fw-light ms-2 pb-1">(He/Him)</div>
+        <div class="d-flex justify-content-between align-items-center">
+          <div>
+            <h4 class="d-none d-sm-block fw-light">Hey! I am</h4>
+            <h4 class="d-sm-none fw-light">Hey! I am</h4>
+            <div class="row flex-column flex-sm-row align-items-sm-end">
+              <div class="col-auto">
+                <div class="d-none d-sm-block display-2">Parvez M Robin</div>
+                <div class="d-sm-none display-5">Parvez M Robin</div>
+              </div>
+              <div class="col-auto">
+                <div class="d-none d-sm-block h2 fw-light ms-sm-2 pb-1">
+                  (He/Him)
+                </div>
+                <div class="d-sm-none h5 fw-light ms-sm-2 pb-1">(He/Him)</div>
+              </div>
+            </div>
+            <h2 id="title" class="d-none d-sm-block fw-light">
+              Software Engineer
+            </h2>
+            <h5 id="title" class="d-sm-none fw-light">Software Engineer</h5>
+            <a
+              href="mailto:parvezmrobin@gmail.com"
+              style="color: var(--bs-pink)"
+            >
+              parvezmrobin@gmail.com
+            </a>
+          </div>
+          <div class="d-block d-sm-none">
+            <img
+              class="rounded-circle"
+              style="width: 120px; border-width: 2px"
+              src="/propic.jpg"
+              alt="It's me"
+            />
+          </div>
         </div>
-        <h2 id="title" class="fw-light">Software Engineer</h2>
-        <a href="mailto:parvezmrobin@gmail.com" style="color: var(--bs-pink)">
-          parvezmrobin@gmail.com
-        </a>
         <div class="mt-4" style="text-align: justify">
           I am a polyglot machine learning engineer with extensive experience in
           web application and deep learning. I worked as a software engineer for

@@ -76,6 +76,8 @@ const schools: ISchool[] = [
 </script>
 
 <style scoped lang="scss">
+$sm: 576px;
+
 ul {
   a {
     color: var(--bs-cyan);
@@ -85,13 +87,17 @@ ul {
 .card {
   background-color: transparent;
   border: none;
-  margin-right: -20px;
-
+  @media screen and (min-width: $sm) {
+    margin-right: -20px;
+  }
   .image-wrapper {
     display: flex;
     justify-content: flex-end;
     align-items: center;
 
+    @media screen and (max-width: $sm - 1) {
+      display: none;
+    }
     img {
       max-height: 150px;
       background-color: white;
@@ -109,9 +115,10 @@ ul {
     position: relative;
     background-color: #0c3a4a;
     border-radius: 5px;
-    left: -20px;
-    padding-left: 30px;
-
+    @media screen and (min-width: $sm) {
+      left: -20px;
+      padding-left: 30px;
+    }
     .card-title {
       color: var(--bs-pink);
     }
@@ -119,15 +126,18 @@ ul {
 }
 
 .reverse.card {
-  margin-left: -20px;
-
+  @media screen and (min-width: $sm) {
+    margin-left: -20px;
+  }
   .image-wrapper {
     justify-content: flex-start;
   }
 
-  .card-body {
-    left: 20px;
-    padding-right: 30px;
+  @media screen and (min-width: $sm) {
+    .card-body {
+      left: 20px;
+      padding-right: 30px;
+    }
   }
 }
 </style>

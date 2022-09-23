@@ -1,13 +1,13 @@
 <template>
   <div
     id="experience"
-    class="vh-100 d-flex justify-content-center"
+    class="page d-flex justify-content-center"
     style="padding-top: 3rem"
   >
     <div class="central-box">
       <Heading class="pb-5">Experience</Heading>
-      <div class="d-flex">
-        <ul class="nav flex-column">
+      <div class="d-flex flex-column flex-sm-row">
+        <ul class="nav flex-sm-column">
           <li
             v-for="(_, experience) in experiences"
             :key="experience"
@@ -28,7 +28,7 @@
           </li>
         </ul>
 
-        <div class="ps-3 pt-1">
+        <div class="ps-3 pt-4 pt-sm-1">
           <h4>{{ experienceDescription.position }}</h4>
           <p>
             <em>{{ experienceDescription.time }}</em>

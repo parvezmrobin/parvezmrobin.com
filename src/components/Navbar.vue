@@ -1,4 +1,3 @@
-<!--suppress HtmlUnknownAnchorTarget -->
 <template>
   <nav id="navbar" class="navbar navbar-dark navbar-expand-md fixed-top">
     <div class="container-fluid">
@@ -27,27 +26,10 @@
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link underline" href="#home"> Home </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link underline" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link underline" href="#experience">Experience</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link underline" href="#education">Education</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link underline" href="#certificates"
-                >Certifications</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link underline" href="#achievements"
-                >Achievements</a
-              >
+            <li v-for="nav in navs" :key="nav" class="nav-item">
+              <a class="nav-link underline" :href="`#${nav.toLowerCase()}`">
+                {{ nav }}
+              </a>
             </li>
           </ul>
         </div>
@@ -55,6 +37,18 @@
     </div>
   </nav>
 </template>
+
+<script lang="ts" setup="">
+const navs = [
+  "Home",
+  "Skills",
+  "Experience",
+  "Education",
+  "Certifications",
+  "Achievements",
+  "Activities",
+];
+</script>
 <style scoped>
 .navbar {
   background-color: transparent;

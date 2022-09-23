@@ -7,10 +7,12 @@
     <Education />
     <Certifications />
     <Achievements />
+    <Activities />
   </div>
 </template>
 
 <script setup lang="ts">
+import Activities from "./components/Activities.vue";
 import Education from "./components/Education.vue";
 import Experience from "./components/Experience.vue";
 import Home from "./components/Home.vue";

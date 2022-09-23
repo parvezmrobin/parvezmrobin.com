@@ -1,5 +1,5 @@
 <template>
-  <div id="skills" class="pt-5 row justify-content-center vh-100">
+  <div id="skills" class="pt-5 row justify-content-center page">
     <div class="central-box flex-column">
       <Heading class="pb-4">Skills</Heading>
       <ul class="nav">
@@ -195,6 +195,15 @@ const tabContent = computed(() => {
   margin-bottom: 0;
 }
 
+$md: 768px;
+
+#skillset {
+  @media screen and (max-width: $md) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .skill.box {
   display: flex;
   align-items: center;
@@ -213,12 +222,19 @@ const tabContent = computed(() => {
   &.right {
     display: flex;
     align-items: center;
+
     > div {
       background: var(--bs-purple-900);
       padding: 10px 10px 10px 30px;
       border-radius: 5px;
       margin-left: -10px;
       box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 25%);
+
+      @media screen and (max-width: $md) {
+        margin-left: 0;
+        margin-top: -10px;
+        padding: 20px 10px 10px 10px;
+      }
     }
   }
 }

@@ -21,7 +21,7 @@
                   ? 'active text-info'
                   : 'text-secondary'
               "
-              @click="selectedExperience = experience"
+              @mouseover="selectedExperience = experience"
             >
               {{ experience }}
             </a>

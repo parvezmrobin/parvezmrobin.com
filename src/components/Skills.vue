@@ -9,10 +9,10 @@
           class="nav-item flex-grow-1"
         >
           <a
-            class="nav-link underline text-info"
-            :class="{ active: tab === activeTab }"
+            class="nav-link underline"
+            :class="tab === activeTab ? 'active text-info' : 'text-secondary'"
             role="button"
-            @click="activeTab = tab"
+            @mouseover="activeTab = tab"
           >
             {{ tab }}
           </a>

@@ -81,7 +81,8 @@ $body-color: #f8f9fa;
 }
 
 body {
-  background: radial-gradient(ellipse at top, #02152a, #062b31, #000) scroll;
+  //background: radial-gradient(ellipse at top, #02152a, #062b31, #000) scroll;
+  background: conic-gradient(from -90deg at 50% 110%, #02152a, #062b31 90deg, #000 180deg) fixed;
 }
 
 .nav-link.underline.active {

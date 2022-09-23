@@ -15,7 +15,10 @@
       </div>
       <div style="max-width: 750px">
         <h4 class="fw-light">Hey! I am</h4>
-        <div class="display-2">Parvez M Robin</div>
+        <div class="d-flex align-items-end">
+          <div class="display-2">Parvez M Robin</div>
+          <div class="h2 fw-light ms-2 pb-1">(He/Him)</div>
+        </div>
         <h2 id="title" class="fw-light">Software Engineer</h2>
         <a href="mailto:parvezmrobin@gmail.com" style="color: var(--bs-pink)">
           parvezmrobin@gmail.com

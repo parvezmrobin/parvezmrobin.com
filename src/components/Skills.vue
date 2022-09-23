@@ -198,6 +198,8 @@ const tabContent = computed(() => {
 .skill.box {
   display: flex;
   align-items: center;
+  --bs-link-color: var(--bs-cyan-400);
+  --bs-link-hover-color: var(--bs-cyan-600);
   &.left {
     > div {
       background: var(--bs-indigo-700);

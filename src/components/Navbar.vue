@@ -2,7 +2,7 @@
   <nav id="navbar" class="navbar navbar-dark navbar-expand-md fixed-top">
     <div class="container-fluid">
       <button
-        class="navbar-toggler border-0"
+        class="navbar-toggler border-0 ms-auto"
         type="button"
         data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasNavbar"
@@ -27,7 +27,11 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li v-for="nav in navs" :key="nav" class="nav-item">
-              <a class="nav-link underline" :href="`#${nav.toLowerCase()}`">
+              <a
+                class="nav-link underline"
+                :href="`#${nav.toLowerCase()}`"
+                @click="hideOffcanvas"
+              >
                 {{ nav }}
               </a>
             </li>
@@ -39,6 +43,9 @@
 </template>
 
 <script lang="ts" setup="">
+import { Offcanvas } from "bootstrap";
+import { onMounted } from "vue";
+
 const navs = [
   "Home",
   "Skills",
@@ -48,6 +55,13 @@ const navs = [
   "Achievements",
   "Activities",
 ];
+let offCanvasInstance: Offcanvas;
+onMounted(() => {
+  offCanvasInstance = new Offcanvas("#offcanvasNavbar");
+});
+function hideOffcanvas() {
+  offCanvasInstance.hide();
+}
 </script>
 <style scoped>
 .navbar {

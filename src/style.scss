@@ -83,7 +83,14 @@ $body-color: #f8f9fa;
 body {
   background: radial-gradient(ellipse at top, #02152a, #062b31, #000) scroll;
   &.conic {
-    background: conic-gradient(from -90deg at 50% 110%, #02152a, #062b31 90deg, #000 180deg) fixed;
+    background: conic-gradient(
+        from -90deg at 50% 120%,
+        #02152a,
+        #062b31 45deg,
+        #00151f 90deg,
+        #062b31 135deg,
+        #02152a 180deg
+    ) fixed;
   }
 }
 

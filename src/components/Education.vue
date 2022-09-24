@@ -1,5 +1,5 @@
 <template>
-  <div id="education" class="pt-5 row justify-content-center vh-100">
+  <div id="education" class="pt-5 row justify-content-center page">
     <div
       class="central-box flex-column"
       style="--central-box-margin-top-ratio: 0.075"

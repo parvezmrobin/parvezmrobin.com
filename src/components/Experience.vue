@@ -7,7 +7,9 @@
     <div class="central-box">
       <Heading class="pb-5">Experience</Heading>
       <div class="d-flex flex-column flex-sm-row">
-        <ul class="nav flex-sm-column">
+        <ul
+          class="nav flex-sm-column justify-content-center justify-content-sm-start"
+        >
           <li
             v-for="(_, experience) in experiences"
             :key="experience"
@@ -93,12 +95,23 @@ const experienceDescription = computed(() => {
 </script>
 
 <style scoped lang="scss">
+$sm: 576px;
+
 .nav-link {
   border-left: 3px solid rgb(var(--bs-secondary-rgb), 33%);
   white-space: nowrap;
 
+  @media screen and (max-width: $sm) {
+    --bs-nav-link-padding-x: 0.5rem;
+    border-left: none;
+    border-bottom: 3px solid rgb(var(--bs-secondary-rgb), 33%);
+  }
   &.active {
     border-left: 3px solid var(--bs-info);
+    @media screen and (max-width: $sm) {
+      border-left: none;
+      border-bottom: 3px solid var(--bs-info);
+    }
   }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div id="achievements" class="pt-5 row justify-content-center vh-100">
+  <div id="achievements" class="pt-5 row justify-content-center page">
     <div class="central-box flex-column">
       <Heading class="pb-4">Achievements</Heading>
       <ul class="triangle">

@@ -8,7 +8,7 @@
             [{{ achievement.from
             }}{{ achievement.to ? ` — ${achievement.to}` : "" }}]
           </em>
-          <strong v-if="achievement.title" class="text-info">
+          <strong v-if="achievement.title" style="color: var(--bs-pink)">
             {{ achievement.title }}:
           </strong>
           <span v-html="achievement.text" />

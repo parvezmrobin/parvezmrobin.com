@@ -30,10 +30,8 @@
                 <div class="d-sm-none h5 fw-light ms-sm-2 pb-1">(He/Him)</div>
               </div>
             </div>
-            <h2 id="title" class="d-none d-sm-block fw-light">
-              Software Engineer
-            </h2>
-            <h5 id="title" class="d-sm-none fw-light">Software Engineer</h5>
+            <h2 id="title" class="d-none d-sm-block fw-light"></h2>
+            <h5 id="titleMobile" class="d-sm-none fw-light"></h5>
             <a
               href="mailto:parvezmrobin@gmail.com"
               style="color: var(--bs-pink)"
@@ -102,20 +100,30 @@ import { onBeforeUnmount, onMounted, ref } from "vue";
 import Links from "./Links.vue";
 
 const showLeftLinks = ref(false);
+
 const scrollEventHandler = (event: Event) => {
   const mouseEvent = event as MouseEvent;
   showLeftLinks.value =
     (mouseEvent.relatedTarget as HTMLAnchorElement).hash !== "#home";
 };
+
 onMounted(() => {
   const scrollEl = document.getElementById("app") as HTMLDivElement;
   scrollEl.addEventListener("activate.bs.scrollspy", scrollEventHandler);
-  const typewriter = new Typewriter("#title");
-  typewriter
-    .typeString("I make machines intelligent")
-    .start()
-    .callFunction(({ elements }: TypewriterState) => elements.cursor.remove());
+  const typewriters = [
+    new Typewriter("#title"),
+    new Typewriter("#titleMobile"),
+  ];
+  for (const typewriter of typewriters) {
+    typewriter
+      .typeString("I make machines intelligent")
+      .start()
+      .callFunction(({ elements }: TypewriterState) =>
+        elements.cursor.remove()
+      );
+  }
 });
+
 onBeforeUnmount(() => {
   const scrollEl = document.getElementById("app") as HTMLDivElement;
   scrollEl.removeEventListener("activate.bs.scrollspy", scrollEventHandler);

@@ -4,6 +4,7 @@
     <Home />
     <Skills />
     <Experience />
+    <Projects />
     <Education />
     <Certifications />
     <Achievements />
@@ -17,6 +18,7 @@ import Education from "./components/Education.vue";
 import Experience from "./components/Experience.vue";
 import Home from "./components/Home.vue";
 import Navbar from "./components/Navbar.vue";
+import Projects from "./components/Projects.vue";
 import Skills from "./components/Skills.vue";
 import Certifications from "./components/Certifications.vue";
 import Achievements from "./components/Achievements.vue";

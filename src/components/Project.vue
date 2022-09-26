@@ -1,6 +1,6 @@
 <template>
   <div v-once ref="rootEl" class="row project">
-    <div class="col-6">
+    <div class="col col-sm-6">
       <h4 class="fw-normal">
         {{ props.title }}
       </h4>
@@ -68,6 +68,8 @@ onMounted(() => {
   --bs-popover-bg: var(--bs-cyan);
 }
 
+$sm: 576px;
+
 .project {
   align-items: center;
   margin-bottom: 2rem;
@@ -78,18 +80,21 @@ onMounted(() => {
   }
   .description {
     background-color: var(--bs-indigo-700);
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 2px;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 50%);
 
-    position: relative;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    transition: left 0.5s ease-in-out;
+    @media screen and (min-width: calc($sm + 1px)) {
+      padding: 1.5rem;
+      position: relative;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      transition: left 0.5s ease-in-out;
 
-    &:hover {
-      left: 15px;
+      &:hover {
+        left: 15px;
+      }
     }
   }
 
@@ -113,7 +118,9 @@ onMounted(() => {
   }
 
   .col-6:last-child {
-    //width: 63.33333333%;
+    @media screen and (max-width: $sm) {
+      display: none;
+    }
 
     div {
       margin-left: -10%;

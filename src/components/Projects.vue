@@ -30,7 +30,7 @@ const projects: IProject[] = [
       "We showed that even a simpler version of the original work can achieve comparable performance.",
     tech: ["MongoDB", "Docker", "TensorFlow", "scikit-learn"],
     github: "https://github.com/parvezmrobin/ml-br-deduplication",
-    img: "/public/siamese-cross-encoder.png",
+    img: "/siamese-cross-encoder.png",
   },
   {
     title: "Official Website of CSE Discipline, Khulna University",
@@ -39,7 +39,7 @@ const projects: IProject[] = [
       "Engineering Discipline, Khulna University, Bangladesh.",
     tech: ["PHP", "Bootstrap", "MySQL"],
     web: "https://new.cseku.ac.bd/",
-    img: "/public/ku-website.png",
+    img: "/ku-website.png",
   },
   {
     title: "Jhijhi",
@@ -50,7 +50,7 @@ const projects: IProject[] = [
     tech: ["Node JS", "Express JS", "React", "TypeScript", "MongoDB"],
     github: "https://github.com/parvezmrobin/jhijhi-frontend",
     web: "https://jhijhi.netlify.app/",
-    img: "/public/jhijhi.png",
+    img: "/jhijhi.png",
   },
 ];
 </script>

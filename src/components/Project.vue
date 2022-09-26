@@ -1,5 +1,5 @@
 <template>
-  <div v-once class="row project">
+  <div v-once ref="rootEl" class="row project">
     <div class="col-6">
       <h4 class="fw-normal">
         {{ props.title }}
@@ -13,8 +13,19 @@
       </div>
 
       <div class="icons mt-2">
-        <a :href="props.github" target="_blank">
-          <i class="devicon-github-plain"></i>
+        <a v-if="props.github" :href="props.github" target="_blank">
+          <i
+            class="devicon-github-plain me-2"
+            data-bs-toggle="popover"
+            data-bs-content="Visit GitHub Repository"
+          />
+        </a>
+        <a v-if="props.web" :href="props.web" target="_blank">
+          <i
+            class="devicon-firefox-plain"
+            data-bs-toggle="popover"
+            data-bs-content="Visit Live Website"
+          />
         </a>
       </div>
     </div>
@@ -26,6 +37,8 @@
   </div>
 </template>
 <script lang="ts" setup>
+import { Popover } from "bootstrap";
+import { onMounted, ref } from "vue";
 import { formatString } from "../util";
 
 const props = defineProps<{
@@ -33,12 +46,32 @@ const props = defineProps<{
   description: string;
   tech: string[];
   github?: string;
+  web?: string;
   img: string;
 }>();
+
+const rootEl = ref<HTMLDivElement | null>(null);
+onMounted(() => {
+  if (rootEl.value === null) {
+    return;
+  }
+  const popoverEls = rootEl.value.querySelectorAll(
+    '[data-bs-toggle="popover"]'
+  );
+  Array.from(popoverEls).forEach(
+    (popoverEl) => new Popover(popoverEl, { trigger: "hover focus" })
+  );
+});
 </script>
 <style lang="scss">
+.popover {
+  --bs-popover-bg: var(--bs-cyan);
+}
+
 .project {
   align-items: center;
+  margin-bottom: 2rem;
+
   h4 {
     font-weight: normal;
     color: var(--bs-pink);
@@ -60,6 +93,10 @@ const props = defineProps<{
     }
   }
 
+  code {
+    color: var(--bs-body-bg);
+  }
+
   .icons {
     a {
       text-decoration: none;
@@ -68,6 +105,10 @@ const props = defineProps<{
 
     i {
       font-size: 32px;
+    }
+
+    img {
+      width: 32px;
     }
   }
 
@@ -85,6 +126,7 @@ const props = defineProps<{
       }
       img {
         width: 100%;
+        border-radius: 5px;
       }
     }
   }

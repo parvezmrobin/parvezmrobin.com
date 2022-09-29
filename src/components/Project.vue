@@ -183,7 +183,7 @@ $sm: 576px;
 
       &:hover {
         z-index: 2;
-        margin-left: -33%;
+        margin-left: -50%;
       }
       img {
         width: 100%;

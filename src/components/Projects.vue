@@ -10,18 +10,31 @@
 
 <script lang="ts" setup>
 import CentralBox from "./CentralBox.vue";
-import Project from "./Project.vue";
-
-interface IProject {
-  title: string;
-  description: string;
-  tech: string[];
-  github?: string;
-  web?: string;
-  img: string;
-}
+import Project, { IProject } from "./Project.vue";
 
 const projects: IProject[] = [
+  {
+    title: "Visually Explaining Bug Localization",
+    description:
+      "Developed a visualization system for a state-of-the-art bug localization tool " +
+      "([LR+WE by Ye et al.](https://dl.acm.org/doi/abs/10.1145/2884781.2884862)). " +
+      "It visually explains the localization process gradually at document-to-document, " +
+      "document-to-word and finally word-to-word level.",
+    tech: [
+      "Vue JS",
+      "D3",
+      "TypeScript",
+      "JavaScript",
+      "Flask",
+      "scikit-learn",
+      "nltk",
+      "Word Embedding",
+      "Python",
+    ],
+    github: "https://github.com/parvezmrobin/visualize-lrwe",
+    web: "http://129.173.67.225:8080/bug-localization",
+    img: "/visualizing-bug-localization.png",
+  },
   {
     title: "Bug Report Deduplication Using Siamese Cross-Encoder Network",
     description:
@@ -48,7 +61,8 @@ const projects: IProject[] = [
       "customizable team size, match format and both single batsman and double batsmen " +
       "support.",
     tech: ["Node JS", "Express JS", "React", "TypeScript", "MongoDB"],
-    github: "https://github.com/parvezmrobin/jhijhi-frontend",
+    frontend: "https://github.com/parvezmrobin/jhijhi-frontend",
+    backend: "https://github.com/parvezmrobin/jhijhi-backend",
     web: "https://jhijhi.netlify.app/",
     img: "/jhijhi.png",
   },

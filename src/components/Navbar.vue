@@ -88,10 +88,13 @@ $xxl: 1400px;
   }
 }
 
-@media screen and (min-width: $xl) {
-  .navbar {
+.navbar {
+  @media screen and (min-width: $xl) {
     width: calc(100% / 6);
     padding-top: v-bind("navbarPaddingTop");
+  }
+  @media screen and (min-width: $xxl) {
+    width: calc(100% / 12);
   }
 }
 </style>

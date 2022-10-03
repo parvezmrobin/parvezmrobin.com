@@ -45,7 +45,9 @@
     </div>
     <div class="col-6">
       <div>
-        <img :src="img" :alt="title" />
+        <a :href="img" target="_blank">
+          <img :src="img" :alt="title" />
+        </a>
       </div>
     </div>
   </div>
@@ -145,10 +147,12 @@ $sm: 576px;
       top: 0;
       left: 0;
       transition: left 0.5s ease-in-out;
+    }
+  }
 
-      &:hover {
-        left: 15px;
-      }
+  @media screen and (min-width: calc($sm + 1px)) {
+    .col.col-sm-6:first-child:hover .description {
+      left: 15px;
     }
   }
 

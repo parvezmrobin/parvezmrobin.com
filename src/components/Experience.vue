@@ -62,7 +62,20 @@ const experiences = {
         "dancing interactively. The tech stack was TypeScript, Express JS, Vue JS, Mongo DB, and " +
         "Docker. Also integrated and maintained [WebRTC](https://agora.io), " +
         "[AWS](https://aws.amazon.com), [GCP](https://cloud.google.com/), [Push Notification]" +
-        "(https://www.pubnub.com/), [Stripe](https://stripe.com/) and various other services.",
+        "(https://www.pubnub.com/), [Stripe](https://stripe.com/), " +
+        "[Task Queue](https://docs.bullmq.io/) (redis) and various other services.",
+      "Migrated the subscription backend of [Wonster Words](https://apps.apple.com/us/app/wonster-words-learning-games/id881119321) " +
+        "iOS app store game from node.js to ASP.Net using Microsoft Azure " +
+        "[FaaS](https://azure.microsoft.com/en-us/services/functions/), " +
+        "[Cosmos DB](https://azure.microsoft.com/en-us/services/cosmos-db/), " +
+        "and [Queue Storage](https://azure.microsoft.com/en-us/services/storage/queues/).",
+      "Built a desktop version of the [Bikribatta](https://www.bikribatta.com/) " +
+        "web app using [Electron](https://www.electronjs.org/). This app also " +
+        "works in offline mode with eventual consistency scheme.",
+      "Contributed to several in-house [React Native](https://reactnative.dev/) " +
+        "based mobile applications.",
+      "Hosted two in-house workshops on ‘Modern Web Development with Vue JS’ " +
+        "and ‘Sustainable Architecture with TypeScript’.",
     ],
   },
   Metabob: {

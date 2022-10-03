@@ -1,5 +1,8 @@
 <template>
-  <nav id="navbar" class="navbar navbar-dark navbar-expand-md fixed-top">
+  <nav
+    id="navbar"
+    class="navbar navbar-dark navbar-expand-md fixed-top pt-xl-4"
+  >
     <div class="container-fluid">
       <button
         class="navbar-toggler border-0 ms-auto"
@@ -25,7 +28,9 @@
           ></button>
         </div>
         <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <ul
+            class="navbar-nav justify-content-end flex-grow-1 pe-3 ps-xl-3 flex-xl-column"
+          >
             <li v-for="nav in navs" :key="nav" class="nav-item">
               <a
                 class="nav-link underline"
@@ -64,15 +69,25 @@ function hideOffcanvas() {
   offCanvasInstance.hide();
 }
 </script>
-<style scoped>
+<style lang="scss">
 .navbar {
   background-color: transparent;
 }
 
-@media screen and (max-width: 767px) {
+$md: 768px;
+$xl: 1200px;
+$xxl: 1400px;
+
+@media screen and (max-width: $md) {
   .offcanvas-body {
     --bs-bg-opacity: 1;
     background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity));
+  }
+}
+
+@media screen and (min-width: $xl) {
+  .navbar {
+    width: calc(100% / 6);
   }
 }
 </style>

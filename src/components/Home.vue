@@ -80,7 +80,7 @@
       <div
         v-if="showLeftLinks"
         class="d-none d-lg-block position-fixed"
-        style="left: 1rem; bottom: 0"
+        style="left: 2rem; bottom: 0"
       >
         <div class="d-flex flex-column align-items-center">
           <Links />

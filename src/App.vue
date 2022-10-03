@@ -1,14 +1,20 @@
 <template>
-  <div class="container">
-    <Navbar />
-    <Home />
-    <Skills />
-    <Experience />
-    <Projects />
-    <Education />
-    <Certifications />
-    <Achievements />
-    <Activities />
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-xl-2">
+        <Navbar />
+      </div>
+      <div class="col-12 col-xl-10">
+        <Home />
+        <Skills />
+        <Experience />
+        <Education />
+        <Projects />
+        <Certifications />
+        <Achievements />
+        <Activities />
+      </div>
+    </div>
   </div>
 </template>
 

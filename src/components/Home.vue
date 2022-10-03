@@ -78,7 +78,7 @@
 
     <Transition name="slide-fade">
       <div
-        v-if="showLeftLinks"
+        v-if="!inHomePage"
         class="d-none d-lg-block position-fixed"
         style="left: 2rem; bottom: 0"
       >
@@ -96,20 +96,20 @@
 <script lang="ts" setup>
 import type { TypewriterState } from "typewriter-effect";
 import Typewriter from "typewriter-effect/dist/core";
-import { onBeforeUnmount, onMounted, ref } from "vue";
+import { onBeforeUnmount, onMounted } from "vue";
+import { inHomePage } from "../util";
 import Links from "./Links.vue";
-
-const showLeftLinks = ref(false);
 
 const scrollEventHandler = (event: Event) => {
   const mouseEvent = event as MouseEvent;
-  showLeftLinks.value =
-    (mouseEvent.relatedTarget as HTMLAnchorElement).hash !== "#home";
+  inHomePage.value =
+    (mouseEvent.relatedTarget as HTMLAnchorElement).hash === "#home";
 };
 
 onMounted(() => {
   const scrollEl = document.getElementById("app") as HTMLDivElement;
   scrollEl.addEventListener("activate.bs.scrollspy", scrollEventHandler);
+
   const typewriters = [
     new Typewriter("#title"),
     new Typewriter("#titleMobile"),

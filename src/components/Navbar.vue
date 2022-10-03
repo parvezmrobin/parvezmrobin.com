@@ -1,8 +1,5 @@
 <template>
-  <nav
-    id="navbar"
-    class="navbar navbar-dark navbar-expand-md fixed-top pt-xl-4"
-  >
+  <nav id="navbar" class="navbar navbar-dark navbar-expand-md fixed-top">
     <div class="container-fluid">
       <button
         class="navbar-toggler border-0 ms-auto"
@@ -47,9 +44,10 @@
   </nav>
 </template>
 
-<script lang="ts" setup="">
+<script lang="ts" setup>
 import { Offcanvas } from "bootstrap";
-import { onMounted } from "vue";
+import { computed, onMounted } from "vue";
+import { inHomePage } from "../util";
 
 const navs = [
   "Home",
@@ -68,10 +66,15 @@ onMounted(() => {
 function hideOffcanvas() {
   offCanvasInstance.hide();
 }
+
+const navbarPaddingTop = computed(() => {
+  return inHomePage.value ? "calc(50vh - 160px)" : "1.5rem";
+});
 </script>
 <style lang="scss">
 .navbar {
   background-color: transparent;
+  transition: padding-top 1s ease-in-out;
 }
 
 $md: 768px;
@@ -88,6 +91,7 @@ $xxl: 1400px;
 @media screen and (min-width: $xl) {
   .navbar {
     width: calc(100% / 6);
+    padding-top: v-bind("navbarPaddingTop");
   }
 }
 </style>

@@ -4,7 +4,7 @@
       <Heading class="pb-4">Skills</Heading>
       <ul class="nav">
         <li
-          v-for="(_, tab) in tabContents"
+          v-for="tab in Object.keys(tabContents)"
           :key="tab"
           class="nav-item flex-grow-1"
         >
@@ -56,6 +56,11 @@ import { computed, ref } from "vue";
 import { formatString } from "../util";
 import Heading from "./Heading.vue";
 
+const urlParams = new URLSearchParams(window.location.search);
+const activeTabValue =
+  urlParams.get("activeSkillTab") ?? "Programming Languages";
+const activeTab = ref(activeTabValue);
+
 const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
   "Programming Languages": {
     skills: [
@@ -73,7 +78,7 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
         "I have also worked more than two years as a software developer mostly using " +
         "<code>JavaScript (ES6+)</code> and <code>TypeScript</code>.",
       "Apart from that I worked in several projects using <code>C#</code>, <code>PHP</code> " +
-        "and golang both in academia and industry. I led a team for developing the official " +
+        "and <code>golang</code> both in academia and industry. I led a team for developing the official " +
         "[website](https://new.cseku.ac.bd/) of the CSE Department of Khulna University, " +
         "Bangladesh. My experience in <code>Java</code> and <code>C++</code> are mostly from " +
         "competitive programming.",
@@ -138,7 +143,7 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
       "I have a deep dive into machine learning and deep learning during my research " +
         "internship at [Metabob](https://metabob.com/). This internship is part of my " +
         "[Mitacs](https://www.mitacs.ca/en/programs/accelerate) scholarship which aims to " +
-        "explain sotfwar bugs in natural language. The research domain includes software " +
+        "explain software bugs in natural language. The research domain includes software " +
         "engineering, deep learning and natural language processing. I further sharpen my " +
         "knowledge while teaching in the Process of Data Science course.",
 
@@ -167,9 +172,7 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
     ],
   },
 };
-const urlParams = new URLSearchParams(window.location.search);
-const activeTabValue = urlParams.get("activeSkillTab") ?? "ML/DL/Data Science";
-const activeTab = ref<keyof typeof tabContents>(activeTabValue);
+
 const tabContent = computed(() => {
   return tabContents[activeTab.value];
 });

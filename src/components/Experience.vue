@@ -11,7 +11,7 @@
           class="nav flex-sm-column justify-content-center justify-content-sm-start"
         >
           <li
-            v-for="(_, experience) in experiences"
+            v-for="experience in Object.keys(experiences)"
             :key="experience"
             class="nav-item"
           >
@@ -53,7 +53,13 @@ import { computed, ref } from "vue";
 import { formatString } from "../util";
 import Heading from "./Heading.vue";
 
-const experiences = {
+interface IExperience {
+  position: string;
+  time: string;
+  works: string[];
+}
+
+const experiences: Record<string, IExperience> = {
   NerdDevs: {
     position: "Software Engineer",
     time: "March 2019 — July 2021",
@@ -101,7 +107,7 @@ const experiences = {
     ],
   },
 };
-const selectedExperience = ref<keyof typeof experiences>("NerdDevs");
+const selectedExperience = ref("NerdDevs");
 const experienceDescription = computed(() => {
   return experiences[selectedExperience.value];
 });

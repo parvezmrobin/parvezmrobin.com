@@ -127,8 +127,12 @@ ul.triangle {
   }
 }
 
-kbd, .text-pink {
+kbd, .text-pink, .h6 {
   color: var(--bs-pink);
+}
+
+.h6 {
+  font-weight: bold;
 }
 
 .text-teal {

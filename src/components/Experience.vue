@@ -17,11 +17,11 @@
           >
             <a
               role="button"
-              class="nav-link"
+              class="nav-link fw-bold"
               :class="
                 experience === selectedExperience
-                  ? 'active text-info'
-                  : 'text-secondary'
+                  ? 'active text-teal'
+                  : 'text-white'
               "
               @mouseover="selectedExperience = experience"
             >
@@ -98,12 +98,12 @@ const experiences: Record<string, IExperience> = {
     position: "Teaching Assistant",
     time: "September 2021 — December 2022",
     works: [
-      "_Process of Data Science (graduate course)_: Providing hands-on learning experience in " +
+      "<span class='h6'>Process of Data Science</span> (graduate course): Providing hands-on learning experience in " +
         "cutting-edge data science technologies in labs, holding office hours to resolve " +
         "difficulties for the students, and assisting the instructor during classes",
-      "_Intro to Software Project_: Taking classes on Docker and containerization, " +
+      "<span class='h6'>Intro to Software Project</span>: Taking classes on Docker and containerization, " +
         "directly mentoring, and evaluating four groups in the agile process",
-      "_Software Development_: Taking labs and helping the students in resolving issues",
+      "<span class='h6'>Software Development</span>: Taking labs and helping the students in resolving issues",
     ],
   },
 };
@@ -117,19 +117,19 @@ const experienceDescription = computed(() => {
 $sm: 576px;
 
 .nav-link {
-  border-left: 3px solid rgb(var(--bs-secondary-rgb), 33%);
+  border-left: 3px solid white;
   white-space: nowrap;
 
   @media screen and (max-width: $sm) {
     --bs-nav-link-padding-x: 0.5rem;
     border-left: none;
-    border-bottom: 3px solid rgb(var(--bs-secondary-rgb), 33%);
+    border-bottom: 3px solid white;
   }
   &.active {
-    border-left: 3px solid var(--bs-info);
+    border-left: 3px solid var(--bs-success);
     @media screen and (max-width: $sm) {
       border-left: none;
-      border-bottom: 3px solid var(--bs-info);
+      border-bottom: 3px solid var(--bs-teal);
     }
   }
 }

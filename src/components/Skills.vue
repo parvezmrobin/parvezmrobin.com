@@ -9,8 +9,8 @@
           class="nav-item flex-grow-1"
         >
           <a
-            class="nav-link underline"
-            :class="tab === activeTab ? 'active text-info' : 'text-secondary'"
+            class="nav-link underline fw-bold"
+            :class="tab === activeTab ? 'active text-teal' : 'text-white'"
             role="button"
             @mouseover="activeTab = tab"
           >
@@ -80,8 +80,8 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
       "Apart from that I worked in several projects using <code>C#</code>, <code>PHP</code> " +
         "and <code>golang</code> both in academia and industry. I led a team for developing the official " +
         "[website](https://new.cseku.ac.bd/) of the CSE Department of Khulna University, " +
-        "Bangladesh. My experience in <code>Java</code> and <code>C++</code> are mostly from " +
-        "competitive programming.",
+        "Bangladesh that is mostly written in <code>PHP</code>. My experience in <code>Java</code> " +
+        "and <code>C++</code> are mostly from competitive programming.",
     ],
   },
   "Web Technology": {
@@ -108,7 +108,7 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
     ],
     desc: [
       "I have extensive work experience in <code>Node JS</code>, <code>Express JS</code> and " +
-        "<code>Vue Js</code> (check Experience section). In nearly all the projects I worked, " +
+        "<code>Vue Js</code> (check [Experience](#experience) section). In nearly all the projects I worked, " +
         "I used <code>RESTful API</code> to communicate between client and server. I also worked " +
         "in developing several mobile applications using <code>React Native</code>.",
       "Alongside these most prominent technologies, I used <code>Web Socket</code> and " +
@@ -149,7 +149,7 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
 
       "One of the early recognition of my Data Science skill is placing among the top 15 teams " +
         "in Datathon Bangladesh, 2019 — the biggest data-centric competition in the country. " +
-        "I have several relevant certification from Coursera (see [Certifications](#certificates)).",
+        "I have several relevant certification from Coursera (see [Certifications](#certifications)).",
     ],
   },
   "Tools & Platform": {
@@ -164,8 +164,11 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
     ],
     desc: [
       "As a software engineer, in several cases I orchestrated my own cloud services as well. " +
-        "I also taught <code>GCP</code> in the Intro to Software Developer course. I use " +
-        `<code>git</code> for ${new Date().getFullYear() - 2015} years now.`,
+        "I designed the development environment [Daency](https://daency.com/) based on Docker and " +
+        "Docker Compose. I also taught <code>GCP</code> in the Intro to Software Developer course. " +
+        `I use <code>git</code> for ${
+          new Date().getFullYear() - 2015
+        } years now.`,
 
       "I have _Coursera_ certification on [Google Cloud Fundamentals: Core Infrastructure]" +
         "(https://coursera.org/share/6d977fe14c15f5178dbee665b5f60482).",
@@ -184,10 +187,11 @@ const tabContent = computed(() => {
 }
 
 .nav-link.underline {
-  border-bottom: 3px solid rgb(var(--bs-secondary-rgb), 33%);
+  border-bottom: 3px solid white;
+  --bs-nav-link-hover-color: var(--bs-teal);
 
   &.active {
-    border-color: var(--bs-info);
+    border-color: var(--bs-success);
   }
 }
 

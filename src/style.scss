@@ -127,6 +127,18 @@ ul.triangle {
   }
 }
 
-kbd {
+kbd, .text-pink {
   color: var(--bs-pink);
+}
+
+.text-teal {
+  color: var(--bs-teal);
+}
+
+.text-purple {
+  color: var(--bs-purple);
+}
+
+.text-indigo {
+  color: var(--bs-indigo);
 }

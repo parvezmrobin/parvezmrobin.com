@@ -87,23 +87,32 @@ ul {
 .card {
   background-color: transparent;
   border: none;
-  @media screen and (min-width: $sm) {
-    margin-right: -20px;
-  }
   .image-wrapper {
+    position: relative;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
 
     @media screen and (max-width: $sm - 1) {
       display: none;
     }
     img {
+      position: absolute;
       max-height: 150px;
       background-color: white;
       padding: 5px;
       border-radius: 5px;
       z-index: 1;
+      right: 55px;
+
+      transition: all 1s ease-in-out;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    .image-wrapper img {
+      right: -20px;
     }
   }
 
@@ -116,8 +125,8 @@ ul {
     background-color: #0c3a4a;
     border-radius: 5px;
     @media screen and (min-width: $sm) {
-      left: -20px;
       padding-left: 30px;
+      padding-right: 30px;
     }
     .card-title {
       color: var(--bs-pink);
@@ -126,17 +135,15 @@ ul {
 }
 
 .reverse.card {
-  @media screen and (min-width: $sm) {
-    margin-left: -20px;
-  }
-  .image-wrapper {
-    justify-content: flex-start;
+  .image-wrapper img {
+    left: 75px;
   }
 
-  @media screen and (min-width: $sm) {
-    .card-body {
-      left: 20px;
-      padding-right: 30px;
+  &:hover,
+  &:focus,
+  &:active {
+    .image-wrapper img {
+      left: -20px;
     }
   }
 }

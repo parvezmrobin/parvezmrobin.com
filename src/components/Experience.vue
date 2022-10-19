@@ -19,9 +19,7 @@
               role="button"
               class="nav-link fw-bold"
               :class="
-                experience === selectedExperience
-                  ? 'active text-teal'
-                  : 'text-white'
+                experience === selectedExperience ? 'active' : 'text-white'
               "
               @mouseover="selectedExperience = experience"
             >
@@ -115,6 +113,11 @@ const experienceDescription = computed(() => {
 
 <style scoped lang="scss">
 $sm: 576px;
+
+.nav {
+  --bs-link-color: var(--bs-teal-600);
+  --bs-link-hover-color: var(--bs-teal-400);
+}
 
 .nav-link {
   border-left: 3px solid white;

@@ -10,7 +10,7 @@
         >
           <a
             class="nav-link underline fw-bold"
-            :class="tab === activeTab ? 'active text-teal' : 'text-white'"
+            :class="tab === activeTab ? 'active' : 'text-white'"
             role="button"
             @mouseover="activeTab = tab"
           >
@@ -211,11 +211,14 @@ $md: 768px;
   }
 }
 
+.nav {
+  --bs-link-color: var(--bs-teal-600);
+  --bs-link-hover-color: var(--bs-teal-400);
+}
+
 .skill.box {
   display: flex;
   align-items: center;
-  --bs-link-color: var(--bs-cyan-400);
-  --bs-link-hover-color: var(--bs-cyan-600);
   &.left {
     > div {
       background: var(--bs-indigo-700);

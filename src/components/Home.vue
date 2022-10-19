@@ -53,9 +53,11 @@
           web application and deep learning. I worked as a software engineer for
           more than two years with hands-on experience in
           <code>node.js</code>, <code>Vue JS</code>, <code>TypeScript</code> and
-          <code>Mongo DB</code>. Currently, as a part of pursuing my Master's in
-          Computer Science degree at Dalhousie University, I am working as a
-          <em>Research Intern</em> at
+          <code>Mongo DB</code>. Currently, as a part of pursuing my Master<span
+            class="font-monospace"
+            >’</span
+          >s in Computer Science degree at Dalhousie University, I am working as
+          a <em>Research Intern</em> at
           <a href="https://metabob.com/">Metabob</a>. My research domain
           includes <em>Software Engineering</em>, <em>Deep Learning</em> and
           <em>Natural Language Processing</em>.
@@ -87,6 +89,29 @@
           <div
             class="border"
             style="height: 7.5rem; width: 0; margin-right: 1rem"
+          />
+        </div>
+      </div>
+    </Transition>
+
+    <Transition name="slide-fade">
+      <div
+        v-if="!inHomePage"
+        class="right d-none d-lg-block position-fixed"
+        style="right: 1rem; bottom: 0.5rem"
+      >
+        <div class="d-flex align-items-center">
+          <div class="me-2">
+            <a
+              href="mailto:parvezmrobin@gmail.com"
+              class="font-monospace text-white floating-email"
+            >
+              parvezmrobin@gmail.com
+            </a>
+          </div>
+          <div
+            class="border"
+            style="width: 7.5rem; height: 0; margin-right: 1rem"
           />
         </div>
       </div>
@@ -154,5 +179,19 @@ onBeforeUnmount(() => {
 .slide-fade-enter-from,
 .slide-fade-leave-to {
   transform: translateY(350px);
+
+  &.right {
+    transform: translateX(350px);
+  }
+}
+
+.floating-email {
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: underline;
+  }
 }
 </style>

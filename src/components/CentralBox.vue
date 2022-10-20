@@ -25,6 +25,10 @@ const props = defineProps({
     type: Number,
     default: 0.075,
   },
+  maxWidth: {
+    type: String,
+    default: "var(--bs-breakpoint-lg)",
+  },
 });
 
 const computedId = computed(() => {
@@ -34,6 +38,6 @@ const computedId = computed(() => {
 
 <style lang="scss" scoped>
 :deep(.central-box) {
-  max-width: var(--bs-breakpoint-lg);
+  max-width: v-bind(maxWidth);
 }
 </style>

@@ -1,5 +1,10 @@
 <template>
-  <CentralBox id="contact" title="Want to know more?" :topMarginRatio="0.2">
+  <CentralBox
+    id="contact"
+    title="Want to know more?"
+    :topMarginRatio="0.2"
+    maxWidth="var(--bs-breakpoint-md)"
+  >
     <h4 class="fw-light">
       Why don’t you send an
       <a

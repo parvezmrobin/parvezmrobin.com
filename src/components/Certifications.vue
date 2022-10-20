@@ -1,5 +1,5 @@
 <template>
-  <CentralBox title="Certifications">
+  <CentralBox title="Certifications" maxWidth="var(--bs-breakpoint-md)">
     <ul class="triangle">
       <li v-for="cert in certificates" v-once :key="cert.link">
         <em>{{ cert.from }}</em> certification on

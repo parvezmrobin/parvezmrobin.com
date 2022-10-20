@@ -1,5 +1,9 @@
 <template>
-  <CentralBox title="Activities" :topMarginRatio="0.075">
+  <CentralBox
+    title="Activities"
+    :topMarginRatio="0.075"
+    maxWidth="var(--bs-breakpoint-md)"
+  >
     <ul class="triangle">
       <li
         v-for="activity in activities"

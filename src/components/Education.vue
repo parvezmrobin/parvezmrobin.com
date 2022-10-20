@@ -1,5 +1,9 @@
 <template>
-  <CentralBox title="Education" :topMarginRatio="0.075">
+  <CentralBox
+    title="Education"
+    :topMarginRatio="0.075"
+    maxWidth="var(--bs-breakpoint-md)"
+  >
     <div
       v-for="(school, i) in schools"
       :key="i"

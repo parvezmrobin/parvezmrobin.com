@@ -1,25 +1,22 @@
 <template>
-  <div id="achievements" class="pt-5 row justify-content-center page">
-    <div class="central-box flex-column">
-      <Heading class="pb-4">Achievements</Heading>
-      <ul class="triangle">
-        <li v-for="(achievement, i) in achievements" v-once :key="i">
-          <em class="text-secondary">
-            [{{ achievement.from
-            }}{{ achievement.to ? ` — ${achievement.to}` : "" }}]
-          </em>
-          <strong v-if="achievement.title" style="color: var(--bs-pink)">
-            {{ achievement.title }}:
-          </strong>
-          <span v-html="achievement.text" />
-        </li>
-      </ul>
-    </div>
-  </div>
+  <CentralBox title="Achievements" maxWidth="var(--bs-breakpoint-md)">
+    <ul class="triangle">
+      <li v-for="(achievement, i) in achievements" v-once :key="i">
+        <em class="text-secondary">
+          [{{ achievement.from
+          }}{{ achievement.to ? ` — ${achievement.to}` : "" }}]
+        </em>
+        <strong v-if="achievement.title" style="color: var(--bs-pink)">
+          {{ achievement.title }}:
+        </strong>
+        <span v-html="achievement.text" />
+      </li>
+    </ul>
+  </CentralBox>
 </template>
 
 <script lang="ts" setup>
-import Heading from "./Heading.vue";
+import CentralBox from "./CentralBox.vue";
 
 interface IAchievement {
   from: string;

@@ -1,6 +1,6 @@
 <template>
   <div
-    :id="props.title.toLowerCase()"
+    :id="props.title.toLowerCase().split(' ').slice(-1)[0]"
     class="pt-5 row justify-content-center page"
   >
     <div

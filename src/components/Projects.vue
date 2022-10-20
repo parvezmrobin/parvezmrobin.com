@@ -1,5 +1,5 @@
 <template>
-  <CentralBox title="Projects" :topMarginRatio="0">
+  <CentralBox title="Personal Projects" :topMarginRatio="0">
     <Project
       v-for="project in projects"
       :key="project.title"

@@ -1,9 +1,9 @@
 <template>
   <div id="contact" class="pt-5 row justify-content-center page">
-    <div class="central-box flex-column">
+    <div class="central-box flex-column mb-5">
       <Heading class="pb-4">Want to know more?</Heading>
       <h4 class="fw-light">
-        Why don’t send an
+        Why don’t you send an
         <a
           href="mailto:parvezmrobin@gmail.com"
           class="text-pink text-decoration-none"

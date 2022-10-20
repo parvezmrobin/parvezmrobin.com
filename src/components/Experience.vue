@@ -1,55 +1,46 @@
 <template>
-  <div
-    id="experience"
-    class="page d-flex justify-content-center"
-    style="padding-top: 3rem"
-  >
-    <div class="central-box">
-      <Heading class="pb-5">Experience</Heading>
-      <div class="d-flex flex-column flex-sm-row">
-        <ul
-          class="nav flex-sm-column justify-content-center justify-content-sm-start"
+  <CentralBox title="Experience">
+    <div class="d-flex flex-column flex-sm-row">
+      <ul
+        class="nav flex-sm-column justify-content-center justify-content-sm-start"
+      >
+        <li
+          v-for="experience in Object.keys(experiences)"
+          :key="experience"
+          class="nav-item"
         >
-          <li
-            v-for="experience in Object.keys(experiences)"
-            :key="experience"
-            class="nav-item"
+          <a
+            role="button"
+            class="nav-link fw-bold"
+            :class="experience === selectedExperience ? 'active' : 'text-white'"
+            @mouseover="selectedExperience = experience"
           >
-            <a
-              role="button"
-              class="nav-link fw-bold"
-              :class="
-                experience === selectedExperience ? 'active' : 'text-white'
-              "
-              @mouseover="selectedExperience = experience"
-            >
-              {{ experience }}
-            </a>
-          </li>
-        </ul>
+            {{ experience }}
+          </a>
+        </li>
+      </ul>
 
-        <div class="ps-3 pt-4 pt-sm-1">
-          <h4>{{ experienceDescription.position }}</h4>
-          <p>
-            <em>{{ experienceDescription.time }}</em>
-          </p>
-          <ul class="triangle">
-            <li
-              v-for="(work, i) in experienceDescription.works"
-              :key="i"
-              v-html="formatString(work)"
-            />
-          </ul>
-        </div>
+      <div class="ps-3 pt-4 pt-sm-1">
+        <h4>{{ experienceDescription.position }}</h4>
+        <p>
+          <em>{{ experienceDescription.time }}</em>
+        </p>
+        <ul class="triangle">
+          <li
+            v-for="(work, i) in experienceDescription.works"
+            :key="i"
+            v-html="formatString(work)"
+          />
+        </ul>
       </div>
     </div>
-  </div>
+  </CentralBox>
 </template>
 
 <script lang="ts" setup>
 import { computed, ref } from "vue";
 import { formatString } from "../util";
-import Heading from "./Heading.vue";
+import CentralBox from "./CentralBox.vue";
 
 interface IExperience {
   position: string;

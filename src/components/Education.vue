@@ -1,51 +1,45 @@
 <template>
-  <div id="education" class="pt-5 row justify-content-center page">
+  <CentralBox title="Education" :topMarginRatio="0.075">
     <div
-      class="central-box flex-column"
-      style="--central-box-margin-top-ratio: 0.075"
+      v-for="(school, i) in schools"
+      :key="i"
+      class="card mb-3"
+      :class="{ reverse: i % 2 }"
     >
-      <Heading class="pb-4">Education</Heading>
-      <div
-        v-for="(school, i) in schools"
-        :key="i"
-        class="card mb-3"
-        :class="{ reverse: i % 2 }"
-      >
-        <div class="row g-0">
-          <div v-if="i % 2 === 0" class="col-md-3 image-wrapper">
-            <img
-              :src="school.img"
-              class="img-fluid rounded-start"
-              alt="school image"
-            />
+      <div class="row g-0">
+        <div v-if="i % 2 === 0" class="col-md-3 image-wrapper">
+          <img
+            :src="school.img"
+            class="img-fluid rounded-start"
+            alt="school image"
+          />
+        </div>
+        <div class="col-md-9">
+          <div class="card-body shadow-lg">
+            <h5 class="card-title">
+              {{ school.name }}
+            </h5>
+            <h6 class="card-subtitle mb-2">{{ school.duration }}</h6>
+            <p class="card-text">
+              {{ school.description }}
+            </p>
+            <p class="card-text"><strong>CGPA:</strong> {{ school.cgpa }}</p>
           </div>
-          <div class="col-md-9">
-            <div class="card-body shadow-lg">
-              <h5 class="card-title">
-                {{ school.name }}
-              </h5>
-              <h6 class="card-subtitle mb-2">{{ school.duration }}</h6>
-              <p class="card-text">
-                {{ school.description }}
-              </p>
-              <p class="card-text"><strong>CGPA:</strong> {{ school.cgpa }}</p>
-            </div>
-          </div>
-          <div v-if="i % 2 === 1" class="col-md-3 image-wrapper">
-            <img
-              :src="school.img"
-              class="img-fluid rounded-start"
-              alt="school image"
-            />
-          </div>
+        </div>
+        <div v-if="i % 2 === 1" class="col-md-3 image-wrapper">
+          <img
+            :src="school.img"
+            class="img-fluid rounded-start"
+            alt="school image"
+          />
         </div>
       </div>
     </div>
-  </div>
+  </CentralBox>
 </template>
 
 <script lang="ts" setup>
-import Heading from "./Heading.vue";
+import CentralBox from "./CentralBox.vue";
 
 interface ISchool {
   img: string;

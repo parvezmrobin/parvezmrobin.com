@@ -1,8 +1,5 @@
 <template>
-  <div
-    :id="props.title.toLowerCase().split(' ').slice(-1)[0]"
-    class="pt-5 row justify-content-center page"
-  >
+  <div :id="computedId" class="pt-5 row justify-content-center page">
     <div
       class="central-box flex-column"
       :style="{ '--central-box-margin-top-ratio': props.topMarginRatio }"
@@ -13,16 +10,25 @@
   </div>
 </template>
 <script lang="ts" setup>
+import { computed } from "vue";
 import Heading from "./Heading.vue";
 const props = defineProps({
   title: {
     type: String,
     required: true,
   },
+  id: {
+    type: String,
+    default: "",
+  },
   topMarginRatio: {
     type: Number,
     default: 0.075,
   },
+});
+
+const computedId = computed(() => {
+  return props.id || props.title.toLowerCase();
 });
 </script>
 

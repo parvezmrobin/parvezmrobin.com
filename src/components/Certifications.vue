@@ -1,21 +1,18 @@
 <template>
-  <div id="certifications" class="pt-5 row justify-content-center page">
-    <div class="central-box flex-column">
-      <Heading class="pb-4">Certifications</Heading>
-      <ul class="triangle">
-        <li v-for="cert in certificates" v-once :key="cert.link">
-          <em>{{ cert.from }}</em> certification on
-          <span class="font-monospace">“</span
-          ><a :href="cert.link">{{ cert.on }}</a
-          ><span class="font-monospace">”</span>
-        </li>
-      </ul>
-    </div>
-  </div>
+  <CentralBox title="Certifications">
+    <ul class="triangle">
+      <li v-for="cert in certificates" v-once :key="cert.link">
+        <em>{{ cert.from }}</em> certification on
+        <span class="font-monospace">“</span
+        ><a :href="cert.link">{{ cert.on }}</a
+        ><span class="font-monospace">”</span>
+      </li>
+    </ul>
+  </CentralBox>
 </template>
 
 <script lang="ts" setup>
-import Heading from "./Heading.vue";
+import CentralBox from "./CentralBox.vue";
 
 interface ICertificate {
   from: string;

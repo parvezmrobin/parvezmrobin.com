@@ -1,24 +1,18 @@
 <template>
-  <div id="activities" class="pt-5 row justify-content-center page">
-    <div
-      class="central-box flex-column"
-      style="--central-box-margin-top-ratio: 0.075"
-    >
-      <Heading class="pb-4">Activities</Heading>
-      <ul class="triangle">
-        <li
-          v-for="activity in activities"
-          v-once
-          :key="activity"
-          v-html="formatString(activity)"
-        />
-      </ul>
-    </div>
-  </div>
+  <CentralBox title="Activities" :topMarginRatio="0.075">
+    <ul class="triangle">
+      <li
+        v-for="activity in activities"
+        v-once
+        :key="activity"
+        v-html="formatString(activity)"
+      />
+    </ul>
+  </CentralBox>
 </template>
 
 <script lang="ts" setup>
-import Heading from "./Heading.vue";
+import CentralBox from "./CentralBox.vue";
 import { formatString } from "../util";
 
 const activities = [

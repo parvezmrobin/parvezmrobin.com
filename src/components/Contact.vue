@@ -1,27 +1,18 @@
 <template>
-  <div id="contact" class="pt-5 row justify-content-center page">
-    <div class="central-box flex-column mb-5">
-      <Heading class="pb-4">Want to know more?</Heading>
-      <h4 class="fw-light">
-        Why don’t you send an
-        <a
-          href="mailto:parvezmrobin@gmail.com"
-          class="text-pink text-decoration-none"
-          >email</a
-        >
-        and let’s talk.
-        <img src="/thinking.gif" alt="I Wonder!" style="height: 40px" />
-      </h4>
-    </div>
-  </div>
+  <CentralBox id="contact" title="Want to know more?" :topMarginRatio="0.2">
+    <h4 class="fw-light">
+      Why don’t you send an
+      <a
+        href="mailto:parvezmrobin@gmail.com"
+        class="text-pink text-decoration-none"
+        >email</a
+      >
+      and let’s talk.
+      <img src="/thinking.gif" alt="I Wonder!" style="height: 40px" />
+    </h4>
+  </CentralBox>
 </template>
 
 <script lang="ts" setup>
-import Heading from "./Heading.vue";
+import CentralBox from "./CentralBox.vue";
 </script>
-
-<style lang="css">
-#contact {
-  --central-box-margin-top-ratio: 0.2;
-}
-</style>

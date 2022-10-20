@@ -1,60 +1,57 @@
 <template>
-  <div id="skills" class="pt-5 row justify-content-center page">
-    <div class="central-box flex-column">
-      <Heading class="pb-4">Skills</Heading>
-      <ul class="nav">
-        <li
-          v-for="tab in Object.keys(tabContents)"
-          :key="tab"
-          class="nav-item flex-grow-1"
+  <CentralBox title="Skills">
+    <ul class="nav">
+      <li
+        v-for="tab in Object.keys(tabContents)"
+        :key="tab"
+        class="nav-item flex-grow-1"
+      >
+        <a
+          class="nav-link underline fw-bold"
+          :class="tab === activeTab ? 'active' : 'text-white'"
+          role="button"
+          @mouseover="activeTab = tab"
         >
-          <a
-            class="nav-link underline fw-bold"
-            :class="tab === activeTab ? 'active' : 'text-white'"
-            role="button"
-            @mouseover="activeTab = tab"
+          {{ tab }}
+        </a>
+      </li>
+    </ul>
+    <div id="skillset" class="d-flex pt-3">
+      <div class="skill box left">
+        <div>
+          <ul
+            class="triangle ul-grid"
+            :style="{
+              '--num-cols': Math.ceil(tabContent.skills.length / 10),
+            }"
           >
-            {{ tab }}
-          </a>
-        </li>
-      </ul>
-      <div id="skillset" class="d-flex pt-3">
-        <div class="skill box left">
-          <div>
-            <ul
-              class="triangle ul-grid"
-              :style="{
-                '--num-cols': Math.ceil(tabContent.skills.length / 10),
-              }"
+            <li
+              v-for="skill in tabContent.skills"
+              :key="skill"
+              class="font-monospace text-nowrap"
             >
-              <li
-                v-for="skill in tabContent.skills"
-                :key="skill"
-                class="font-monospace text-nowrap"
-              >
-                {{ skill }}
-              </li>
-            </ul>
-          </div>
+              {{ skill }}
+            </li>
+          </ul>
         </div>
-        <div class="skill box right">
-          <div>
-            <p
-              v-for="desc in tabContent.desc"
-              :key="desc"
-              v-html="formatString(desc)"
-            />
-          </div>
+      </div>
+      <div class="skill box right">
+        <div>
+          <p
+            v-for="desc in tabContent.desc"
+            :key="desc"
+            v-html="formatString(desc)"
+          />
         </div>
       </div>
     </div>
-  </div>
+  </CentralBox>
 </template>
 
 <script lang="ts" setup>
 import { computed, ref } from "vue";
 import { formatString } from "../util";
-import Heading from "./Heading.vue";
+import CentralBox from "./CentralBox.vue";
 
 const urlParams = new URLSearchParams(window.location.search);
 const activeTabValue =

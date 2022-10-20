@@ -37,7 +37,7 @@ const computedId = computed(() => {
 </script>
 
 <style lang="scss" scoped>
-:deep(.central-box) {
+.central-box {
   max-width: v-bind(maxWidth);
 }
 </style>

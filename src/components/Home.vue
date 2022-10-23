@@ -1,7 +1,9 @@
 <template>
   <div id="home" class="vh-100">
-    <div class="d-flex justify-content-center align-items-center h-100">
-      <div class="d-none d-lg-block position-relative me-5">
+    <div
+      class="d-flex flex-column flex-lg-row justify-content-center align-items-center h-100"
+    >
+      <div class="d-none d-md-block position-relative me-lg-5 mb-5 mb-lg-0">
         <img
           class="rounded-circle"
           style="width: 200px; z-index: 1"
@@ -81,7 +83,7 @@
     <Transition name="slide-fade">
       <div
         v-if="!inHomePage"
-        class="d-none d-lg-block position-fixed"
+        class="side-links-wrapper position-fixed"
         style="left: 2rem; bottom: 0"
       >
         <div class="d-flex flex-column align-items-center">
@@ -192,6 +194,14 @@ onBeforeUnmount(() => {
   &:focus,
   &:active {
     text-decoration: underline;
+  }
+}
+
+.side-links-wrapper {
+  display: none;
+
+  @media screen and (min-width: 1150px) {
+    display: block;
   }
 }
 </style>

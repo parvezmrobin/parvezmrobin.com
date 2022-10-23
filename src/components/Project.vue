@@ -1,46 +1,51 @@
 <template>
   <div v-once class="row project">
-    <div class="col col-sm-6">
+    <div class="col col-lg-6">
       <h4 class="fw-normal">
         {{ title }}
       </h4>
-      <div class="description mt-2">
-        <div v-html="formatString(description)"></div>
-      </div>
+      <div class="row">
+        <div class="col-12 col-md-8 col-lg-12">
+          <div class="description mt-2">
+            <div v-html="formatString(description)"></div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 col-lg-12">
+          <div class="mt-2">
+            <code v-for="t in tech" :key="t" class="me-3">{{ t }}</code>
+          </div>
 
-      <div class="mt-2">
-        <code v-for="t in tech" :key="t" class="me-3">{{ t }}</code>
-      </div>
-
-      <div class="icons mt-2">
-        <a v-if="github" :href="github" target="_blank">
-          <i
-            class="devicon-github-plain me-2"
-            data-bs-toggle="popover"
-            data-bs-content="Visit GitHub Repository"
-          />
-        </a>
-        <a v-if="frontend" :href="frontend" target="_blank">
-          <i
-            class="devicon-webpack-plain me-2"
-            data-bs-toggle="popover"
-            data-bs-content="Visit Frontend Repository"
-          />
-        </a>
-        <a v-if="backend" :href="backend" target="_blank">
-          <i
-            class="devicon-linux-plain me-2"
-            data-bs-toggle="popover"
-            data-bs-content="Visit Backend Repository"
-          />
-        </a>
-        <a v-if="web" :href="web" target="_blank">
-          <i
-            class="devicon-firefox-plain"
-            data-bs-toggle="popover"
-            data-bs-content="Visit Live Website"
-          />
-        </a>
+          <div class="icons mt-2">
+            <a v-if="github" :href="github" target="_blank">
+              <i
+                class="devicon-github-plain me-2"
+                data-bs-toggle="popover"
+                data-bs-content="Visit GitHub Repository"
+              />
+            </a>
+            <a v-if="frontend" :href="frontend" target="_blank">
+              <i
+                class="devicon-webpack-plain me-2"
+                data-bs-toggle="popover"
+                data-bs-content="Visit Frontend Repository"
+              />
+            </a>
+            <a v-if="backend" :href="backend" target="_blank">
+              <i
+                class="devicon-linux-plain me-2"
+                data-bs-toggle="popover"
+                data-bs-content="Visit Backend Repository"
+              />
+            </a>
+            <a v-if="web" :href="web" target="_blank">
+              <i
+                class="devicon-firefox-plain"
+                data-bs-toggle="popover"
+                data-bs-content="Visit Live Website"
+              />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="col-6">
@@ -125,6 +130,8 @@ export default defineComponent({
 }
 
 $sm: 576px;
+$md: 768px;
+$lg: 992px;
 
 .project {
   align-items: center;
@@ -140,7 +147,7 @@ $sm: 576px;
     border-radius: 2px;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 50%);
 
-    @media screen and (min-width: calc($sm + 1px)) {
+    @media screen and (min-width: calc($lg + 1px)) {
       padding: 1.5rem;
       position: relative;
       z-index: 1;
@@ -150,14 +157,15 @@ $sm: 576px;
     }
   }
 
-  @media screen and (min-width: calc($sm + 1px)) {
-    .col.col-sm-6:first-child:hover .description {
+  @media screen and (min-width: calc($lg + 1px)) {
+    .col.col-lg-6:first-child:hover .description {
       left: 15px;
     }
   }
 
   code {
     color: var(--bs-body-bg);
+    display: inline-flex;
   }
 
   .icons {
@@ -176,7 +184,7 @@ $sm: 576px;
   }
 
   .col-6:last-child {
-    @media screen and (max-width: $sm) {
+    @media screen and (max-width: $lg) {
       display: none;
     }
 

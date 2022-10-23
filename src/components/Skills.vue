@@ -53,13 +53,8 @@ import { computed, ref } from "vue";
 import { formatString } from "../util";
 import CentralBox from "./CentralBox.vue";
 
-const urlParams = new URLSearchParams(window.location.search);
-const activeTabValue =
-  urlParams.get("activeSkillTab") ?? "Programming Languages";
-const activeTab = ref(activeTabValue);
-
 const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
-  "Programming Languages": {
+  Languages: {
     skills: [
       "Python",
       "JavaScript (ES6+)",
@@ -114,7 +109,7 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
         "In my research works, I used <code>Flask</code> to deploy machine learning models.",
     ],
   },
-  "Database Systems": {
+  Database: {
     skills: ["Mongo DB", "MySQL", "PostgreSQL", "Redis"],
     desc: [
       "During my job as a software engineer, <code>MongoDB</code> was the go to" +
@@ -172,6 +167,13 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
     ],
   },
 };
+
+const urlParams = new URLSearchParams(window.location.search);
+let activeTabValue = urlParams.get("activeSkillTab");
+if (!activeTabValue || !Object.keys(tabContents).includes(activeTabValue)) {
+  activeTabValue = "Languages";
+}
+const activeTab = ref(activeTabValue);
 
 const tabContent = computed(() => {
   return tabContents[activeTab.value];

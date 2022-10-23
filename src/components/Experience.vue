@@ -1,8 +1,5 @@
 <template>
-  <CentralBox
-    title="Experience"
-    maxWidth="calc((var(--bs-breakpoint-md) + var(--bs-breakpoint-lg)) / 2)"
-  >
+  <CentralBox title="Experience" maxWidth="var(--bs-breakpoint-lg)">
     <div class="d-flex flex-column flex-sm-row">
       <ul
         class="nav flex-sm-column justify-content-center justify-content-sm-start"

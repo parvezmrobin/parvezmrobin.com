@@ -24,11 +24,10 @@ const projects: IProject[] = [
       "Vue JS",
       "D3",
       "TypeScript",
-      "JavaScript",
       "Flask",
       "scikit-learn",
-      "nltk",
       "Word Embedding",
+      "nltk",
       "Python",
     ],
     github: "https://github.com/parvezmrobin/visualize-lrwe",
@@ -60,7 +59,7 @@ const projects: IProject[] = [
       "A react app backed by Express JS and Mongo DB to facilitate cricket scoring with " +
       "customizable team size, match format and both single batsman and double batsmen " +
       "support.",
-    tech: ["Node JS", "Express JS", "React", "TypeScript", "MongoDB"],
+    tech: ["Node JS", "Express JS", "React", "JavaScript", "MongoDB"],
     frontend: "https://github.com/parvezmrobin/jhijhi-frontend",
     backend: "https://github.com/parvezmrobin/jhijhi-backend",
     web: "https://jhijhi.netlify.app/",

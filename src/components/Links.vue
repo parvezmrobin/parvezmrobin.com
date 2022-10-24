@@ -1,12 +1,21 @@
 <template>
-  <div v-for="link in links" :key="link.icon" class="link-icon">
-    <a :href="link.link" :title="link.title" target="_blank">
+  <div v-for="link in links" ref="rootEls" :key="link.icon" class="link-icon">
+    <a
+      :href="link.link"
+      target="_blank"
+      data-bs-toggle="popover"
+      :data-bs-content="link.title"
+    >
       <i v-if="link.icon.startsWith('devicon')" :class="link.icon"></i>
       <img v-else :src="link.icon" :alt="link.title" />
     </a>
   </div>
 </template>
+
 <script setup lang="ts">
+import { Popover } from "bootstrap";
+import { onMounted, ref } from "vue";
+
 const links = [
   {
     icon: "devicon-github-original",
@@ -29,7 +38,18 @@ const links = [
     link: "https://medium.com/@parvezmrobin",
   },
 ];
+
+const rootEls = ref<HTMLDivElement[]>([]);
+onMounted(() => {
+  for (const el of rootEls.value) {
+    new Popover(
+      el.querySelector('[data-bs-toggle="popover"]') as HTMLAnchorElement,
+      { trigger: "hover focus" }
+    );
+  }
+});
 </script>
+
 <style lang="scss" scoped>
 .link-icon {
   padding: 0 1rem 1rem 0;

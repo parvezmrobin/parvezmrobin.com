@@ -125,10 +125,6 @@ export default defineComponent({
 });
 </script>
 <style lang="scss">
-.popover {
-  --bs-popover-bg: var(--bs-purple-700);
-}
-
 $sm: 576px;
 $md: 768px;
 $lg: 992px;

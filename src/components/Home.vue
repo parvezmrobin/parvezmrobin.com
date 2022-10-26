@@ -3,7 +3,7 @@
     <div
       class="d-flex flex-column flex-lg-row justify-content-center align-items-center h-100"
     >
-      <div class="d-none d-md-block position-relative me-lg-5 mb-5 mb-lg-0">
+      <div class="d-none d-sm-block position-relative me-lg-5 mb-5 mb-lg-0">
         <img
           class="rounded-circle"
           style="width: 200px; z-index: 1"

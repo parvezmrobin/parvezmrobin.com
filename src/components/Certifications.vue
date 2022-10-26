@@ -57,6 +57,11 @@ const certificates: ICertificate[] = [
     link: "https://coursera.org/share/6d977fe14c15f5178dbee665b5f60482",
   },
   {
+    from: "Coursera",
+    on: "Cisco: SD-WAN Cloud Hub with Google Cloud",
+    link: "https://coursera.org/share/61d25d9c72d6ba1407c9976d1045c955",
+  },
+  {
     from: "Hacker Rank",
     on: "Rest API (Intermediate)",
     link: "https://www.hackerrank.com/certificates/9cc8998cd213",

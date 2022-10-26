@@ -5,7 +5,7 @@
     :topMarginRatio="0.2"
     maxWidth="var(--bs-breakpoint-md)"
   >
-    <h4 class="fw-light">
+    <h4 class="fw-light mb-5">
       Why don’t you send an
       <a
         href="mailto:parvezmrobin@gmail.com"

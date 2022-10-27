@@ -52,12 +52,12 @@ const certificates: ICertificate[] = [
     link: "https://coursera.org/share/55e2d559c23b56de71c4aa614a75646a",
   },
   {
-    from: "Coursera",
+    from: "Google | Coursera",
     on: "Google Cloud Fundamentals: Core Infrastructure",
     link: "https://coursera.org/share/6d977fe14c15f5178dbee665b5f60482",
   },
   {
-    from: "Coursera",
+    from: "Cisco | Coursera",
     on: "Cisco: SD-WAN Cloud Hub with Google Cloud",
     link: "https://coursera.org/share/61d25d9c72d6ba1407c9976d1045c955",
   },

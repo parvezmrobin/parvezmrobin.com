@@ -7,12 +7,12 @@
         class="nav-item flex-grow-1"
       >
         <a
-          class="nav-link underline fw-bold"
+          class="nav-link underline fw-bold text-center"
           :class="tab === activeTab ? 'active' : 'text-white'"
           role="button"
           @mouseover="activeTab = tab"
         >
-          {{ tab }}
+          <span>{{ tab }}</span>
         </a>
       </li>
     </ul>
@@ -191,6 +191,16 @@ const tabContent = computed(() => {
 
   &.active {
     border-color: var(--bs-success);
+  }
+
+  > span {
+    position: relative;
+    top: 0;
+    transition: top 500ms;
+  }
+
+  &:hover > span {
+    top: -5px;
   }
 }
 

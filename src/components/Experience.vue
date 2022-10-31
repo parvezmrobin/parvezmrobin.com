@@ -15,7 +15,7 @@
             :class="experience === selectedExperience ? 'active' : 'text-white'"
             @mouseover="selectedExperience = experience"
           >
-            {{ experience }}
+            <span>{{ experience }}</span>
           </a>
         </li>
       </ul>
@@ -125,6 +125,16 @@ $sm: 576px;
       border-left: none;
       border-bottom: 3px solid var(--bs-teal);
     }
+  }
+
+  > span {
+    position: relative;
+    left: 0;
+    transition: left 500ms;
+  }
+
+  &:hover > span {
+    left: 5px;
   }
 }
 </style>

@@ -55,11 +55,9 @@
           web application and deep learning. I worked as a software engineer for
           more than two years with hands-on experience in
           <code>node.js</code>, <code>Vue JS</code>, <code>TypeScript</code> and
-          <code>Mongo DB</code>. Currently, as a part of pursuing my Master<span
-            class="font-monospace"
-            >’</span
-          >s in Computer Science degree at Dalhousie University, I am working as
-          a <em>Research Intern</em> at
+          <code>Mongo DB</code>. Currently, as a part of my Master’s in Computer
+          Science at Dalhousie University, I am working as a
+          <em>Research Intern</em> at
           <a href="https://metabob.com/">Metabob</a>. My research domain
           includes <em>Software Engineering</em>, <em>Deep Learning</em> and
           <em>Natural Language Processing</em>.
@@ -99,7 +97,7 @@
     <Transition name="slide-fade">
       <div
         v-if="!inHomePage"
-        class="right d-none d-lg-block position-fixed"
+        class="right position-fixed"
         style="right: 1rem; bottom: 0.5rem"
       >
         <div class="d-flex align-items-center">
@@ -167,6 +165,13 @@ onBeforeUnmount(() => {
   &:hover {
     left: 5px !important;
     top: -5px !important;
+  }
+}
+
+.right {
+  display: none;
+  @media screen and (min-width: 1850px) {
+    display: block;
   }
 }
 

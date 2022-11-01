@@ -112,8 +112,8 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
   Database: {
     skills: ["Mongo DB", "MySQL", "PostgreSQL", "Redis"],
     desc: [
-      "During my job as a software engineer, <code>MongoDB</code> was the go to" +
-        "database system. I also have used <code>redis</code> for caching in several" +
+      "During my job as a software engineer, <code>MongoDB</code> was the go to " +
+        "database system. I also have used <code>redis</code> for caching in several " +
         "projects. Of course when performance is critical, I used <code>MySQL</code> " +
         "or <code>PostgreSQL</code> instead.",
     ],

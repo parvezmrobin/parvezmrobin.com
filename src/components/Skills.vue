@@ -114,8 +114,8 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
     desc: [
       "During my job as a software engineer, <code>MongoDB</code> was the go to " +
         "database system. I also have used <code>redis</code> for caching in several " +
-        "projects. Of course when performance is critical, I used <code>MySQL</code> " +
-        "or <code>PostgreSQL</code> instead.",
+        "projects. Of course when throughput is critical than availability, I used " +
+        "RDBMSs instead.",
     ],
   },
   "ML/DL/Data Science": {
@@ -228,6 +228,7 @@ $md: 768px;
 .skill.box {
   display: flex;
   align-items: center;
+
   &.left {
     > div {
       background: var(--bs-indigo-700);

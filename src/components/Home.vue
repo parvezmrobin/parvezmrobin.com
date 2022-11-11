@@ -64,15 +64,7 @@
         </div>
 
         <div class="d-flex pt-3">
-          <div
-            class="border"
-            style="
-              width: 7.5rem;
-              height: 0;
-              margin-top: 1.25rem;
-              margin-right: 1rem;
-            "
-          />
+          <div class="border horizontal" />
           <Links />
         </div>
       </div>
@@ -97,14 +89,14 @@
     <Transition name="slide-fade">
       <div
         v-if="!inHomePage"
-        class="right position-fixed"
+        class="floating-email position-fixed"
         style="right: 1rem; bottom: 0.5rem"
       >
         <div class="d-flex align-items-center">
           <div class="me-2">
             <a
               href="mailto:parvezmrobin@gmail.com"
-              class="font-monospace text-white floating-email"
+              class="font-monospace text-white"
             >
               parvezmrobin@gmail.com
             </a>
@@ -168,10 +160,28 @@ onBeforeUnmount(() => {
   }
 }
 
-.right {
+.border.horizontal {
+  flex-grow: 1;
+  max-width: 7.5rem;
+  height: 0;
+  margin-top: 1.25rem;
+  margin-right: 1rem;
+}
+
+.floating-email {
   display: none;
   @media screen and (min-width: 1850px) {
     display: block;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -187,18 +197,8 @@ onBeforeUnmount(() => {
 .slide-fade-leave-to {
   transform: translateY(350px);
 
-  &.right {
+  &.floating-email {
     transform: translateX(350px);
-  }
-}
-
-.floating-email {
-  text-decoration: none;
-
-  &:hover,
-  &:focus,
-  &:active {
-    text-decoration: underline;
   }
 }
 

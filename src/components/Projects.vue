@@ -31,7 +31,7 @@ const projects: IProject[] = [
       "Python",
     ],
     github: "https://github.com/parvezmrobin/visualize-lrwe",
-    web: "http://129.173.67.225:8080/bug-localization",
+    web: "https://lrwe.parvezmrobin.dev/",
     img: "/visualizing-bug-localization.png",
   },
   {
@@ -62,7 +62,7 @@ const projects: IProject[] = [
     tech: ["Node JS", "Express JS", "React", "JavaScript", "MongoDB"],
     frontend: "https://github.com/parvezmrobin/jhijhi-frontend",
     backend: "https://github.com/parvezmrobin/jhijhi-backend",
-    web: "https://jhijhi.netlify.app/",
+    web: "https://jhijhi.parvezmrobin.dev/",
     img: "/jhijhi.png",
   },
 ];

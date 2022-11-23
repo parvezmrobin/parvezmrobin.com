@@ -53,20 +53,25 @@ const experiences: Record<string, IExperience> = {
     position: "Software Engineer",
     time: "March 2019 — July 2021",
     works: [
-      "Architected and designed [daency.com](https://daency.com/), an online platform to learn " +
-        "dancing interactively. The tech stack was TypeScript, Express JS, Vue JS, Mongo DB, and " +
-        "Docker. Also integrated and maintained [WebRTC](https://agora.io), " +
+      "Architected and designed [Daency](https://daency.com/), an online platform to learn " +
+        "dancing interactively. The tech stack was <code>TypeScript</code>, " +
+        "<code>Express JS</code>, <code>Vue JS</code>, <code>Mongo DB</code>, and " +
+        "<code>Docker</code>. Also integrated and maintained [WebRTC](https://agora.io), " +
         "[AWS](https://aws.amazon.com), [GCP](https://cloud.google.com/), [Push Notification]" +
         "(https://www.pubnub.com/), [Stripe](https://stripe.com/), " +
         "[Task Queue](https://docs.bullmq.io/) (redis) and various other services.",
+      "In [Bikribatta](https://www.bikribatta.com/) inventory solution, *architected* accounts, " +
+        "reports, and employee management components. " +
+        "Written a stock management microservice using <code>Golang</code> that speeds up corresponding " +
+        "API access time by more than 1000%. Further, built a desktop version of the " +
+        "Point of Sales component of the same solution " +
+        "using [Electron](https://www.electronjs.org/), which also " +
+        "works in offline mode with eventual consistency scheme.",
       "Migrated the subscription backend of [Wonster Words](https://apps.apple.com/us/app/wonster-words-learning-games/id881119321) " +
         "iOS app store game from node.js to ASP.Net using Microsoft Azure " +
         "[FaaS](https://azure.microsoft.com/en-us/services/functions/), " +
         "[Cosmos DB](https://azure.microsoft.com/en-us/services/cosmos-db/), " +
         "and [Queue Storage](https://azure.microsoft.com/en-us/services/storage/queues/).",
-      "Built a desktop version of the [Bikribatta](https://www.bikribatta.com/) " +
-        "web app using [Electron](https://www.electronjs.org/). This app also " +
-        "works in offline mode with eventual consistency scheme.",
       "Contributed to several in-house [React Native](https://reactnative.dev/) " +
         "based mobile applications.",
       "Hosted two in-house workshops on ‘Modern Web Development with Vue JS’ " +
@@ -91,8 +96,9 @@ const experiences: Record<string, IExperience> = {
         "cutting-edge data science technologies in labs, holding office hours to resolve " +
         "difficulties for the students, and assisting the instructor during classes",
       "<span class='h6'>Intro to Software Project</span>: Taking classes on Docker and containerization, " +
-        "directly mentoring, and evaluating four groups in the agile process",
-      "<span class='h6'>Software Development</span>: Taking labs and helping the students in resolving issues",
+        "directly mentoring, and evaluating four groups in the agile process and maintaining their GCP instances",
+      "<span class='h6'>Software Development</span>: Taking labs and helping the students in resolving issues " +
+        "regarding version controlling, test driven development, code smells, refactoring, and more",
     ],
   },
 };

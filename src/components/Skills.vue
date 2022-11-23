@@ -112,9 +112,9 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
   Database: {
     skills: ["Mongo DB", "MySQL", "PostgreSQL", "Redis"],
     desc: [
-      "During my job as a software engineer, <code>MongoDB</code> was the go to " +
+      "During my job as a software engineer, <code>MongoDB</code> was the go-to " +
         "database system. I also have used <code>redis</code> for caching in several " +
-        "projects. Of course when throughput is critical than availability, I used " +
+        "projects. Of course, when throughput was critical than availability, I used " +
         "RDBMSs instead.",
     ],
   },
@@ -137,7 +137,7 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
         "[Mitacs](https://www.mitacs.ca/en/programs/accelerate) scholarship which aims to " +
         "explain software bugs in natural language. The research domain includes software " +
         "engineering, deep learning and natural language processing. I further sharpen my " +
-        "knowledge while teaching in the Process of Data Science course.",
+        "knowledge while teaching in the _Process of Data_ Science course.",
 
       "One of the early recognition of my Data Science skill is placing among the top 15 teams " +
         "in Datathon Bangladesh, 2019 — the biggest data-centric competition in the country. " +
@@ -150,6 +150,7 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
       "Docker Compose",
       "Google Cloud Platform",
       "Amazon Web Service",
+      "Microsoft Azure",
       "git",
       "nano",
       "Linux",
@@ -157,7 +158,13 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
     desc: [
       "As a software engineer, in several cases I orchestrated my own cloud services as well. " +
         "I designed the development environment [Daency](https://daency.com/) based on Docker and " +
-        "Docker Compose. I also taught <code>GCP</code> in the Intro to Software Developer course. " +
+        "Docker Compose. I have rewritten the subscription backend of " +
+        "[Wonster Words](https://apps.apple.com/us/app/wonster-words-learning-games/id881119321) " +
+        "iOS game using " +
+        "Microsoft Azure [FaaS](https://azure.microsoft.com/en-us/services/functions/), " +
+        "[Cosmos DB](https://azure.microsoft.com/en-us/services/cosmos-db/), and " +
+        "[Queue Storage](https://azure.microsoft.com/en-us/services/storage/queues/). " +
+        "I also taught <code>GCP</code> in the <em>Intro to Software Developement</em> course. " +
         `I use <code>git</code> for ${
           new Date().getFullYear() - 2015
         } years now.`,

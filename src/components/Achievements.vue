@@ -52,7 +52,7 @@ const achievements: IAchievement[] = [
   },
   {
     from: "May 2015",
-    text: "Runner-up in the programming contest in CSE Fest 2017, Khulna University, Bangladesh",
+    text: "Runner-up in the programming contest in CSE Fest 2015, Khulna University, Bangladesh",
   },
   {
     from: "Jan 2015",

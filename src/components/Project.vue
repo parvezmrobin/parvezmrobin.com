@@ -25,17 +25,27 @@
             </a>
             <a v-if="frontend" :href="frontend" target="_blank">
               <i
-                class="devicon-webpack-plain me-2"
+                class="devicon-github-plain me-2"
                 data-bs-toggle="popover"
                 data-bs-content="Visit Frontend Repository"
               />
             </a>
-            <a v-if="backend" :href="backend" target="_blank">
+            <a
+              v-if="backend"
+              :href="backend"
+              target="_blank"
+              style="position: relative"
+            >
               <i
-                class="devicon-linux-plain me-2"
+                class="devicon-github-plain me-2"
                 data-bs-toggle="popover"
                 data-bs-content="Visit Backend Repository"
               />
+              <sub
+                class="text-pink h5 mb-0"
+                style="position: absolute; right: 3px; bottom: -7px"
+                >B</sub
+              >
             </a>
             <a v-if="web" :href="web" target="_blank">
               <i

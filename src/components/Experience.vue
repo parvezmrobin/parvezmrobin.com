@@ -78,6 +78,20 @@ const experiences: Record<string, IExperience> = {
         "and ‘Sustainable Architecture with TypeScript’.",
     ],
   },
+  CoachSnap: {
+    position: "Full Stack Developer",
+    time: "December 2019 — February 2020",
+    works: [
+      "[CoachSnap](https://www.coachsnap.com/) is a digital platform to connect " +
+        "coaches and their students together online. There my core responsibility " +
+        "was to implement the payment service using <code>Stripe</code>. I futher " +
+        "worked on several other exciting features including appointment management. " +
+        "The tech-stack involves cutting edge technologies like " +
+        "<code>GraphQL</code> (Apollo & Prisma), <code>React</code> (Ant Design), " +
+        "query caching, CSS preprocessor (<code>less</code>), <code>Docker</code>, " +
+        "and yarn workspace.",
+    ],
+  },
   Metabob: {
     position: "Research Intern",
     time: "May 2022 — April 2023",

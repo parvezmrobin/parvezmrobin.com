@@ -41,11 +41,15 @@
                 data-bs-toggle="popover"
                 data-bs-content="Visit Backend Repository"
               />
-              <sub
-                class="text-pink h5 mb-0"
-                style="position: absolute; right: 3px; bottom: -7px"
-                >B</sub
-              >
+              <i
+                class="devicon-scala-plain fs-4 text-secondary"
+                style="
+                  position: absolute;
+                  right: 2px;
+                  bottom: -5px;
+                  pointer-events: none;
+                "
+              />
             </a>
             <a v-if="web" :href="web" target="_blank">
               <i
@@ -147,6 +151,7 @@ $lg: 992px;
     font-weight: normal;
     color: var(--bs-pink);
   }
+
   .description {
     background-color: var(--bs-indigo-700);
     padding: 1rem;
@@ -203,6 +208,7 @@ $lg: 992px;
         z-index: 2;
         margin-left: -50%;
       }
+
       img {
         width: 100%;
         border-radius: 5px;

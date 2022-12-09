@@ -39,7 +39,7 @@ const projects: IPublication[] = [
       "Explaining Software Bugs Leveraging Code Structures in Neural Machine Translation",
     description:
       "_P. Mahbub_, O Shuvo and M. M. Rahman, 45th International " +
-      "Conference on Software Engineering (ICSE), 2023",
+      "Conference on Software Engineering (ICSE), 2023 [Accepted]",
     keywords: [
       "Software Bug",
       "Bug Explanation",

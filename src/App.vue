@@ -9,6 +9,7 @@
         <Skills />
         <Experience />
         <Education />
+        <Publications />
         <Projects />
         <Certifications />
         <Achievements />
@@ -29,6 +30,7 @@ import Experience from "./components/Experience.vue";
 import Home from "./components/Home.vue";
 import Navbar from "./components/Navbar.vue";
 import Projects from "./components/Projects.vue";
+import Publications from "./components/Publications.vue";
 import Skills from "./components/Skills.vue";
 </script>
 

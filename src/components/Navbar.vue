@@ -54,6 +54,7 @@ const navs = [
   "Skills",
   "Experience",
   "Education",
+  "Publications",
   "Projects",
   "Certifications",
   "Achievements",

@@ -44,7 +44,13 @@
         "registeredComponentsOnly": true
       }
     ],
-    "vue/custom-event-name-casing": ["error", "camelCase"],
+    "vue/custom-event-name-casing": [
+      "error",
+      "camelCase",
+      {
+        "ignores": ["/^show:/"]
+      }
+    ],
     "vue/match-component-file-name": [
       "error",
       {

@@ -5,17 +5,24 @@
         {{ title }}
       </h4>
       <div class="row">
-        <div class="col-12 col-md-8 col-lg-12">
+        <div class="col-12">
           <div class="description mt-2">
             <div v-html="formatString(description)"></div>
           </div>
         </div>
-        <div class="col-12 col-md-4 col-lg-12">
+        <div class="col-12 d-flex align-items-center">
           <div class="mt-2">
-            <code v-for="(kw, i) in keywords" :key="kw" class="me-3"
-              >{{ kw }}{{ i < keywords.length - 1 ? "," : "" }}</code
-            >
+            <code v-for="(kw, i) in keywords" :key="kw" class="me-3">
+              {{ kw }}{{ i < keywords.length - 1 ? "," : "" }}
+            </code>
           </div>
+          <button
+            type="button"
+            class="btn btn-outline-info"
+            @click="$emit('show:abstract', $event)"
+          >
+            Abstract
+          </button>
         </div>
       </div>
     </div>
@@ -31,6 +38,7 @@ export type IPublication = {
   title: string;
   description: string;
   keywords: string[];
+  abstract: string;
 };
 
 export default defineComponent({
@@ -49,6 +57,7 @@ export default defineComponent({
       type: Array as PropType<string[]>,
     },
   },
+  emits: ["show:abstract"],
   mounted(): void {
     if (this.$el === null) {
       return;

@@ -25,6 +25,12 @@
           <h5 class="modal-title text-pink">
             {{ selectedPublication?.title }}
           </h5>
+          <button
+            type="button"
+            class="btn-close btn-close-white d-inline-block d-md-none"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          />
         </div>
         <div class="modal-body" style="text-align: justify">
           <p>
@@ -84,8 +90,7 @@ const publications: IPublication[] = [
     description:
       "*Parvez Mahbub*, Naz Zarreen Oishie and S. M. Rafizul Haque, In Proceeding " +
       "of the 22<sup>nd</sup> International Conference on Computer and Information " +
-      "Technology (ICCIT), 2019, pp. 1-6, " +
-      "doi:&nbsp;[10.1109/ICCIT48885.2019.9038412](https://doi.org/10.1109/ICCIT48885.2019.9038412).",
+      "Technology (ICCIT), 2019, pp. 1-6",
     keywords: [
       "Source Code Authorship Identification",
       "Deep Neural Network",

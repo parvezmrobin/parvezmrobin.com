@@ -2,18 +2,15 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-12 col-xl-2 col-xxl-1">
-        <Navbar />
+        <Navbar :navs="Object.keys(components)" />
       </div>
       <div class="col-12 col-xl-10 col-xxl-11">
-        <Home />
-        <Skills />
-        <Experience />
-        <Education />
-        <Publications />
-        <Projects />
-        <Certifications />
-        <Achievements />
-        <Activities />
+        <!--suppress JSValidateTypes -->
+        <Component
+          :is="component_"
+          v-for="(component_, componentName) in components"
+          :key="componentName"
+        />
         <Contact />
       </div>
     </div>
@@ -32,6 +29,16 @@ import Navbar from "./components/Navbar.vue";
 import Projects from "./components/Projects.vue";
 import Publications from "./components/Publications.vue";
 import Skills from "./components/Skills.vue";
-</script>
 
-<style scoped></style>
+const components = {
+  Home,
+  Skills,
+  Experience,
+  Education,
+  Publications,
+  Projects,
+  Certifications,
+  Achievements,
+  Activities,
+};
+</script>

@@ -28,7 +28,7 @@
           <ul
             class="navbar-nav justify-content-end flex-grow-1 pe-3 ps-xl-3 flex-xl-column"
           >
-            <li v-for="nav in navs" :key="nav" class="nav-item">
+            <li v-for="nav in props.navs" :key="nav" class="nav-item">
               <a
                 class="nav-link underline"
                 :href="`#${nav.toLowerCase()}`"
@@ -49,17 +49,7 @@ import { Offcanvas } from "bootstrap";
 import { computed, onMounted } from "vue";
 import { inHomePage } from "../util";
 
-const navs = [
-  "Home",
-  "Skills",
-  "Experience",
-  "Education",
-  "Publications",
-  "Projects",
-  "Certifications",
-  "Achievements",
-  "Activities",
-];
+const props = defineProps<{ navs: string[] }>();
 let offCanvasInstance: Offcanvas;
 onMounted(() => {
   offCanvasInstance = new Offcanvas("#offcanvasNavbar");

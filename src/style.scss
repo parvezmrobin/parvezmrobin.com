@@ -151,7 +151,7 @@ kbd, .text-pink, .h6 {
   --bs-popover-bg: var(--bs-purple-700);
 }
 
-@each $color, $value in (indigo: $indigo, purple: $purple) {
+@each $color, $value in ('indigo': $indigo, 'purple': $purple) {
   .btn-outline-#{$color} {
     @include button-outline-variant($value);
   }

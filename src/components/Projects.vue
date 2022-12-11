@@ -14,6 +14,25 @@ import Project, { IProject } from "./Project.vue";
 
 const projects: IProject[] = [
   {
+    title: "Jhijhi",
+    description:
+      "A react app backed by Express JS and Mongo DB to facilitate cricket scoring with " +
+      "heavy customization support. It is hosted with Netlify (frontend), Amazon EC2 (backend), " +
+      "MongoDB Atlas (database), and Circle CI (deployment).",
+    tech: [
+      "Node JS",
+      "Express JS",
+      "React",
+      "JavaScript",
+      "MongoDB",
+      "Circle CI",
+    ],
+    frontend: "https://github.com/parvezmrobin/jhijhi-frontend",
+    backend: "https://github.com/parvezmrobin/jhijhi-backend",
+    web: "https://jhijhi.parvezmrobin.dev/",
+    img: "/jhijhi.png",
+  },
+  {
     title: "Visually Explaining Bug Localization",
     description:
       "Developed a visualization system for a state-of-the-art bug localization tool " +
@@ -27,7 +46,7 @@ const projects: IProject[] = [
       "Flask",
       "scikit-learn",
       "Word Embedding",
-      "nltk",
+      "NLTK",
       "Python",
     ],
     github: "https://github.com/parvezmrobin/visualize-lrwe",
@@ -38,8 +57,8 @@ const projects: IProject[] = [
     title: "Bug Report Deduplication Using Siamese Cross-Encoder Network",
     description:
       "Replicated a state-of-the-art duplicate bug report detection technique based on a " +
-      "siamese architecture. " +
-      "We showed that even a simpler version of the original work can achieve comparable performance.",
+      "siamese architecture. We showed that even a simpler version of the original work can " +
+      "achieve comparable performance.",
     tech: ["MongoDB", "Docker", "TensorFlow", "scikit-learn"],
     github: "https://github.com/parvezmrobin/ml-br-deduplication",
     img: "/siamese-cross-encoder.png",
@@ -52,18 +71,6 @@ const projects: IProject[] = [
     tech: ["PHP", "Bootstrap", "MySQL"],
     web: "https://new.cseku.ac.bd/",
     img: "/ku-website.png",
-  },
-  {
-    title: "Jhijhi",
-    description:
-      "A react app backed by Express JS and Mongo DB to facilitate cricket scoring with " +
-      "customizable team size, match format and both single batsman and double batsmen " +
-      "support.",
-    tech: ["Node JS", "Express JS", "React", "JavaScript", "MongoDB"],
-    frontend: "https://github.com/parvezmrobin/jhijhi-frontend",
-    backend: "https://github.com/parvezmrobin/jhijhi-backend",
-    web: "https://jhijhi.parvezmrobin.dev/",
-    img: "/jhijhi.png",
   },
 ];
 </script>

@@ -42,8 +42,9 @@
                 data-bs-content="Visit Backend Repository"
               />
               <i
-                class="devicon-scala-plain fs-4 text-secondary"
+                class="devicon-scala-plain fs-4"
                 style="
+                  color: var(--bs-green-600);
                   position: absolute;
                   right: 2px;
                   bottom: -5px;

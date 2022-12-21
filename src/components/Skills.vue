@@ -105,7 +105,7 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
         "in developing several mobile applications using <code>React Native</code>.",
       "Alongside these most prominent technologies, I used <code>Web Socket</code> and " +
         "<code>WebRTC</code> to make a video calling service. I also developed a _novel_ " +
-        "[visualization tool](http://129.173.67.225:8080/bug-localization) using <code>D3</code>. " +
+        "[visualization tool](https://lrwe.parvezmrobin.dev) using <code>D3</code>. " +
         "In my research works, I used <code>Flask</code> to deploy machine learning models.",
     ],
   },

@@ -16,13 +16,25 @@
               {{ kw }}{{ i < keywords.length - 1 ? "," : "" }}
             </code>
           </div>
-          <button
-            type="button"
-            class="btn btn-outline-info"
-            @click="$emit('show:abstract', $event)"
-          >
-            Abstract
-          </button>
+          <div class="btn-group" role="group">
+            <a
+              v-if="prePrint"
+              class="btn btn-primary"
+              :href="prePrint"
+              target="_blank"
+              style="white-space: nowrap; --bs-btn-border-radius: 3px"
+            >
+              Pre-Print
+            </a>
+            <button
+              type="button"
+              class="btn btn-info"
+              style="--bs-btn-border-radius: 3px"
+              @click="$emit('show:abstract', $event)"
+            >
+              Abstract
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -38,6 +50,7 @@ export type IPublication = {
   title: string;
   description: string;
   keywords: string[];
+  prePrint?: string;
   abstract: string;
 };
 
@@ -50,6 +63,10 @@ export default defineComponent({
     },
     description: {
       required: true,
+      type: String,
+    },
+    prePrint: {
+      default: undefined,
       type: String,
     },
     keywords: {
@@ -102,10 +119,6 @@ $lg: 992px;
   code {
     color: var(--bs-body-bg);
     display: inline-flex;
-  }
-
-  a {
-    color: var(--bs-pink);
   }
 }
 </style>

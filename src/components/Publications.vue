@@ -81,6 +81,7 @@ const publications: IPublication[] = [
       "Deep Learning",
       "Transformers",
     ],
+    prePrint: "https://arxiv.org/abs/2212.04584",
     abstract:
       "Software bugs claim ≈50% of development time and cost the global economy billions of dollars. Once a bug is reported, the assigned developer attempts to identify and understand the source code responsible for the bug and then corrects the code. Over the last five decades, there has been significant research on automatically finding or correcting software bugs. However, there has been little research on automatically explaining the bugs to the developers, which is essential but a highly challenging task. In this paper, we propose Bugsplainer, a transformer-based generative model, that generates natural language explanations for software bugs by learning from a large corpus of bug-fix commits. Bugsplainer can leverage structural information and buggy patterns from the source code to generate an explanation for a bug. Our evaluation using three performance metrics shows that Bugsplainer can generate understandable and good explanations according to Google's standard, and can outperform multiple baselines from the literature. We also conduct a developer study involving 20 participants where the explanations from Bugsplainer were found to be more accurate, more precise, more concise and more useful than the baselines.",
   },
@@ -98,6 +99,7 @@ const publications: IPublication[] = [
       "Support Vector Machine",
       "Stacking Ensemble",
     ],
+    prePrint: "https://arxiv.org/abs/2212.05610",
     abstract:
       "Source code segment authorship identification is the task of identifying the author of a source code segment through supervised learning. It has vast importance in plagiarism detection, digital forensics, and several other law enforcement issues. However, when a source code segment is written by multiple authors, typical author identification methods no longer work. Here, an author identification technique, capable of predicting the authorship of source code segments, even in case of multiple authors, has been proposed which uses stacking ensemble classifier. This proposed technique is built upon several deep neural networks, random forests and support vector machine classifiers. It has been shown that for identifying the authorgroup, a single classification technique is no longer sufficient and using a deep neural network based stacking ensemble method can enhance the accuracy significantly. Performance of the proposed technique has been compared with some existing methods which only deal with the source code segments written exactly by a single author. Despite the harder task of authorship identification for source code segments written by multiple authors, our proposed technique has achieved promising results evident by the identification accuracy, compared to the related works which only deal with code segments written by a single author.",
   },

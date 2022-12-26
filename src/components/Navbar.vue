@@ -16,7 +16,7 @@
         tabindex="-1"
         aria-labelledby="offcanvasNavbarLabel"
       >
-        <div class="offcanvas-header bg-dark">
+        <div class="offcanvas-header justify-content-end bg-dark">
           <button
             type="button"
             class="btn-close btn-close-white"
@@ -30,7 +30,7 @@
           >
             <li v-for="nav in props.navs" :key="nav" class="nav-item">
               <a
-                class="nav-link underline"
+                class="nav-link underline text-end"
                 :href="`#${nav.toLowerCase()}`"
                 @click="hideOffcanvas"
               >

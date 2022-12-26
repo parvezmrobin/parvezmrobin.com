@@ -1,5 +1,5 @@
 <template>
-  <div v-once class="row project">
+  <div v-once class="row publication">
     <div class="col">
       <h4 class="fw-normal">
         {{ title }}
@@ -10,30 +10,34 @@
             <div v-html="formatString(description)"></div>
           </div>
         </div>
-        <div class="col-12 d-flex align-items-center">
-          <div class="mt-2">
-            <code v-for="(kw, i) in keywords" :key="kw" class="me-3">
-              {{ kw }}{{ i < keywords.length - 1 ? "," : "" }}
-            </code>
-          </div>
-          <div class="btn-group" role="group">
-            <a
-              v-if="prePrint"
-              class="btn btn-primary"
-              :href="prePrint"
-              target="_blank"
-              style="white-space: nowrap; --bs-btn-border-radius: 3px"
-            >
-              Pre-Print
-            </a>
-            <button
-              type="button"
-              class="btn btn-info"
-              style="--bs-btn-border-radius: 3px"
-              @click="$emit('show:abstract', $event)"
-            >
-              Abstract
-            </button>
+        <div class="col-12">
+          <div class="row align-items-center justify-content-between">
+            <div class="mt-2 keywords">
+              <code v-for="(kw, i) in keywords" :key="kw" class="me-3">
+                {{ kw }}{{ i < keywords.length - 1 ? "," : "" }}
+              </code>
+            </div>
+            <div class="col-auto">
+              <div class="btn-group" role="group">
+                <a
+                  v-if="prePrint"
+                  class="btn btn-primary"
+                  :href="prePrint"
+                  target="_blank"
+                  style="white-space: nowrap; --bs-btn-border-radius: 3px"
+                >
+                  Pre-Print
+                </a>
+                <button
+                  type="button"
+                  class="btn btn-info"
+                  style="--bs-btn-border-radius: 3px"
+                  @click="$emit('show:abstract', $event)"
+                >
+                  Abstract
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -96,7 +100,7 @@ $sm: 576px;
 $md: 768px;
 $lg: 992px;
 
-.project {
+.publication {
   align-items: center;
   margin-bottom: 2rem;
 
@@ -119,6 +123,12 @@ $lg: 992px;
   code {
     color: var(--bs-body-bg);
     display: inline-flex;
+  }
+
+  .keywords {
+    @media screen and (min-width: $md) {
+      flex: 1 1 0;
+    }
   }
 }
 </style>

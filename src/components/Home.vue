@@ -62,6 +62,19 @@
           includes <em>Software Engineering</em>, <em>Deep Learning</em> and
           <em>Natural Language Processing</em>.
         </div>
+        <div
+          class="mt-4"
+          style="word-spacing: -0.05rem; color: var(--bs-yellow-600)"
+        >
+          Discover what I can bring to the table —
+          <a
+            class="fst-italic"
+            style="color: currentColor"
+            href="https://drive.google.com/file/d/1erRyU27NSWeYNGp0TqN3eRIPG7iIacFJ/view?usp=sharing"
+            target="_blank"
+            >Take a look at my Résumé</a
+          >.
+        </div>
 
         <div class="d-flex pt-3">
           <div class="border horizontal" />

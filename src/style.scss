@@ -148,7 +148,7 @@ kbd, .text-pink, .h6 {
 }
 
 .popover {
-  --bs-popover-bg: $purple-700;
+  --bs-popover-bg: #{$purple-700};
 }
 
 @each $color, $value in ('indigo': $indigo, 'purple': $purple) {

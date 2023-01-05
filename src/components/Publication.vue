@@ -19,15 +19,22 @@
             </div>
             <div class="col-auto">
               <div class="btn-group" role="group">
-                <a
-                  v-if="prePrint"
-                  class="btn btn-primary"
-                  :href="prePrint"
-                  target="_blank"
-                  style="white-space: nowrap; --bs-btn-border-radius: 3px"
-                >
-                  Pre-Print
-                </a>
+                <template v-for="attr in ['prePrint', 'demo', 'prototype']">
+                  <a
+                    v-if="$attrs[attr]"
+                    :key="attr"
+                    class="btn btn-primary"
+                    :href="$attrs[attr]"
+                    target="_blank"
+                    style="
+                      white-space: nowrap;
+                      text-transform: capitalize;
+                      --bs-btn-border-radius: 3px;
+                    "
+                  >
+                    {{ kebabCase(attr) }}
+                  </a>
+                </template>
                 <button
                   type="button"
                   class="btn btn-info"
@@ -49,12 +56,15 @@
 import { Popover } from "bootstrap";
 import { defineComponent, PropType } from "vue";
 import { formatString } from "../util";
+import kebabCase from "lodash.kebabcase";
 
 export type IPublication = {
   title: string;
   description: string;
   keywords: string[];
   prePrint?: string;
+  demo?: string;
+  prototype?: string;
   abstract: string;
 };
 
@@ -67,10 +77,6 @@ export default defineComponent({
     },
     description: {
       required: true,
-      type: String,
-    },
-    prePrint: {
-      default: undefined,
       type: String,
     },
     keywords: {
@@ -92,6 +98,7 @@ export default defineComponent({
   },
   methods: {
     formatString,
+    kebabCase,
   },
 });
 </script>

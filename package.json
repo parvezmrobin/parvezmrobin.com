@@ -12,6 +12,7 @@
   "dependencies": {
     "@types/node": "^18.7.18",
     "bootstrap": "^5.2.1",
+    "lodash.kebabcase":  "^4.1.1",
     "typewriter-effect": "^2.19.0",
     "vue": "^3.2.37"
   },

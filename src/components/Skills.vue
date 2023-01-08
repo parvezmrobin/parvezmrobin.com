@@ -66,7 +66,7 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
       "C++",
     ],
     desc: [
-      "I have an extensive experience in of teaching and researching using Python. " +
+      "I have an extensive experience in of teaching and researching using <code>Python</code>. " +
         "I have also worked more than two years as a software developer mostly using " +
         "<code>JavaScript (ES6+)</code> and <code>TypeScript</code>.",
       "Apart from that I worked in several projects using <code>C#</code>, <code>PHP</code> " +
@@ -74,6 +74,8 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
         "[website](https://new.cseku.ac.bd/) of the CSE Department of Khulna University, " +
         "Bangladesh that is mostly written in <code>PHP</code>. My experience in <code>Java</code> " +
         "and <code>C++</code> are mostly from competitive programming.",
+      "I strongly suggest to check my [LeetCode](https://leetcode.com/parvezmrobin) profile " +
+        "to glance my coding skill.",
     ],
   },
   "Web Technology": {
@@ -142,6 +144,9 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
       "One of the early recognition of my Data Science skill is placing among the top 15 teams " +
         "in Datathon Bangladesh, 2019 — the biggest data-centric competition in the country. " +
         "I have several relevant certification from Coursera (see [Certifications](#certifications)).",
+
+      "I recently published my research on _Explaining Software Bugs Using Deep Learning_ in ICSE " +
+        "2023 — the biggest software engineering conference (see [Publications](#publications)).",
     ],
   },
   "Tools & Platform": {
@@ -188,8 +193,8 @@ const tabContent = computed(() => {
 </script>
 
 <style scoped lang="scss">
-.central-box {
-  max-width: var(--bs-breakpoint-lg);
+:deep(a) {
+  color: var(--bs-teal);
 }
 
 .nav-link.underline {

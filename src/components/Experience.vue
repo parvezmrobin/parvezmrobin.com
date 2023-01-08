@@ -59,7 +59,7 @@ const experiences: Record<string, IExperience> = {
         "<code>Docker</code>. Also integrated and maintained [WebRTC](https://agora.io), " +
         "[AWS](https://aws.amazon.com), [GCP](https://cloud.google.com/), [Push Notification]" +
         "(https://www.pubnub.com/), [Stripe](https://stripe.com/), " +
-        "[Task Queue](https://docs.bullmq.io/) (redis) and various other services.",
+        "[Task Queue](https://docs.bullmq.io/) (<code>redis</code>) and various other services.",
       "In [Bikribatta](https://www.bikribatta.com/) inventory solution, *architected* accounts, " +
         "reports, and employee management components. " +
         "Written a stock management microservice using <code>Golang</code> that speeds up corresponding " +
@@ -68,7 +68,7 @@ const experiences: Record<string, IExperience> = {
         "using [Electron](https://www.electronjs.org/), which also " +
         "works in offline mode with eventual consistency scheme.",
       "Migrated the subscription backend of [Wonster Words](https://apps.apple.com/us/app/wonster-words-learning-games/id881119321) " +
-        "iOS app store game from node.js to ASP.Net using Microsoft Azure " +
+        "iOS app store game from <code>node.js</code> to <code>ASP.Net</code> using Microsoft Azure " +
         "[FaaS](https://azure.microsoft.com/en-us/services/functions/), " +
         "[Cosmos DB](https://azure.microsoft.com/en-us/services/cosmos-db/), " +
         "and [Queue Storage](https://azure.microsoft.com/en-us/services/storage/queues/).",
@@ -107,10 +107,10 @@ const experiences: Record<string, IExperience> = {
     time: "September 2021 — December 2022",
     works: [
       "<span class='h6'>Process of Data Science</span> (graduate course): Providing hands-on learning experience in " +
-        "cutting-edge data science technologies in labs, holding office hours to resolve " +
+        "cutting-edge data science technologies (e.g., geospatial data) in labs, holding office hours to resolve " +
         "difficulties for the students, and assisting the instructor during classes",
-      "<span class='h6'>Intro to Software Project</span>: Taking classes on Docker and containerization, " +
-        "directly mentoring, and evaluating four groups in the agile process and maintaining their GCP instances",
+      "<span class='h6'>Intro to Software Project</span>: Taking classes on <code>Docker</code> and containerization, " +
+        "directly mentoring, and evaluating four groups in the agile process and maintaining their <code>GCP</code> instances",
       "<span class='h6'>Software Development</span>: Taking labs and helping the students in resolving issues " +
         "regarding version controlling, test driven development, code smells, refactoring, and more",
     ],
@@ -150,11 +150,16 @@ $sm: 576px;
   > span {
     position: relative;
     left: 0;
-    transition: left 500ms;
+    top: 0;
+    transition: left 500ms, top 500ms;
   }
 
   &:hover > span {
     left: 5px;
+    @media screen and (max-width: $sm) {
+      left: 0;
+      top: -5px;
+    }
   }
 }
 </style>

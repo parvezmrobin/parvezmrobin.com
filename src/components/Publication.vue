@@ -24,7 +24,7 @@
                     v-if="$attrs[attr]"
                     :key="attr"
                     class="btn btn-primary"
-                    :href="$attrs[attr]"
+                    :href="$attrs[attr] + ''"
                     target="_blank"
                     style="
                       white-space: nowrap;

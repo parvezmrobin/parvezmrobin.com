@@ -1,5 +1,8 @@
 <template>
   <CentralBox title="Skills">
+    <h4 class="cursive text-pink">
+      I can exit Vim. In addition to that, I am skilled in
+    </h4>
     <ul class="nav">
       <li
         v-for="tab in Object.keys(tabContents)"
@@ -193,6 +196,12 @@ const tabContent = computed(() => {
 </script>
 
 <style scoped lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Itim&family=Kalam:wght@300&display=swap");
+
+.cursive {
+  font-family: "Itim", cursive;
+}
+
 :deep(a) {
   color: var(--bs-teal);
 }

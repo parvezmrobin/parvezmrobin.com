@@ -11,6 +11,7 @@
           v-for="(component_, componentName) in components"
           :key="componentName"
         />
+        <Testimonials />
         <Contact />
       </div>
     </div>
@@ -29,6 +30,7 @@ import Navbar from "./components/Navbar.vue";
 import Projects from "./components/Projects.vue";
 import Publications from "./components/Publications.vue";
 import Skills from "./components/Skills.vue";
+import Testimonials from "./components/Testimonials.vue";
 
 const components = {
   Home,

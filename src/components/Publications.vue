@@ -88,6 +88,36 @@ const publications: IPublication[] = [
       "Software bugs claim ≈50% of development time and cost the global economy billions of dollars. Once a bug is reported, the assigned developer attempts to identify and understand the source code responsible for the bug and then corrects the code. Over the last five decades, there has been significant research on automatically finding or correcting software bugs. However, there has been little research on automatically explaining the bugs to the developers, which is essential but a highly challenging task. In this paper, we propose Bugsplainer, a transformer-based generative model, that generates natural language explanations for software bugs by learning from a large corpus of bug-fix commits. Bugsplainer can leverage structural information and buggy patterns from the source code to generate an explanation for a bug. Our evaluation using three performance metrics shows that Bugsplainer can generate understandable and good explanations according to Google's standard, and can outperform multiple baselines from the literature. We also conduct a developer study involving 20 participants where the explanations from Bugsplainer were found to be more accurate, more precise, more concise and more useful than the baselines.",
   },
   {
+    title: "Defectors: A Large, Diverse Python Dataset for Defect Prediction",
+    description:
+      "*Parvez Mahbub*, Ohiduzzaman Shuvo and M. Masudur Rahman, In Proceeding " +
+      "of The 20<sup>th</sup> Mining Software Repositories " +
+      "(MSR), 2023, pp. 5, Melbourne, Australia, May 2023 (To appear)",
+    keywords: [
+      "Defect Prediction",
+      "Just-in-Time",
+      "Dataset",
+      "Software Engineering",
+      "Software Maintenance",
+    ],
+    prePrint: "https://arxiv.org/abs/2303.04738",
+    abstract:
+      "Defect prediction has been a popular research topic where " +
+      "machine learning (ML) and deep learning (DL) have found numerous " +
+      "applications. However, these ML/DL-based defect prediction models " +
+      "are often limited by the quality and size of their datasets. " +
+      "In this paper, we present Defectors, a large dataset for just-in-time " +
+      "and line-level defect prediction. Defectors consists of ≈ 213K source " +
+      "code files (≈ 93K defective and ≈ 120K defect-free) that span across " +
+      "24 popular Python projects. These projects come from 18 different " +
+      "domains, including machine learning, automation, and internet-of-things. " +
+      "Such a scale and diversity make Defectors a suitable dataset for training " +
+      "ML/DL models, especially transformer models that require large and diverse " +
+      "datasets. We also foresee several application areas of our dataset " +
+      "including defect prediction and defect explanation. " +
+      "Dataset Link: https://doi.org/10.5281/zenodo.7708984",
+  },
+  {
     title:
       "Authorship Identification of Source Code Segments Written by Multiple Authors Using Stacking Ensemble Method",
     description:

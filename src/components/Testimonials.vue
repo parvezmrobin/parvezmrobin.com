@@ -33,13 +33,16 @@
     </div>
 
     <div
-      class="shadow-lg rounded p-3 mt-5 d-flex align-items-center"
+      class="shadow-lg rounded p-3 mt-5"
       style="background-color: var(--bs-indigo-900)"
     >
       For serious testimonials check out my
-      <a href="https://www.linkedin.com/in/parvezmrobin/" class="mx-1 fw-bold">
-        LinkedIn
-      </a>
+      <a
+        href="https://www.linkedin.com/in/parvezmrobin/"
+        class="fw-bold"
+        target="_blank"
+        >LinkedIn</a
+      >
       profile. 😒
     </div>
   </CentralBox>
@@ -50,11 +53,8 @@ import CentralBox from "./CentralBox.vue";
 </script>
 
 <style scoped lang="scss">
-ul.triangle {
+a {
   --bs-link-color: var(--bs-cyan-400);
   --bs-link-hover-color: var(--bs-cyan-600);
-  li {
-    margin-bottom: 0.5rem;
-  }
 }
 </style>

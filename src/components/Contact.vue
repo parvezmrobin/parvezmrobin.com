@@ -12,7 +12,7 @@
       <img src="/thinking.gif" alt="I Wonder!" style="height: 35px" />
     </p>
   </CentralBox>
-  <div class="text-center mb-3">
+  <div class="text-center mb-2">
     <small>
       This website is built with
       <a href="https://v3.vuejs.org/" target="_blank" rel="noopener noreferrer"

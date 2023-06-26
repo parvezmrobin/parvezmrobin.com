@@ -3,7 +3,7 @@
     id="publications"
     title="Publications"
     :topMarginRatio="0"
-    maxWidth="var(--bs-breakpoint-md)"
+    maxWidth="var(--bs-breakpoint-lg)"
   >
     <Publication
       v-for="publication in publications"

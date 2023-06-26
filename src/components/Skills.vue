@@ -77,8 +77,8 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
         "[website](https://new.cseku.ac.bd/) of the CSE Department of Khulna University, " +
         "Bangladesh that is mostly written in <code>PHP</code>. My experience in <code>Java</code> " +
         "and <code>C++</code> are mostly from competitive programming.",
-      "I strongly suggest to check my [LeetCode](https://leetcode.com/parvezmrobin) profile " +
-        "to glance my coding skill.",
+      "I strongly suggest to check my [<kbd>LeetCode</kbd>](https://leetcode.com/parvezmrobin) " +
+        "profile to glance my coding skill.",
     ],
   },
   "Web Technology": {

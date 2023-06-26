@@ -56,7 +56,7 @@
           more than two years with hands-on experience in
           <code>node.js</code>, <code>Vue JS</code>, <code>TypeScript</code> and
           <code>Mongo DB</code>. Currently, as a part of my Master’s in Computer
-          Science at Dalhousie University, I am working as a
+          Science at Dalhousie University, I also worked as a
           <em>Research Intern</em> at
           <a href="https://metabob.com/">Metabob</a>. My research domain
           includes <em>Software Engineering</em>, <em>Deep Learning</em> and

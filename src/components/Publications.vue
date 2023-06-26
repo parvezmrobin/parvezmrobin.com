@@ -71,7 +71,7 @@ const publications: IPublication[] = [
     description:
       "*Parvez Mahbub*, Ohiduzzaman Shuvo and M. Masudur Rahman, In Proceeding " +
       "of The 45<sup>th</sup> IEEE/ACM International Conference on Software Engineering " +
-      "(ICSE), 2023, pp. 12, Melbourne, Australia, May 2023 (To appear)",
+      "(ICSE), 2023, pp. 12, Melbourne, Australia, May 2023",
     keywords: [
       "Software Bug",
       "Bug Explanation",
@@ -92,7 +92,7 @@ const publications: IPublication[] = [
     description:
       "*Parvez Mahbub*, Ohiduzzaman Shuvo and M. Masudur Rahman, In Proceeding " +
       "of The 20<sup>th</sup> Mining Software Repositories " +
-      "(MSR), 2023, pp. 5, Melbourne, Australia, May 2023 (To appear)",
+      "(MSR), 2023, pp. 5, Melbourne, Australia, May 2023",
     keywords: [
       "Defect Prediction",
       "Just-in-Time",
@@ -134,6 +134,46 @@ const publications: IPublication[] = [
     prePrint: "https://arxiv.org/abs/2212.05610",
     abstract:
       "Source code segment authorship identification is the task of identifying the author of a source code segment through supervised learning. It has vast importance in plagiarism detection, digital forensics, and several other law enforcement issues. However, when a source code segment is written by multiple authors, typical author identification methods no longer work. Here, an author identification technique, capable of predicting the authorship of source code segments, even in case of multiple authors, has been proposed which uses stacking ensemble classifier. This proposed technique is built upon several deep neural networks, random forests and support vector machine classifiers. It has been shown that for identifying the authorgroup, a single classification technique is no longer sufficient and using a deep neural network based stacking ensemble method can enhance the accuracy significantly. Performance of the proposed technique has been compared with some existing methods which only deal with the source code segments written exactly by a single author. Despite the harder task of authorship identification for source code segments written by multiple authors, our proposed technique has achieved promising results evident by the identification accuracy, compared to the related works which only deal with code segments written by a single author.",
+  },
+  {
+    title:
+      "Recommending Code Reviews Leveraging Code Changes with Structured Information Retrieval",
+    description:
+      "Ohiduzzaman Shuvo, *Parvez Mahbub* and M. Masudur Rahman, In Proceeding " +
+      "of The 39<sup>th</sup> International Conference on Software Maintenance and Evolution " +
+      "(ICSME), 2023, pp. 12, Bogotá, Colombia, October 2023 (To appear)",
+    keywords: [
+      "Software Engineering",
+      "Code Reviews",
+      "Code Changes",
+      "Information Retrieval",
+      "Software Maintenance",
+    ],
+    prePrint: "https://arxiv.org/abs/2303.04738",
+    abstract: `Review comments are one of the main building
+    blocks of modern code reviews. Manually writing code review
+    comments could be time-consuming and technically challenging.
+    Recently, an information retrieval (IR) based approach
+    has been proposed to automatically recommend relevant code
+    review comments for method-level code changes. However, this
+    technique overlooks the structured items (e.g., class name, library
+    information) from the source code and is applicable only for
+    method-level changes. In this paper, we propose a novel technique
+    for relevant review comments recommendation – RevCom – that
+    leverages various code-level changes using structured information
+    retrieval. RevCom uses different structured items from source
+    code and can recommend relevant reviews for all types of changes
+    (e.g., method-level and non-method-level). Our evaluation using
+    three performance metrics show that RevCom outperforms both
+    IR-based and DL-based baselines by up to 49.45% and 23.57%
+    margins in BLEU score in recommending review comments.
+    We find that RevCom can recommend review comments with
+    an average BLEU score of ≈ 26.63%. According to Google’s
+    AutoML Translation documentation, such a BLEU score indicates
+    that the review comments can capture the original intent of
+    the reviewers. All these findings suggest that RevCom can
+    recommend relevant code reviews and has the potential to reduce
+    the cognitive effort of human code reviewers`,
   },
 ];
 </script>

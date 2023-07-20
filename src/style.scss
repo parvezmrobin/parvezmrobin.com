@@ -183,3 +183,12 @@ body::-webkit-scrollbar-thumb {
   border-radius: 6px;
   border: 3px solid var(--scrollbarBG);
 }
+
+.hover {
+  transition: background-color 1s;
+  &.purple {
+    &:hover {
+      background-color: rgba(41, 6, 97, 0.75);
+    }
+  }
+}

@@ -33,7 +33,7 @@ const links = [
     link: "https://leetcode.com/parvezmrobin/",
   },
   {
-    icon: "/medium.png",
+    icon: "/medium.webp",
     title: "Medium",
     link: "https://medium.com/@parvezmrobin",
   },

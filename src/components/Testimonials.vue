@@ -23,12 +23,16 @@
       <hr />
       <div class="mx-3 d-flex align-items-center">
         — Bing Chat
-        <img
-          src="/bing.png"
-          alt="bing"
-          class="d-inline ms-1"
-          style="width: 14px"
-        />
+        <picture>
+          <source type="image/webp" srcset="/bing.webp" />
+          <source type="image/png" srcset="/bing.png" />
+          <img
+            src="/bing.png"
+            alt="bing"
+            class="d-inline ms-1"
+            style="width: 14px"
+          />
+        </picture>
       </div>
     </div>
 

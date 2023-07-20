@@ -4,12 +4,16 @@
       class="d-flex flex-column flex-lg-row justify-content-center align-items-center h-100"
     >
       <div class="d-none d-sm-block position-relative me-lg-5 mb-5 mb-lg-0">
-        <img
-          class="rounded-circle"
-          style="width: 200px; z-index: 1"
-          src="/propic.jpg"
-          alt="It's me"
-        />
+        <picture>
+          <source type="image/webp" srcset="/propic.webp" />
+          <source type="image/jpeg" srcset="/propic.jpg" />
+          <img
+            src="/propic.jpg"
+            alt="It's me"
+            class="rounded-circle"
+            style="width: 200px"
+          />
+        </picture>
         <div
           class="bg-circle position-absolute rounded-circle h-100 w-100"
           style="left: -5px; top: 5px"
@@ -42,12 +46,16 @@
             </a>
           </div>
           <div class="d-block d-sm-none">
-            <img
-              class="rounded-circle"
-              style="width: 120px; border-width: 2px"
-              src="/propic.jpg"
-              alt="It's me"
-            />
+            <picture>
+              <source type="image/webp" srcset="/propic.webp" />
+              <source type="image/jpeg" srcset="/propic.jpg" />
+              <img
+                src="/propic.jpg"
+                alt="It's me"
+                class="rounded-circle"
+                style="width: 200px"
+              />
+            </picture>
           </div>
         </div>
         <div class="mt-4" style="text-align: justify">
@@ -64,7 +72,7 @@
         </div>
         <div
           class="mt-4"
-          style="word-spacing: -0.05rem; color: var(--bs-yellow-600)"
+          style="word-spacing: -0.05rem; color: var(--bs-yellow)"
         >
           Discover what I can bring to the table —
           <a
@@ -91,10 +99,7 @@
       >
         <div class="d-flex flex-column align-items-center">
           <Links />
-          <div
-            class="border"
-            style="height: 7.5rem; width: 0; margin-right: 1rem"
-          />
+          <div class="link-extension" />
         </div>
       </div>
     </Transition>
@@ -221,5 +226,13 @@ onBeforeUnmount(() => {
   @media screen and (min-width: 1150px) {
     display: block;
   }
+}
+
+.link-extension {
+  border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color);
+  width: 0;
+  margin-right: 1rem;
+  // making sure links doesn't overlap with navbar
+  height: min(7.5rem, calc(100vh - 625px));
 }
 </style>

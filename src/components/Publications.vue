@@ -5,12 +5,14 @@
     :topMarginRatio="0"
     maxWidth="var(--bs-breakpoint-lg)"
   >
-    <Publication
-      v-for="publication in publications"
-      :key="publication.title"
-      v-bind="publication"
-      @show:abstract="showAbstract(publication)"
-    />
+    <div>
+      <Publication
+        v-for="publication in publications"
+        :key="publication.title"
+        v-bind="publication"
+        @show:abstract="showAbstract(publication)"
+      />
+    </div>
   </CentralBox>
 
   <div

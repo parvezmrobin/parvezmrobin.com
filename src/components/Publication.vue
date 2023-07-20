@@ -1,5 +1,5 @@
 <template>
-  <div v-once class="row publication">
+  <div v-once class="row publication purple hover">
     <div class="col">
       <h4 class="fw-normal">
         {{ title }}
@@ -109,7 +109,12 @@ $lg: 992px;
 
 .publication {
   align-items: center;
-  margin-bottom: 2rem;
+  padding: 1em 0;
+  border-radius: 4px;
+
+  &:first-child {
+    margin-top: -1em;
+  }
 
   h4 {
     font-weight: normal;

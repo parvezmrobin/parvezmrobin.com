@@ -1,10 +1,12 @@
 <template>
   <CentralBox id="projects" title="Personal Projects" :topMarginRatio="0">
-    <Project
-      v-for="project in projects"
-      :key="project.title"
-      v-bind="project"
-    />
+    <div>
+      <Project
+        v-for="project in projects"
+        :key="project.title"
+        v-bind="project"
+      />
+    </div>
   </CentralBox>
 </template>
 
@@ -30,7 +32,7 @@ const projects: IProject[] = [
     frontend: "https://github.com/parvezmrobin/jhijhi-frontend",
     backend: "https://github.com/parvezmrobin/jhijhi-backend",
     web: "https://jhijhi.parvezmrobin.dev/",
-    img: "/jhijhi.png",
+    images: ["/jhijhi.webp", "/jhijhi.png"],
   },
   {
     title: "Visually Explaining Bug Localization",
@@ -51,7 +53,10 @@ const projects: IProject[] = [
     ],
     github: "https://github.com/parvezmrobin/visualize-lrwe",
     web: "https://lrwe.parvezmrobin.dev/",
-    img: "/visualizing-bug-localization.png",
+    images: [
+      "/visualizing-bug-localization.webp",
+      "/visualizing-bug-localization.png",
+    ],
   },
   {
     title: "Bug Report Deduplication Using Siamese Cross-Encoder Network",
@@ -61,7 +66,7 @@ const projects: IProject[] = [
       "achieve comparable performance.",
     tech: ["MongoDB", "Docker", "TensorFlow", "scikit-learn"],
     github: "https://github.com/parvezmrobin/ml-br-deduplication",
-    img: "/siamese-cross-encoder.png",
+    images: ["/siamese-cross-encoder.webp", "/siamese-cross-encoder.png"],
   },
   {
     title: "Official Website of CSE Discipline, Khulna University",
@@ -70,7 +75,7 @@ const projects: IProject[] = [
       "Engineering Discipline, Khulna University, Bangladesh.",
     tech: ["PHP", "Bootstrap", "MySQL"],
     web: "https://new.cseku.ac.bd/",
-    img: "/ku-website.png",
+    images: ["/ku-website.webp", "/ku-website.png"],
   },
 ];
 </script>

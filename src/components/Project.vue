@@ -1,5 +1,5 @@
 <template>
-  <div v-once class="row project">
+  <div v-once class="row project purple hover">
     <div class="col col-lg-6">
       <h4 class="fw-normal">
         {{ title }}
@@ -44,7 +44,7 @@
               <i
                 class="devicon-scala-plain fs-4"
                 style="
-                  color: var(--bs-green-600);
+                  color: var(--bs-green);
                   position: absolute;
                   right: 2px;
                   bottom: -5px;
@@ -65,8 +65,16 @@
     </div>
     <div class="col-6">
       <div>
-        <a :href="img" target="_blank">
-          <img :src="img" :alt="title" />
+        <a :href="images[0]" target="_blank">
+          <picture>
+            <source
+              v-for="img in images"
+              :key="img"
+              :type="`image/${img.split('.').at(-1)}`"
+              :srcset="img"
+            />
+            <img :src="images.at(-1)" :alt="title" />
+          </picture>
         </a>
       </div>
     </div>
@@ -84,7 +92,7 @@ export type IProject = {
   tech: string[];
   github?: string;
   web?: string;
-  img: string;
+  images: string[];
 } & ({ frontend?: string; backend?: string } | never);
 
 export default defineComponent({
@@ -118,9 +126,9 @@ export default defineComponent({
       type: String,
       default: undefined,
     },
-    img: {
+    images: {
       required: true,
-      type: String,
+      type: Array as PropType<string[]>,
     },
   },
   mounted(): void {
@@ -146,7 +154,12 @@ $lg: 992px;
 
 .project {
   align-items: center;
-  margin-bottom: 2rem;
+  padding: 1em 0;
+  border-radius: 4px;
+
+  &:first-child {
+    margin-top: -1em;
+  }
 
   h4 {
     font-weight: normal;
@@ -166,12 +179,6 @@ $lg: 992px;
       top: 0;
       left: 0;
       transition: left 0.5s ease-in-out;
-    }
-  }
-
-  @media screen and (min-width: calc($lg + 1px)) {
-    .col.col-lg-6:first-child:hover .description {
-      left: 15px;
     }
   }
 

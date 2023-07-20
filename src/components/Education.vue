@@ -12,11 +12,15 @@
     >
       <div class="row g-0">
         <div v-if="i % 2 === 0" class="col-md-3 image-wrapper">
-          <img
-            :src="school.img"
-            class="img-fluid rounded-start"
-            alt="school image"
-          />
+          <picture class="img-fluid rounded-start">
+            <source
+              v-for="img in school.images"
+              :key="img"
+              :type="`image/${img.split('.').at(-1)}`"
+              :srcset="img"
+            />
+            <img :src="school.images" alt="school image" />
+          </picture>
         </div>
         <div class="col-md-9">
           <div class="card-body shadow-lg">
@@ -31,11 +35,15 @@
           </div>
         </div>
         <div v-if="i % 2 === 1" class="col-md-3 image-wrapper">
-          <img
-            :src="school.img"
-            class="img-fluid rounded-start"
-            alt="school image"
-          />
+          <picture class="img-fluid rounded-start">
+            <source
+              v-for="img in school.images"
+              :key="img"
+              :type="`image/${img.split('.').at(-1)}`"
+              :srcset="img"
+            />
+            <img :src="school.images.at(-1)" alt="school image" />
+          </picture>
         </div>
       </div>
     </div>
@@ -46,7 +54,7 @@
 import CentralBox from "./CentralBox.vue";
 
 interface ISchool {
-  img: string;
+  images: string[];
   name: string;
   duration: string;
   description: string;
@@ -55,7 +63,7 @@ interface ISchool {
 
 const schools: ISchool[] = [
   {
-    img: "/dalu.png",
+    images: ["/dalu.webp", "/dalu.png"],
     name: "Dalhousie University – Master’s in Computer Science",
     duration: "September 2021 – ongoing",
     description:
@@ -63,7 +71,7 @@ const schools: ISchool[] = [
     cgpa: "4.3 out of 4.3",
   },
   {
-    img: "/ku.png",
+    images: ["/ku.webp", "/ku.png"],
     name: "Khulna University – Bachelor of Science in Computer Science and Engineering",
     duration: "December 2014 – February 2019",
     description:
@@ -103,6 +111,7 @@ ul {
       right: 55px;
 
       transition: all 1s ease-in-out;
+      translate: 0 -50%;
     }
   }
 
@@ -120,7 +129,7 @@ ul {
 
   .card-body {
     position: relative;
-    background-color: #0c3a4a;
+    background-color: var(--bs-purple-800);
     border-radius: 5px;
     @media screen and (min-width: $sm) {
       padding-left: 30px;

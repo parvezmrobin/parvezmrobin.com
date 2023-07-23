@@ -19,7 +19,7 @@
               :type="`image/${img.split('.').at(-1)}`"
               :srcset="img"
             />
-            <img :src="school.images" alt="school image" />
+            <img :src="school.images.at(-1)" alt="school image" />
           </picture>
         </div>
         <div class="col-md-9">

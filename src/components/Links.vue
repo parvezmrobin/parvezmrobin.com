@@ -5,6 +5,7 @@
       target="_blank"
       data-bs-toggle="popover"
       :data-bs-content="link.title"
+      :aria-label="link.title"
     >
       <i v-if="link.icon.startsWith('devicon')" :class="link.icon"></i>
       <img v-else :src="link.icon" :alt="link.title" />

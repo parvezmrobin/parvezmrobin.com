@@ -16,14 +16,24 @@
           </div>
 
           <div class="icons mt-2">
-            <a v-if="github" :href="github" target="_blank">
+            <a
+              v-if="github"
+              :href="github"
+              target="_blank"
+              aria-label="Visit GitHub Repository"
+            >
               <i
                 class="devicon-github-plain me-2"
                 data-bs-toggle="popover"
                 data-bs-content="Visit GitHub Repository"
               />
             </a>
-            <a v-if="frontend" :href="frontend" target="_blank">
+            <a
+              v-if="frontend"
+              :href="frontend"
+              target="_blank"
+              aria-label="Visit Frontend Repository"
+            >
               <i
                 class="devicon-github-plain me-2"
                 data-bs-toggle="popover"
@@ -35,6 +45,7 @@
               :href="backend"
               target="_blank"
               style="position: relative"
+              aria-label="Visit Backend Repository"
             >
               <i
                 class="devicon-github-plain me-2"
@@ -52,7 +63,12 @@
                 "
               />
             </a>
-            <a v-if="web" :href="web" target="_blank">
+            <a
+              v-if="web"
+              :href="web"
+              target="_blank"
+              aria-label="Visit Live Website"
+            >
               <i
                 class="devicon-firefox-plain"
                 data-bs-toggle="popover"

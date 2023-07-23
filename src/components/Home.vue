@@ -62,10 +62,9 @@
           I am a polyglot machine learning engineer with extensive experience in
           web application and deep learning. I worked as a software engineer for
           more than two years with hands-on experience in
-          <code>node.js</code>, <code>Vue JS</code>, <code>TypeScript</code> and
-          <code>Mongo DB</code>. Currently, as a part of my Master’s in Computer
-          Science at Dalhousie University, I also worked as a
-          <em>Research Intern</em> at
+          <kbd>node.js</kbd>, <kbd>Vue JS</kbd>, <kbd>TypeScript</kbd> and
+          <kbd>Mongo DB</kbd>. As a part of my Master’s in Computer Science at
+          Dalhousie University, I also worked as a <em>Research Intern</em> at
           <a href="https://metabob.com/">Metabob</a>. My research domain
           includes <em>Software Engineering</em>, <em>Deep Learning</em> and
           <em>Natural Language Processing</em>.
@@ -166,6 +165,10 @@ onBeforeUnmount(() => {
 </script>
 
 <style lang="scss">
+a {
+  color: var(--bs-teal);
+}
+
 .rounded-circle {
   border: 10px solid #0c2a3a;
 }

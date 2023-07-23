@@ -9,7 +9,11 @@
       Why don’t you send an
       <a href="mailto:parvezmrobin@gmail.com">email</a>
       and let’s talk.
-      <img src="/thinking.gif" alt="I Wonder!" style="height: 35px" />
+      <picture>
+        <source srcset="/thinking.webp" type="image/webp" />
+        <source srcset="/thinking.gif" type="image/gif" />
+        <img src="/thinking.gif" alt="I Wonder!" style="height: 35px" />
+      </picture>
     </p>
   </CentralBox>
   <div class="text-center mb-2">

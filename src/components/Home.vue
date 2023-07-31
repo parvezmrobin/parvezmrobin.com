@@ -77,7 +77,7 @@
           <a
             class="fst-italic"
             style="color: currentColor"
-            href="https://drive.google.com/file/d/1erRyU27NSWeYNGp0TqN3eRIPG7iIacFJ/view?usp=sharing"
+            href="https://drive.google.com/file/d/1-HI6LSSq7DJ7mvJV90dq400mtKTB9BmA/view?usp=sharing"
             target="_blank"
             >Take a look at my Résumé</a
           >.

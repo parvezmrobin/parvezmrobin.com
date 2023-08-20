@@ -34,9 +34,9 @@ const links = [
     link: "https://leetcode.com/parvezmrobin/",
   },
   {
-    icon: "/medium.webp",
-    title: "Medium",
-    link: "https://medium.com/@parvezmrobin",
+    icon: "https://scholar.google.com/favicon.ico",
+    title: "Google Scholar",
+    link: "https://scholar.google.com/citations?user=ZfEcKyYAAAAJ",
   },
 ];
 

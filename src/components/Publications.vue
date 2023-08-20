@@ -73,7 +73,7 @@ const publications: IPublication[] = [
     description:
       "*Parvez Mahbub*, Ohiduzzaman Shuvo and M. Masudur Rahman, In Proceeding " +
       "of The 45<sup>th</sup> IEEE/ACM International Conference on Software Engineering " +
-      "(ICSE), 2023, pp. 12, Melbourne, Australia, May 2023",
+      "(ICSE), 2023, pp. 640-652, Melbourne, Australia, May 2023",
     keywords: [
       "Software Bug",
       "Bug Explanation",
@@ -94,7 +94,7 @@ const publications: IPublication[] = [
     description:
       "*Parvez Mahbub*, Ohiduzzaman Shuvo and M. Masudur Rahman, In Proceeding " +
       "of The 20<sup>th</sup> Mining Software Repositories " +
-      "(MSR), 2023, pp. 5, Melbourne, Australia, May 2023",
+      "(MSR), 2023, pp. 393-397, Melbourne, Australia, May 2023",
     keywords: [
       "Defect Prediction",
       "Just-in-Time",
@@ -118,6 +118,32 @@ const publications: IPublication[] = [
       "datasets. We also foresee several application areas of our dataset " +
       "including defect prediction and defect explanation. " +
       "Dataset Link: https://doi.org/10.5281/zenodo.7708984",
+  },
+  {
+    title:
+      "Bugsplainer: Leveraging Code Structures to Explain Software Bugs with Neural Machine Translation",
+    description:
+      "*Parvez Mahbub*, M. Masudur Rahman, Ohiduzzaman Shuvo and Avinash Gopal, In Proceeding " +
+      "of The 39<sup>th</sup> IEEE International Conference on Software Maintenance and Evolution " +
+      "(ICSME 2023), 2023, pp. 6, Bogota, Colombia, October 2023",
+    keywords: [
+      "Software Bug",
+      "Bug Explanation",
+      "Software Engineering",
+      "Software Maintenance",
+      "Natural Language Processing",
+      "Deep Learning",
+      "Neural Text Generation",
+    ],
+    demo: "https://youtu.be/xga-ScvULpk",
+    abstract:
+      `Software bugs cost the global economy billions of dollars each year and take up $\\approx$ 50\\% of the development time.
+Once a bug is reported, the assigned developer attempts to identify and understand the source code responsible for the bug and then corrects the code.
+Over the last five decades, there has been significant research on automatically finding or correcting software bugs.
+However, there has been little research on automatically explaining the bugs to the developers, which is essential but a highly challenging task.
+In this paper, we propose Bugsplainer, a novel web-based debugging solution, that generates natural language explanations for software bugs by learning from a large corpus of bug-fix commits.
+Bugsplainer leverages code structures to reason about a bug and employs the fine-tuned version of a text generation model -- CodeT5 -- to generate the explanations.` +
+      "Tool video: https://youtu.be/xga-ScvULpk",
   },
   {
     title:

@@ -136,6 +136,7 @@ const publications: IPublication[] = [
       "Neural Text Generation",
     ],
     demo: "https://youtu.be/xga-ScvULpk",
+    prePrint: "https://arxiv.org/abs/2308.12267",
     abstract:
       `Software bugs cost the global economy billions of dollars each year and take up $\\approx$ 50\\% of the development time.
 Once a bug is reported, the assigned developer attempts to identify and understand the source code responsible for the bug and then corrects the code.

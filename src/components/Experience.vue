@@ -53,17 +53,20 @@ const experiences: Record<string, IExperience> = {
     position: "Software Engineer",
     time: "March 2019 — July 2021",
     works: [
-      "Architected and designed [Daency](https://daency.com/), an online platform to learn " +
+      "Led the architected and development of [Daency](https://daency.com/), an online platform to learn " +
         "dancing interactively. The tech stack was <code>TypeScript</code>, " +
         "<code>Express JS</code>, <code>Vue JS</code>, <code>Mongo DB</code>, and " +
         "<code>Docker</code>. Also integrated and maintained [WebRTC](https://agora.io), " +
         "[AWS](https://aws.amazon.com), [GCP](https://cloud.google.com/), [Push Notification]" +
         "(https://www.pubnub.com/), [Stripe](https://stripe.com/), " +
-        "[Task Queue](https://docs.bullmq.io/) (<code>redis</code>) and various other services.",
+        "[Task Queue](https://docs.bullmq.io/) (<code>redis</code>) and various other services. " +
+        "Collaborated with the stakeholders to engineer requirements and plan sprints in the agile " +
+        "process with a globally distributed team, while reducing requirement changes during sprints " +
+        "from ≈ 30% to < 5%.",
       "In [Bikribatta](https://www.bikribatta.com/) inventory solution, *architected* accounts, " +
         "reports, and employee management components. " +
-        "Written a stock management microservice using <code>Golang</code> that speeds up corresponding " +
-        "API access time by more than 1000%. Further, built a desktop version of the " +
+        "Written a stock management microservice using <code>Golang</code> that reduces the latency 10X. " +
+        "Further, built a desktop version of the " +
         "Point of Sales component of the same solution " +
         "using [Electron](https://www.electronjs.org/), which also " +
         "works in offline mode with eventual consistency scheme.",
@@ -78,6 +81,32 @@ const experiences: Record<string, IExperience> = {
         "and ‘Sustainable Architecture with TypeScript’.",
     ],
   },
+  Metabob: {
+    position: "Research Intern",
+    time: "May 2022 — April 2023",
+    works: [
+      "Worked on a research project aiming to automatically explain software " +
+        "bugs in natural language using cutting-edge deep learning techniques. " +
+        "A recent developer survey shows that our developed tool can provide 43% " +
+        "more accurate and 40% concise explanations of bugs (see [Publications](#publications)).",
+      "Developed a web application backed by state-of-the-art language model to " +
+        "explain defective source code using Python, Flask, PyTorch, and Vue JS " +
+        "(see [Demo](https://www.youtube.com/watch?v=xga-ScvULpk)).",
+    ],
+  },
+  "Festive.Rocks": {
+    position: "Cofounder and Tech Lead ",
+    time: "January 2023 — Present",
+    works: [
+      "Created a low latency, high-performance website to run on slow internet " +
+        "regions for the target market.",
+      "Seamlessly hosted two full-sold events with great customer satisfaction, " +
+        "which resulted in getting 3 more big events in the coming months.",
+      "Led a team of four developers to complete a fully featured web application " +
+        "within three months while maintaining very high code quality and more " +
+        "than 90% test coverage.",
+    ],
+  },
   CoachSnap: {
     position: "Full Stack Developer",
     time: "December 2019 — February 2020",
@@ -90,16 +119,6 @@ const experiences: Record<string, IExperience> = {
         "<code>GraphQL</code> (Apollo & Prisma), <code>React</code> (Ant Design), " +
         "query caching, CSS preprocessor (<code>less</code>), <code>Docker</code>, " +
         "and yarn workspace.",
-    ],
-  },
-  Metabob: {
-    position: "Research Intern",
-    time: "May 2022 — April 2023",
-    works: [
-      "Working on a research project aiming to automatically explain software bugs in natural " +
-        "language. The research domain includes software engineering, deep learning, and natural " +
-        "language processing. A recent developer survey shows that our developed tool can provide " +
-        "accurate and concise explanations of bugs compared to human-written explanations.",
     ],
   },
   "Dalhousie University": {

@@ -29,6 +29,7 @@
             </h5>
             <h6 class="card-subtitle mb-2">{{ school.duration }}</h6>
             <p class="card-text">
+              <span class="text-info"><em>Thesis</em>:</span>
               {{ school.description }}
             </p>
             <p class="card-text"><strong>CGPA:</strong> {{ school.cgpa }}</p>
@@ -65,18 +66,18 @@ const schools: ISchool[] = [
   {
     images: ["/dalu.webp", "/dalu.png"],
     name: "Dalhousie University – Master’s in Computer Science",
-    duration: "September 2021 – ongoing",
+    duration: "September 2021 – August 2023",
     description:
-      "Courses include Advanced Topics in NLP and Machine Learning for Big Data.",
-    cgpa: "4.3 out of 4.3",
+      "Comprehending Software Bugs Leveraging Code Structure in Neural Language Modelling",
+    cgpa: "4.30/4.30",
   },
   {
     images: ["/ku.webp", "/ku.png"],
     name: "Khulna University – Bachelor of Science in Computer Science and Engineering",
     duration: "December 2014 – February 2019",
     description:
-      "Courses include Artificial Intelligence, Data Warehousing and Mining, Computer Networking, and Information Security",
-    cgpa: "3.61 out of 4",
+      "Authorship Identification of Source Code Segments Written by Multiple Authors Using Stacking Ensemble Method",
+    cgpa: "3.61/4.00",
   },
 ];
 </script>

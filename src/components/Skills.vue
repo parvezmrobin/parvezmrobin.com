@@ -62,18 +62,20 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
       "Python",
       "JavaScript (ES6+)",
       "TypeScript",
+      "Golang",
       "C#",
       "PHP",
-      "Golang",
       "Java",
       "C++",
     ],
     desc: [
       "I have an extensive experience in of teaching and researching using <code>Python</code>. " +
         "I have also worked more than two years as a software developer mostly using " +
-        "<code>JavaScript (ES6+)</code> and <code>TypeScript</code>.",
-      "Apart from that I worked in several projects using <code>C#</code>, <code>PHP</code> " +
-        "and <code>golang</code> both in academia and industry. I led a team for developing the official " +
+        "<code>JavaScript (ES6+)</code> and <code>TypeScript</code>. Recently, I led a team of " +
+        "four developers to build [festive.rocks](https://festive.rocks) — a low latency, high-performance " +
+        "online event hosting platform. The backend of this platform is written in <code>Golang</code>.",
+      "Apart from that I worked in several projects using <code>C#</code> and <code>PHP</code> " +
+        "both in academia and industry. I led a team for developing the official " +
         "[website](https://new.cseku.ac.bd/) of the CSE Department of Khulna University, " +
         "Bangladesh that is mostly written in <code>PHP</code>. My experience in <code>Java</code> " +
         "and <code>C++</code> are mostly from competitive programming.",
@@ -87,6 +89,7 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
       "Express JS",
       "Vue JS",
       "React",
+      "GoFiber",
       "GraphQL",
       "REST API",
       "Bootstrap",
@@ -111,7 +114,8 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
       "Alongside these most prominent technologies, I used <code>Web Socket</code> and " +
         "<code>WebRTC</code> to make a video calling service. I also developed a _novel_ " +
         "[visualization tool](https://lrwe.parvezmrobin.dev) using <code>D3</code>. " +
-        "In my research works, I used <code>Flask</code> to deploy machine learning models.",
+        "In my research works as well as in my internship at Metabob, I used <code>Flask</code> " +
+        "to deploy machine learning models.",
     ],
   },
   Database: {
@@ -119,8 +123,10 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
     desc: [
       "During my job as a software engineer, <code>MongoDB</code> was the go-to " +
         "database system. I also have used <code>redis</code> for caching in several " +
-        "projects. Of course, when throughput was critical than availability, I used " +
-        "RDBMSs instead.",
+        "projects. In my recent venture, [festive.rocks](https://festive.rocks), I used " +
+        "<code>PostgreSQL</code> as the database system. I have led a team to develop the " +
+        "[official website](https://new.cseku.ac.bd/) of the CSE Department of Khulna University, " +
+        "Bangladesh, which uses <code>MySQL</code> as the database system.",
     ],
   },
   "ML/DL/Data Science": {
@@ -148,8 +154,8 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
         "in Datathon Bangladesh, 2019 — the biggest data-centric competition in the country. " +
         "I have several relevant certification from Coursera (see [Certifications](#certifications)).",
 
-      "I recently published my research on _Explaining Software Bugs Using Deep Learning_ in ICSE " +
-        "2023 — the biggest software engineering conference (see [Publications](#publications)).",
+      "<div class='rounded px-1' style='background-color: var(--bs-cyan-800)'>I recently published my research on _Explaining Software Bugs Using Deep Learning_ in ICSE " +
+        "2023 — the biggest software engineering conference (see [Publications](#publications)).</div>",
     ],
   },
   "Tools & Platform": {

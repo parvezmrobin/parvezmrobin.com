@@ -17,7 +17,7 @@
         <div
           class="bg-circle position-absolute rounded-circle h-100 w-100"
           style="left: -5px; top: 5px"
-        ></div>
+        />
       </div>
       <div style="max-width: 750px">
         <div class="d-flex justify-content-between align-items-center">
@@ -38,12 +38,7 @@
             </div>
             <h2 id="title" class="d-none d-sm-block fw-light"></h2>
             <h5 id="titleMobile" class="d-sm-none fw-light"></h5>
-            <a
-              href="mailto:parvezmrobin@gmail.com"
-              style="color: var(--bs-pink)"
-            >
-              parvezmrobin@gmail.com
-            </a>
+            <a href="mailto:parvezmrobin@gmail.com"> parvezmrobin@gmail.com </a>
           </div>
           <div class="d-block d-sm-none">
             <picture>
@@ -53,7 +48,7 @@
                 src="/propic.jpg"
                 alt="It's me"
                 class="rounded-circle"
-                style="width: 200px"
+                style="width: 100%"
               />
             </picture>
           </div>
@@ -62,8 +57,8 @@
           I am a polyglot machine learning engineer with extensive experience in
           web application and deep learning. I worked as a software engineer for
           more than two years with hands-on experience in
-          <kbd>node.js</kbd>, <kbd>Vue JS</kbd>, <kbd>TypeScript</kbd> and
-          <kbd>Mongo DB</kbd>. As a part of my Master’s in Computer Science at
+          <code>node.js</code>, <code>Vue JS</code>, <code>TypeScript</code> and
+          <code>Mongo DB</code>. As a part of my Master’s in Computer Science at
           Dalhousie University, I also worked as a <em>Research Intern</em> at
           <a href="https://metabob.com/">Metabob</a>. My research domain
           includes <em>Software Engineering</em>, <em>Deep Learning</em> and

@@ -53,17 +53,19 @@
             </picture>
           </div>
         </div>
+
         <div class="mt-4" style="text-align: justify">
           I am a polyglot machine learning engineer with extensive experience in
           web application and deep learning. I worked as a software engineer for
-          more than two years with hands-on experience in
-          <code>node.js</code>, <code>Vue JS</code>, <code>TypeScript</code> and
+          more than two years with hands-on experience in <code>Python</code>,
+          <code>TypeScript</code>, <code>Node.JS</code>, and
           <code>Mongo DB</code>. As a part of my Master’s in Computer Science at
           Dalhousie University, I also worked as a <em>Research Intern</em> at
           <a href="https://metabob.com/">Metabob</a>. My research domain
           includes <em>Software Engineering</em>, <em>Deep Learning</em> and
           <em>Natural Language Processing</em>.
         </div>
+
         <div
           class="mt-4"
           style="word-spacing: -0.05rem; color: var(--bs-yellow)"
@@ -72,7 +74,7 @@
           <a
             class="fst-italic"
             style="color: currentColor"
-            href="https://drive.google.com/file/d/1-HI6LSSq7DJ7mvJV90dq400mtKTB9BmA/view?usp=sharing"
+            href="https://drive.google.com/file/d/14RiWaMnAW_yYGa54Mf-wfLQ5J4hOsGIC/view?usp=sharing"
             target="_blank"
             >Take a look at my Résumé</a
           >.

@@ -39,8 +39,8 @@ const components = {
   Education,
   Publications,
   Projects,
-  Certifications,
   Achievements,
   Activities,
+  Certifications,
 };
 </script>

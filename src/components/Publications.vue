@@ -87,7 +87,58 @@ const publications: IPublication[] = [
     demo: "https://www.youtube.com/watch?v=xga-ScvULpk",
     prototype: "https://bugsplainer.research.cs.dal.ca/",
     abstract:
-      "Software bugs claim ≈50% of development time and cost the global economy billions of dollars. Once a bug is reported, the assigned developer attempts to identify and understand the source code responsible for the bug and then corrects the code. Over the last five decades, there has been significant research on automatically finding or correcting software bugs. However, there has been little research on automatically explaining the bugs to the developers, which is essential but a highly challenging task. In this paper, we propose Bugsplainer, a transformer-based generative model, that generates natural language explanations for software bugs by learning from a large corpus of bug-fix commits. Bugsplainer can leverage structural information and buggy patterns from the source code to generate an explanation for a bug. Our evaluation using three performance metrics shows that Bugsplainer can generate understandable and good explanations according to Google's standard, and can outperform multiple baselines from the literature. We also conduct a developer study involving 20 participants where the explanations from Bugsplainer were found to be more accurate, more precise, more concise and more useful than the baselines.",
+      `Software bugs claim ≈50% of development time and cost the global economy billions of dollars.
+      Once a bug is reported, the assigned developer attempts to identify and understand the source
+      code responsible for the bug and then corrects the code. Over the last five decades, there has
+      been significant research on automatically finding or correcting software bugs. However, there
+      has been little research on automatically explaining the bugs to the developers, which is
+      essential but a highly challenging task. In this paper, we propose Bugsplainer, a
+      transformer-based generative model, that generates natural language explanations for software
+      bugs by learning from a large corpus of bug-fix commits. Bugsplainer can leverage structural
+      information and buggy patterns from the source code to generate an explanation for a bug. Our
+      evaluation using three performance metrics shows that Bugsplainer can generate understandable
+      and good explanations according to Google's standard, and can outperform multiple baselines
+      from the literature. We also conduct a developer study involving 20 participants where the
+      explanations from Bugsplainer were found to be more accurate, more precise, more concise and
+      more useful than the baselines.`,
+  },
+  {
+    title:
+      "Predicting Line-Level Defects by Capturing Code Contexts with Hierarchical Transformers",
+    description:
+      "*Parvez Mahbub* and M. Masudur Rahman, In Proceeding " +
+      "of The 31<sup>st</sup> IEEE International Conference on Software Analysis, Evolution and " +
+      "Reengineering (SANER), 2024, pp. 12, Rovaniemi, Finland, March 2024 (to appear)",
+    keywords: [
+      "Software Quality Assurance",
+      "Line Level Defect Prediction",
+      "Code Context",
+      "Code Structure",
+      "Software Engineering",
+      "Software Maintenance",
+      "Deep Learning",
+      "Transformers",
+    ],
+    prePrint: "https://arxiv.org/abs/2312.11889",
+    abstract:
+      `Software defects consume 40% of the total budget in software development and cost the global
+      economy billions of dollars every year. Unfortunately, despite the use of many software
+      quality assurance (SQA) practices in software development (e.g., code review, continuous
+      integration), defects may still exist in the official release of a software product.
+      Therefore, prioritizing SQA efforts for the vulnerable areas of the codebase is essential to
+      ensure the high quality of a software release. Predicting software defects at the line level
+      could help prioritize the SQA effort but is a highly challenging task given that only ≈3% of
+      lines of a codebase could be defective. Existing works on line-level defect prediction often
+      fall short and cannot fully leverage the line-level defect information. In this paper, we
+      propose Bugsplorer, a novel deep-learning technique for line-level defect prediction. It
+      leverages a hierarchical structure of transformer models to represent two types of code
+      elements: code tokens and code lines. Unlike the existing techniques that are optimized for
+      file-level defect prediction, Bugsplorer is optimized for a line-level defect prediction
+      objective. Our evaluation with five performance metrics shows that Bugsplorer has a promising
+      capability of predicting defective lines with 26–72% better accuracy than that of the
+      state-of-the-art technique. It can rank the first 20% defective lines within the top 1–3%
+      suspicious lines. Thus, Bugsplorer has the potential to significantly reduce SQA costs by
+      ranking defective lines higher.`,
   },
   {
     title: "Defectors: A Large, Diverse Python Dataset for Defect Prediction",
@@ -138,7 +189,7 @@ const publications: IPublication[] = [
     demo: "https://youtu.be/xga-ScvULpk",
     prePrint: "https://arxiv.org/abs/2308.12267",
     abstract:
-      `Software bugs cost the global economy billions of dollars each year and take up $\\approx$ 50\\% of the development time.
+      `Software bugs cost the global economy billions of dollars each year and take up ≈50% of the development time.
 Once a bug is reported, the assigned developer attempts to identify and understand the source code responsible for the bug and then corrects the code.
 Over the last five decades, there has been significant research on automatically finding or correcting software bugs.
 However, there has been little research on automatically explaining the bugs to the developers, which is essential but a highly challenging task.

@@ -60,12 +60,7 @@
             software development and deep learning. I worked as a software
             engineer for more than three years with hands-on experience in
             <code>C++</code>, <code>Go</code>, <code>Python</code>, and
-            <code>TypeScript</code>. As a part of my Master’s in Computer
-            Science at Dalhousie University, I also worked as a
-            <em>Research Intern</em> at
-            <a href="https://metabob.com/">Metabob</a>. My research domain
-            includes <em>Software Engineering</em>, <em>Deep Learning</em> and
-            <em>Natural Language Processing</em>.
+            <code>TypeScript</code>.
           </p>
           <p>
             Currently, I am working as a Software Engineer at

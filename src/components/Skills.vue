@@ -60,27 +60,31 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
   Languages: {
     skills: [
       "Python",
+      "C++",
+      "Go",
       "JavaScript (ES6+)",
       "TypeScript",
-      "Golang",
       "C#",
-      "PHP",
       "Java",
-      "C++",
+      "PHP",
     ],
     desc: [
-      "I have an extensive experience in of teaching and researching using <code>Python</code>. " +
-        "I have also worked more than two years as a software developer mostly using " +
-        "<code>JavaScript (ES6+)</code> and <code>TypeScript</code>. Recently, I led a team of " +
-        "four developers to build [festive.rocks](https://festive.rocks) — a low latency, high-performance " +
-        "online event hosting platform. The backend of this platform is written in <code>Golang</code>.",
-      "Apart from that I worked in several projects using <code>C#</code> and <code>PHP</code> " +
-        "both in academia and industry. I led a team for developing the official " +
-        "[website](https://new.cseku.ac.bd/) of the CSE Department of Khulna University, " +
-        "Bangladesh that is mostly written in <code>PHP</code>. My experience in <code>Java</code> " +
-        "and <code>C++</code> are mostly from competitive programming.",
-      "I strongly suggest to check my [<kbd>LeetCode</kbd>](https://leetcode.com/parvezmrobin) " +
-        "profile to glance my coding skill.",
+      `I use C++ as my primary language at Siemens. I have an extensive
+      experience in of teaching and researching using <code>Python</code>. I
+      have also worked more than two years as a software developer mostly using
+      <code>JavaScript (ES6+)</code> and <code>TypeScript</code>. Recently, I
+      led a team of four developers to build
+      [festive.rocks](https://festive.rocks) — a low latency, high-performance
+      online event hosting platform. The backend of this platform is written in
+      <code>Go</code>.`,
+      `Apart from that I worked in several projects using <code>C#</code> and
+      <code>PHP</code> both in academia and industry. I led a team for
+      developing the official [website](https://new.cseku.ac.bd/) of the CSE
+      Department of Khulna University, Bangladesh that is mostly written in
+      <code>PHP</code>.`,
+      `I strongly suggest to check my
+      [<kbd>LeetCode</kbd>](https://leetcode.com/parvezmrobin) profile to glance
+      my coding skill.`,
     ],
   },
   "Web Technology": {

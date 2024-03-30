@@ -55,15 +55,30 @@
         </div>
 
         <div class="mt-4" style="text-align: justify">
-          I am a polyglot machine learning engineer with extensive experience in
-          web application and deep learning. I worked as a software engineer for
-          more than two years with hands-on experience in <code>Python</code>,
-          <code>TypeScript</code>, <code>Node.JS</code>, and
-          <code>Mongo DB</code>. As a part of my Master’s in Computer Science at
-          Dalhousie University, I also worked as a <em>Research Intern</em> at
-          <a href="https://metabob.com/">Metabob</a>. My research domain
-          includes <em>Software Engineering</em>, <em>Deep Learning</em> and
-          <em>Natural Language Processing</em>.
+          <p>
+            I am a polyglot software engineer with extensive experience in both
+            software development and deep learning. I worked as a software
+            engineer for more than three years with hands-on experience in
+            <code>C++</code>, <code>Go</code>, <code>Python</code>, and
+            <code>TypeScript</code>. As a part of my Master’s in Computer
+            Science at Dalhousie University, I also worked as a
+            <em>Research Intern</em> at
+            <a href="https://metabob.com/">Metabob</a>. My research domain
+            includes <em>Software Engineering</em>, <em>Deep Learning</em> and
+            <em>Natural Language Processing</em>.
+          </p>
+          <p>
+            Currently, I am working as a Software Engineer at
+            <em>Siemens Digital Industries</em> contributing to
+            <em
+              ><a
+                href="https://eda.sw.siemens.com/en-US/ic/analog-fastspice/"
+                target="_blank"
+                >Analog FastSPICE</a
+              ></em
+            >
+            – the fastest nano-meter circuit verification platform.
+          </p>
         </div>
 
         <div

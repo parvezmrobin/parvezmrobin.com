@@ -49,6 +49,15 @@ interface IExperience {
 }
 
 const experiences: Record<string, IExperience> = {
+  Siemns: {
+    position: "Software Engineer",
+    time: "March 2024 — Present",
+    works: [
+      `Contributing to the research and development of
+      [Analog FastSPICE](https://eda.sw.siemens.com/en-US/ic/analog-fastspice/)
+      – the fastest nano-meter circuit verification platform.`,
+    ],
+  },
   NerdDevs: {
     position: "Software Engineer",
     time: "March 2019 — July 2021",

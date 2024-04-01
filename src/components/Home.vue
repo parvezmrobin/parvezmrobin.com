@@ -64,7 +64,7 @@
           </p>
           <p>
             Currently, I am working as a Software Engineer at
-            <em>Siemens Digital Industries</em> contributing to
+            <em>Siemens</em> contributing to
             <em
               ><a
                 href="https://eda.sw.siemens.com/en-US/ic/analog-fastspice/"

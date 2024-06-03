@@ -21,7 +21,7 @@
       </ul>
 
       <template v-for="(experience, experienceDescription) in experiences" :key="experience">
-        <div v-show=experience === selectedExperience" class="ps-3 pt-4 pt-sm-1">
+        <div v-show="experience === selectedExperience" class="ps-3 pt-4 pt-sm-1">
           <h4>{{ experienceDescription.position }}</h4>
           <p>
             <em>{{ experienceDescription.time }}</em>

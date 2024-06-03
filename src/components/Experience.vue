@@ -51,7 +51,7 @@ interface IExperience {
 }
 
 const experiences: Record<string, IExperience> = {
-  Siemns: {
+  Siemens: {
     position: "Software Engineer",
     time: "March 2024 — Present",
     works: [

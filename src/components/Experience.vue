@@ -20,19 +20,21 @@
         </li>
       </ul>
 
-      <div class="ps-3 pt-4 pt-sm-1">
-        <h4>{{ experienceDescription.position }}</h4>
-        <p>
-          <em>{{ experienceDescription.time }}</em>
-        </p>
-        <ul class="triangle">
-          <li
-            v-for="(work, i) in experienceDescription.works"
-            :key="i"
-            v-html="formatString(work)"
-          />
-        </ul>
-      </div>
+      <template v-for="(experience, experienceDescription) in experiences" :key="experience">
+        <div v-show=experience === selectedExperience" class="ps-3 pt-4 pt-sm-1">
+          <h4>{{ experienceDescription.position }}</h4>
+          <p>
+            <em>{{ experienceDescription.time }}</em>
+          </p>
+          <ul class="triangle">
+            <li
+              v-for="(work, i) in experienceDescription.works"
+              :key="i"
+              v-html="formatString(work)"
+            />
+          </ul>
+        </div>
+      </template>
     </div>
   </CentralBox>
 </template>
@@ -144,10 +146,7 @@ const experiences: Record<string, IExperience> = {
     ],
   },
 };
-const selectedExperience = ref("NerdDevs");
-const experienceDescription = computed(() => {
-  return experiences[selectedExperience.value];
-});
+const selectedExperience = ref("Siemens");
 </script>
 
 <style scoped lang="scss">

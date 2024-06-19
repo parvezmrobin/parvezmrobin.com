@@ -19,7 +19,12 @@
         </a>
       </li>
     </ul>
-    <div id="skillset" class="d-flex pt-3">
+    <div
+      v-for="(tabContent, category) in tabContents"
+      v-show="category === activeTab"
+      :key="category"
+      class="skillset d-flex pt-3"
+    >
       <div class="skill box left">
         <div>
           <ul
@@ -52,7 +57,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref } from "vue";
+import { ref } from "vue";
 import { formatString } from "../util";
 import CentralBox from "./CentralBox.vue";
 
@@ -199,10 +204,6 @@ if (!activeTabValue || !Object.keys(tabContents).includes(activeTabValue)) {
   activeTabValue = "Languages";
 }
 const activeTab = ref(activeTabValue);
-
-const tabContent = computed(() => {
-  return tabContents[activeTab.value];
-});
 </script>
 
 <style scoped lang="scss">
@@ -244,7 +245,7 @@ const tabContent = computed(() => {
 
 $md: 768px;
 
-#skillset {
+.skillset {
   @media screen and (max-width: $md) {
     flex-direction: column;
     align-items: center;

@@ -20,8 +20,14 @@
         </li>
       </ul>
 
-      <template v-for="(experienceDescription, experience) in experiences" :key="experience">
-        <div v-show="experience === selectedExperience" class="ps-3 pt-4 pt-sm-1">
+      <template
+        v-for="(experienceDescription, experience) in experiences"
+        :key="experience"
+      >
+        <div
+          v-show="experience === selectedExperience"
+          class="ps-3 pt-4 pt-sm-1"
+        >
           <h4>{{ experienceDescription.position }}</h4>
           <p>
             <em>{{ experienceDescription.time }}</em>
@@ -40,7 +46,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref } from "vue";
+import { ref } from "vue";
 import { formatString } from "../util";
 import CentralBox from "./CentralBox.vue";
 
@@ -64,28 +70,31 @@ const experiences: Record<string, IExperience> = {
     position: "Software Engineer",
     time: "March 2019 — July 2021",
     works: [
-      "Led the architected and development of [Daency](https://daency.com/), an online platform to learn " +
-        "dancing interactively. The tech stack was <code>TypeScript</code>, " +
-        "<code>Express JS</code>, <code>Vue JS</code>, <code>Mongo DB</code>, and " +
-        "<code>Docker</code>. Also integrated and maintained [WebRTC](https://agora.io), " +
-        "[AWS](https://aws.amazon.com), [GCP](https://cloud.google.com/), [Push Notification]" +
-        "(https://www.pubnub.com/), [Stripe](https://stripe.com/), " +
-        "[Task Queue](https://docs.bullmq.io/) (<code>redis</code>) and various other services. " +
-        "Collaborated with the stakeholders to engineer requirements and plan sprints in the agile " +
-        "process with a globally distributed team, while reducing requirement changes during sprints " +
-        "from ≈ 30% to < 5%.",
-      "In [Bikribatta](https://www.bikribatta.com/) inventory solution, *architected* accounts, " +
-        "reports, and employee management components. " +
-        "Written a stock management microservice using <code>Golang</code> that reduces the latency 10X. " +
-        "Further, built a desktop version of the " +
-        "Point of Sales component of the same solution " +
-        "using [Electron](https://www.electronjs.org/), which also " +
-        "works in offline mode with eventual consistency scheme.",
-      "Migrated the subscription backend of [Wonster Words](https://apps.apple.com/us/app/wonster-words-learning-games/id881119321) " +
-        "iOS app store game from <code>node.js</code> to <code>ASP.Net</code> using Microsoft Azure " +
-        "[FaaS](https://azure.microsoft.com/en-us/services/functions/), " +
-        "[Cosmos DB](https://azure.microsoft.com/en-us/services/cosmos-db/), " +
-        "and [Queue Storage](https://azure.microsoft.com/en-us/services/storage/queues/).",
+      `Led the architected and development of [Daency](https://daency.com/), an
+       online platform to learn dancing interactively. The tech stack was
+       <code>TypeScript</code>, <code>Express JS</code>, <code>Vue JS</code>,
+       <code>Mongo DB</code>, and <code>Docker</code>. Also integrated and
+       maintained [WebRTC](https://agora.io), [AWS](https://aws.amazon.com),
+       [GCP](https://cloud.google.com/),
+       [Push Notification](https://www.pubnub.com/),
+       [Stripe](https://stripe.com/), [Task Queue](https://docs.bullmq.io/)
+       (<code>redis</code>) and various other services. Collaborated with the
+       stakeholders to engineer requirements and plan sprints in the agile
+       process with a globally distributed team, while reducing requirement
+       changes during sprints from ≈ 30% to < 5%.`,
+      `In [Bikribatta](https://www.bikribatta.com/) inventory solution,
+       *architected* accounts, reports, and employee management components.
+       Written a stock management microservice using <code>Golang</code> that
+       reduces the latency 10X. Further, built a desktop app for the Point of
+       Sales component using [Electron](https://www.electronjs.org/), which also
+       works in offline mode with an eventual consistency scheme.`,
+      `Migrated the subscription backend of
+       [Wonster Words](https://apps.apple.com/us/app/wonster-words-learning-games/id881119321)
+       iOS app store game from <code>node.js</code> to <code>ASP.Net</code>
+       using Microsoft Azure
+       [FaaS](https://azure.microsoft.com/en-us/services/functions/),
+       [Cosmos DB](https://azure.microsoft.com/en-us/services/cosmos-db/),
+       and [Queue Storage](https://azure.microsoft.com/en-us/services/storage/queues/).`,
       "Contributed to several in-house [React Native](https://reactnative.dev/) " +
         "based mobile applications.",
       "Hosted two in-house workshops on ‘Modern Web Development with Vue JS’ " +
@@ -106,7 +115,7 @@ const experiences: Record<string, IExperience> = {
     ],
   },
   "Festive.Rocks": {
-    position: "Cofounder and Tech Lead ",
+    position: "Co-founder and Tech Lead ",
     time: "January 2023 — Present",
     works: [
       "Created a low latency, high-performance website to run on slow internet " +
@@ -124,8 +133,8 @@ const experiences: Record<string, IExperience> = {
     works: [
       "[CoachSnap](https://www.coachsnap.com/) is a digital platform to connect " +
         "coaches and their students together online. There my core responsibility " +
-        "was to implement the payment service using <code>Stripe</code>. I futher " +
-        "worked on several other exciting features including appointment management. " +
+        "was to implement the payment service using <code>Stripe</code>. I further " +
+        "worked on several other exciting features, including appointment management. " +
         "The tech-stack involves cutting edge technologies like " +
         "<code>GraphQL</code> (Apollo & Prisma), <code>React</code> (Ant Design), " +
         "query caching, CSS preprocessor (<code>less</code>), <code>Docker</code>, " +

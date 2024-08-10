@@ -1,56 +1,60 @@
 <template>
   <CentralBox title="Skills">
-    <h4 class="cursive text-pink">
+    <h4
+      class="cursive p-1 rounded"
+      style="background-color: var(--bs-green-700)"
+    >
       I can exit Vim. In addition to that, I am skilled in
     </h4>
-    <ul class="nav">
-      <li
-        v-for="tab in Object.keys(tabContents)"
-        :key="tab"
-        class="nav-item flex-grow-1"
-      >
-        <a
-          class="nav-link underline fw-bold text-center"
-          :class="tab === activeTab ? 'active' : 'text-white'"
-          role="button"
-          @mouseover="activeTab = tab"
+    <div v-for="(tabContent, category) in tabContents" :key="category" class="">
+      <div style="margin-top: 36px">
+        <h5
+          class="underline d-flex align-items-baseline"
+          :class="{ active: isExpanded[category] }"
         >
-          <span>{{ tab }}</span>
-        </a>
-      </li>
-    </ul>
-    <div
-      v-for="(tabContent, category) in tabContents"
-      v-show="category === activeTab"
-      :key="category"
-      class="skillset d-flex pt-3"
-    >
-      <div class="skill box left">
-        <div>
-          <ul
-            class="triangle ul-grid"
-            :style="{
-              '--num-cols': Math.ceil(tabContent.skills.length / 10),
-            }"
+          <span>{{ category }}</span>
+
+          <button
+            class="btn btn-outline-success btn-sm ms-auto"
+            type="button"
+            :aria-expanded="isExpanded[category]"
+            :aria-controls="`#skill-${category}`"
+            @click="isExpanded[category] = !isExpanded[category]"
           >
-            <li
+            {{ isExpanded[category] ? "Hide" : "Show" }} Details
+          </button>
+        </h5>
+      </div>
+
+      <div class="">
+        <div class="rounded">
+          <div class="d-flex align-items-center flex-wrap">
+            <div
               v-for="skill in tabContent.skills"
               :key="skill"
-              class="font-monospace text-nowrap"
+              class="font-monospace text-nowrap me-3"
+              style="color: var(--bs-gray-400)"
             >
               {{ skill }}
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="skill box right">
-        <div>
-          <p
-            v-for="desc in tabContent.desc"
-            :key="desc"
-            v-html="formatString(desc)"
-          />
-        </div>
+
+        <Transition>
+          <div
+            v-show="isExpanded[category]"
+            :id="`#skill-${category}`"
+            class="mt-3"
+          >
+            <div class="skill description">
+              <p
+                v-for="desc in tabContent.desc"
+                :key="desc"
+                v-html="formatString(desc)"
+              />
+            </div>
+          </div>
+        </Transition>
       </div>
     </div>
   </CentralBox>
@@ -70,7 +74,6 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
       "JavaScript (ES6+)",
       "TypeScript",
       "C#",
-      "Java",
       "PHP",
     ],
     desc: [
@@ -87,7 +90,7 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
       developing the official [website](https://new.cseku.ac.bd/) of the CSE
       Department of Khulna University, Bangladesh that is mostly written in
       <code>PHP</code>.`,
-      `I strongly suggest to check my
+      `I strongly suggest checking my
       [<kbd>LeetCode</kbd>](https://leetcode.com/parvezmrobin) profile to glance
       my coding skill.`,
     ],
@@ -95,25 +98,12 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
   "Web Technology": {
     skills: [
       "Node JS",
-      "Express JS",
       "Vue JS",
       "React",
-      "GoFiber",
-      "GraphQL",
       "REST API",
       "Bootstrap",
       "CSS3",
-      "D3",
-      "Micro Service",
-      "Webpack",
-      "Vite",
-      "Web Socket",
-      "WebRTC",
       "Flask",
-      "Laravel",
-      "ASP.Net",
-      "Next JS",
-      "jQuery",
     ],
     desc: [
       "I have extensive work experience in <code>Node JS</code>, <code>Express JS</code> and " +
@@ -138,7 +128,7 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
         "Bangladesh, which uses <code>MySQL</code> as the database system.",
     ],
   },
-  "ML/DL/Data Science": {
+  "Machine Learning": {
     skills: [
       "Neural Networks",
       "Transformers",
@@ -146,9 +136,6 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
       "Transfer Learning",
       "Ensemble Learning",
       "Unsupervised Learning",
-      "Decision Tree",
-      "Regression Models",
-      "Support Vector Machine",
       "Natural Language Processing",
     ],
     desc: [
@@ -162,20 +149,15 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
       "One of the early recognition of my Data Science skill is placing among the top 15 teams " +
         "in Datathon Bangladesh, 2019 — the biggest data-centric competition in the country. " +
         "I have several relevant certification from Coursera (see [Certifications](#certifications)).",
-
-      "<div class='rounded px-1' style='background-color: var(--bs-cyan-800)'>I recently published my research on _Explaining Software Bugs Using Deep Learning_ in ICSE " +
-        "2023 — the biggest software engineering conference (see [Publications](#publications)).</div>",
     ],
   },
   "Tools & Platform": {
     skills: [
       "Docker",
-      "Docker Compose",
       "Google Cloud Platform",
       "Amazon Web Service",
       "Microsoft Azure",
       "git",
-      "nano",
       "Linux",
     ],
     desc: [
@@ -198,12 +180,7 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
   },
 };
 
-const urlParams = new URLSearchParams(window.location.search);
-let activeTabValue = urlParams.get("activeSkillTab");
-if (!activeTabValue || !Object.keys(tabContents).includes(activeTabValue)) {
-  activeTabValue = "Languages";
-}
-const activeTab = ref(activeTabValue);
+const isExpanded = ref<Record<string, boolean>>({});
 </script>
 
 <style scoped lang="scss">
@@ -217,12 +194,13 @@ const activeTab = ref(activeTabValue);
   color: var(--bs-teal);
 }
 
-.nav-link.underline {
-  border-bottom: 3px solid white;
+.underline {
+  border-bottom: 1px solid var(--bs-secondary);
+  padding-bottom: 4px;
   --bs-nav-link-hover-color: var(--bs-teal);
 
   &.active {
-    border-color: var(--bs-success);
+    border-color: var(--bs-info);
   }
 
   > span {
@@ -230,64 +208,24 @@ const activeTab = ref(activeTabValue);
     top: 0;
     transition: top 500ms;
   }
-
-  &:hover > span {
-    top: -5px;
-  }
-}
-
-.ul-grid {
-  display: grid;
-  column-gap: 2rem;
-  grid-template-columns: repeat(var(--num-cols), 1fr);
-  margin-bottom: 0;
 }
 
 $md: 768px;
 
-.skillset {
-  @media screen and (max-width: $md) {
-    flex-direction: column;
-    align-items: center;
-  }
+.skill.description {
+  background: var(--bs-purple-900);
+  padding: 10px 10px 10px 30px;
+  border-radius: 5px;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 25%);
 }
 
-.nav {
-  --bs-link-color: var(--bs-teal-600);
-  --bs-link-hover-color: var(--bs-teal-400);
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
 }
 
-.skill.box {
-  display: flex;
-  align-items: center;
-
-  &.left {
-    > div {
-      background: var(--bs-indigo-700);
-      padding: 10px;
-      border-radius: 5px;
-      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 50%);
-      z-index: 1;
-    }
-  }
-
-  &.right {
-    display: flex;
-    align-items: center;
-
-    > div {
-      background: var(--bs-purple-900);
-      padding: 10px 10px 10px 30px;
-      border-radius: 5px;
-      margin-left: -10px;
-      box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 25%);
-
-      @media screen and (max-width: $md) {
-        margin-left: 0;
-        margin-top: -10px;
-        padding: 20px 10px 10px 10px;
-      }
-    }
-  }
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }
 </style>

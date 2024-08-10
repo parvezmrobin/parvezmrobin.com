@@ -1,9 +1,10 @@
 <template>
-  <div id="home" class="vh-100">
+  <div id="home">
     <div
-      class="d-flex flex-column flex-lg-row justify-content-center align-items-center h-100"
+      class="d-flex flex-column flex-lg-row justify-content-center align-items-center"
+      style="min-height: 100vh"
     >
-      <div class="d-none d-sm-block position-relative me-lg-5 mb-5 mb-lg-0">
+      <div class="d-none d-sm-block position-relative me-lg-5 my-5 mb-lg-0">
         <picture>
           <source type="image/webp" srcset="/propic.webp" />
           <source type="image/jpeg" srcset="/propic.jpg" />

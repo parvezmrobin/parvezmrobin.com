@@ -6,10 +6,14 @@
     >
       I can exit Vim. In addition to that, I am skilled in
     </h4>
-    <div v-for="(tabContent, category) in tabContents" :key="category" class="">
-      <div style="margin-top: 36px">
+    <div
+      v-for="(tabContent, category) in tabContents"
+      :key="category"
+      class="row rounded purple hover py-2 mt-3"
+    >
+      <div>
         <h5
-          class="underline d-flex align-items-baseline"
+          class="text-pink underline d-flex align-items-baseline"
           :class="{ active: isExpanded[category] }"
         >
           <span>{{ category }}</span>
@@ -33,7 +37,6 @@
               v-for="skill in tabContent.skills"
               :key="skill"
               class="font-monospace text-nowrap me-3"
-              style="color: var(--bs-gray-400)"
             >
               {{ skill }}
             </div>

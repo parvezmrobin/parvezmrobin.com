@@ -1,52 +1,42 @@
 <template>
   <CentralBox title="Experience" maxWidth="var(--bs-breakpoint-lg)">
-    <div class="d-flex flex-column flex-sm-row">
-      <ul
-        class="nav flex-sm-column justify-content-center justify-content-sm-start"
-      >
-        <li
-          v-for="experience in Object.keys(experiences)"
-          :key="experience"
-          class="nav-item"
-        >
-          <a
-            role="button"
-            class="nav-link fw-bold"
-            :class="experience === selectedExperience ? 'active' : 'text-white'"
-            @mouseover="selectedExperience = experience"
-          >
-            <span>{{ experience }}</span>
-          </a>
-        </li>
-      </ul>
+    <div
+      v-for="(experienceDescription, experience) in experiences"
+      :key="experience"
+      class="row pt-3"
+    >
+      <div class="d-md-none">
+        <h5 class="fw-normal">
+          <span class="text-pink">{{ experience }}</span>
+        </h5>
+        <h6 class="d-flex justify-content-between">
+          {{ experienceDescription.position }}
+          <em class="small">{{ experienceDescription.time }}</em>
+        </h6>
+        <hr class="mt-0" />
+      </div>
 
-      <template
-        v-for="(experienceDescription, experience) in experiences"
-        :key="experience"
-      >
-        <div
-          v-show="experience === selectedExperience"
-          class="ps-3 pt-4 pt-sm-1"
-        >
-          <h4>{{ experienceDescription.position }}</h4>
-          <p>
-            <em>{{ experienceDescription.time }}</em>
-          </p>
-          <ul class="triangle">
-            <li
-              v-for="(work, i) in experienceDescription.works"
-              :key="i"
-              v-html="formatString(work)"
-            />
-          </ul>
-        </div>
-      </template>
+      <div class="col col-3 d-none d-md-block">
+        <h4 class="fw-normal text-pink">{{ experience }}</h4>
+        <h6 class="fw-normal">{{ experienceDescription.position }}</h6>
+        <p class="small">
+          <em>{{ experienceDescription.time }}</em>
+        </p>
+      </div>
+      <div class="col col-md-9">
+        <ul class="triangle">
+          <li
+            v-for="(work, i) in experienceDescription.works"
+            :key="i"
+            v-html="formatString(work)"
+          />
+        </ul>
+      </div>
     </div>
   </CentralBox>
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
 import { formatString } from "../util";
 import CentralBox from "./CentralBox.vue";
 
@@ -58,12 +48,18 @@ interface IExperience {
 
 const experiences: Record<string, IExperience> = {
   Siemens: {
-    position: "Software Engineer",
+    position: "Software Developer",
     time: "March 2024 — Present",
     works: [
-      `Contributing to the research and development of
+      `For
       [Analog FastSPICE](https://eda.sw.siemens.com/en-US/ic/analog-fastspice/)
-      – the fastest nano-meter circuit verification platform.`,
+      – the fasted nanometer circuit verification platform, developed a
+      stamping algorithm that takes up to <em>4 times less</em> memory in
+      multithreaded runs.`,
+
+      `Jointly developed a Matrix-Vector multiplication algorithm specific to
+      symmetric matrices that is <em>40% faster</em> than the general-purpose
+      algorithm.`,
     ],
   },
   NerdDevs: {
@@ -155,7 +151,6 @@ const experiences: Record<string, IExperience> = {
     ],
   },
 };
-const selectedExperience = ref("Siemens");
 </script>
 
 <style scoped lang="scss">
@@ -197,5 +192,9 @@ $sm: 576px;
       top: -5px;
     }
   }
+}
+
+::v-deep(.h6) {
+  color: var(--bs-info);
 }
 </style>

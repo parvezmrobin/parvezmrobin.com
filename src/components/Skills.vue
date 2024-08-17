@@ -1,11 +1,11 @@
 <template>
   <CentralBox title="Skills">
-    <h4
-      class="cursive p-1 rounded"
-      style="background-color: var(--bs-green-700)"
+    <h5
+      class="p-1 rounded fw-normal"
+      style="background-color: var(--bs-pink-800)"
     >
       I can exit Vim. In addition to that, I am skilled in
-    </h4>
+    </h5>
     <div
       v-for="(tabContent, category) in tabContents"
       :key="category"
@@ -19,7 +19,7 @@
           <span>{{ category }}</span>
 
           <button
-            class="btn btn-outline-success btn-sm ms-auto"
+            class="btn text-primary btn-sm ms-auto"
             type="button"
             :aria-expanded="isExpanded[category]"
             :aria-controls="`#skill-${category}`"
@@ -187,12 +187,6 @@ const isExpanded = ref<Record<string, boolean>>({});
 </script>
 
 <style scoped lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Itim&family=Kalam:wght@300&display=swap");
-
-.cursive {
-  font-family: "Itim", cursive;
-}
-
 :deep(a) {
   color: var(--bs-teal);
 }

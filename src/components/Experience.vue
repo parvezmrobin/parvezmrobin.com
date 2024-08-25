@@ -62,6 +62,19 @@ const experiences: Record<string, IExperience> = {
       algorithm.`,
     ],
   },
+  Metabob: {
+    position: "Research Intern",
+    time: "May 2022 — April 2023",
+    works: [
+      "Worked on a research project aiming to automatically explain software " +
+        "bugs in natural language using cutting-edge deep learning techniques. " +
+        "A recent developer survey shows that our developed tool can provide 43% " +
+        "more accurate and 40% concise explanations of bugs (see [Publications](#publications)).",
+      "Developed a web application backed by state-of-the-art language model to " +
+        "explain defective source code using Python, Flask, PyTorch, and Vue JS " +
+        "(see [Demo](https://www.youtube.com/watch?v=xga-ScvULpk)).",
+    ],
+  },
   NerdDevs: {
     position: "Software Engineer",
     time: "March 2019 — July 2021",
@@ -97,19 +110,7 @@ const experiences: Record<string, IExperience> = {
         "and ‘Sustainable Architecture with TypeScript’.",
     ],
   },
-  Metabob: {
-    position: "Research Intern",
-    time: "May 2022 — April 2023",
-    works: [
-      "Worked on a research project aiming to automatically explain software " +
-        "bugs in natural language using cutting-edge deep learning techniques. " +
-        "A recent developer survey shows that our developed tool can provide 43% " +
-        "more accurate and 40% concise explanations of bugs (see [Publications](#publications)).",
-      "Developed a web application backed by state-of-the-art language model to " +
-        "explain defective source code using Python, Flask, PyTorch, and Vue JS " +
-        "(see [Demo](https://www.youtube.com/watch?v=xga-ScvULpk)).",
-    ],
-  },
+
   "Festive.Rocks": {
     position: "Co-founder and Tech Lead ",
     time: "January 2023 — Present",
@@ -121,20 +122,6 @@ const experiences: Record<string, IExperience> = {
       "Led a team of four developers to complete a fully featured web application " +
         "within three months while maintaining very high code quality and more " +
         "than 90% test coverage.",
-    ],
-  },
-  CoachSnap: {
-    position: "Full Stack Developer",
-    time: "December 2019 — February 2020",
-    works: [
-      "[CoachSnap](https://www.coachsnap.com/) is a digital platform to connect " +
-        "coaches and their students together online. There my core responsibility " +
-        "was to implement the payment service using <code>Stripe</code>. I further " +
-        "worked on several other exciting features, including appointment management. " +
-        "The tech-stack involves cutting edge technologies like " +
-        "<code>GraphQL</code> (Apollo & Prisma), <code>React</code> (Ant Design), " +
-        "query caching, CSS preprocessor (<code>less</code>), <code>Docker</code>, " +
-        "and yarn workspace.",
     ],
   },
   "Dalhousie University": {

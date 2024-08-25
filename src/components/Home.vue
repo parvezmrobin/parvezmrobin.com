@@ -65,15 +65,8 @@
           </p>
           <p>
             Currently, I am working as a Software Engineer at
-            <em>Siemens</em> contributing to
-            <em
-              ><a
-                href="https://eda.sw.siemens.com/en-US/ic/analog-fastspice/"
-                target="_blank"
-                >Analog FastSPICE</a
-              ></em
-            >
-            – the fastest nano-meter circuit verification platform.
+            <em>Siemens</em> EDAI – building next generation AI platform for
+            Electronic Design Automation (EDA).
           </p>
         </div>
 

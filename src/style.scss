@@ -5,6 +5,17 @@
 $navbar-dark-color: white;
 $body-color: #f8f9fa;
 
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 6,
+);
+
 // 3. Include remainder of required Bootstrap stylesheets
 @import "~bootstrap/scss/variables";
 
@@ -80,6 +91,10 @@ $body-color: #f8f9fa;
   @each $name, $color in $all-colors {
     --bs-#{$name}: #{$color};
   }
+}
+
+html {
+  background:  #041818;
 }
 
 body {
@@ -163,7 +178,7 @@ kbd, .text-pink, .h6 {
 
 
 html {
-  --scrollbarBG: #062b31;
+  --scrollbarBG: var(----bs-teal-900);
   --thumbBG: var(--bs-teal);
 }
 

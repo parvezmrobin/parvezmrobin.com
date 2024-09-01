@@ -17,13 +17,16 @@
         tabindex="-1"
         aria-labelledby="offcanvasNavbarLabel"
       >
-        <div class="offcanvas-header justify-content-end bg-dark">
+        <div
+          class="offcanvas-header justify-content-end"
+          style="background-color: var(--bs-cyan-900)"
+        >
           <button
             type="button"
             class="btn-close btn-close-white"
             data-bs-dismiss="offcanvas"
             aria-label="Close"
-          ></button>
+          />
         </div>
         <div class="offcanvas-body">
           <ul
@@ -73,10 +76,15 @@ $md: 768px;
 $xl: 1200px;
 $xxl: 1400px;
 
-@media screen and (max-width: $md) {
+@media screen and (max-width: $xl) {
   .offcanvas-body {
-    --bs-bg-opacity: 1;
-    background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity));
+    background-color: var(--bs-cyan-900);
+  }
+}
+
+@media screen and (min-width: $md) {
+  .offcanvas-body {
+    border-radius: var(--bs-border-radius-sm);
   }
 }
 

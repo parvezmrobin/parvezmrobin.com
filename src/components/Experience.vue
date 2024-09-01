@@ -3,7 +3,7 @@
     <div
       v-for="(experienceDescription, experience) in experiences"
       :key="experience"
-      class="row pt-3"
+      class="row pt-4 hover purple rounded"
     >
       <div class="d-md-none">
         <h5 class="fw-normal">

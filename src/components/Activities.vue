@@ -5,7 +5,7 @@
     maxWidth="var(--bs-breakpoint-md)"
   >
     <ul class="triangle">
-      <li v-for="activity in activities" v-once :key="activity">
+      <li v-for="(activity, i) in activities" v-once :key="i">
         <em class="text-secondary me-1">[{{ activity.time }}]</em>
         <span v-html="formatString(activity.text)" />
       </li>

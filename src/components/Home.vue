@@ -64,9 +64,14 @@
             <code>TypeScript</code>.
           </p>
           <p>
-            Currently, I am working as a Software Engineer at
-            <em>Siemens</em> EDAI – building next generation AI platform for
-            Electronic Design Automation (EDA).
+            Currently, I am working as a Machine Learning Engineer at
+            <a
+              href="https://eda.sw.siemens.com/en-US/trending-technologies/eda-ai-page/"
+              target="_blank"
+              >Siemens EDA AI</a
+            >
+            – building next generation AI platform for Electronic Design
+            Automation (EDA).
           </p>
         </div>
 

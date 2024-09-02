@@ -84,8 +84,5 @@ ul {
   li {
     margin-bottom: 0.5rem;
   }
-  a {
-    color: var(--bs-cyan);
-  }
 }
 </style>

@@ -3,7 +3,7 @@
 
 // 2. Include any default variable overrides here
 $navbar-dark-color: white;
-$body-color: #f8f9fa;
+$body-color: #d8e9fa;
 
 $spacer: 1rem;
 $spacers: (
@@ -135,14 +135,18 @@ body {
 }
 
 ul.triangle {
+  --bs-link-hover-color: var(--bs-cyan);
+
   padding-left: 1rem;
 
   li::marker {
     content: "▹";
+    font-size: .75rem;
   }
 
   li {
     padding-left: 1rem;
+    margin-bottom: .5rem;
   }
 }
 

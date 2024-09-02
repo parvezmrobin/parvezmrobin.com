@@ -7,8 +7,12 @@
       :data-bs-content="link.title"
       :aria-label="link.title"
     >
-      <i v-if="link.icon.startsWith('devicon')" :class="link.icon"></i>
-      <img v-else :src="link.icon" :alt="link.title" />
+      <i
+        v-if="link.icon.startsWith('devicon')"
+        :class="link.icon"
+        style="font-size: 2rem"
+      />
+      <img v-else :src="link.icon" :alt="link.title" style="width: 2rem" />
     </a>
   </div>
 </template>
@@ -54,6 +58,14 @@ onMounted(() => {
 <style lang="scss" scoped>
 .link-icon {
   padding: 0 1rem 1rem 0;
+  position: relative;
+  bottom: 0;
+
+  transition: bottom 0.25s ease-in-out;
+  &:hover {
+    bottom: 0.25rem;
+  }
+
   a {
     color: inherit;
     text-decoration: none;

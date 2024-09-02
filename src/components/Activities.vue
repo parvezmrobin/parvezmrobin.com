@@ -75,13 +75,3 @@ const activities: IActivity[] = [
   },
 ];
 </script>
-
-<style scoped lang="scss">
-ul.triangle {
-  --bs-link-color: var(--bs-cyan-400);
-  --bs-link-hover-color: var(--bs-cyan-600);
-  li {
-    margin-bottom: 0.5rem;
-  }
-}
-</style>

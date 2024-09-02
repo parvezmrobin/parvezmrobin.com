@@ -66,6 +66,7 @@ const navbarPaddingTop = computed(() => {
   return inHomePage.value ? "calc(50vh - 160px)" : "1.5rem";
 });
 </script>
+
 <style lang="scss">
 .navbar {
   background-color: transparent;
@@ -95,6 +96,16 @@ $xxl: 1400px;
   }
   @media screen and (min-width: $xxl) {
     width: calc(100% / 12);
+  }
+}
+
+.nav-link {
+  position: relative;
+  right: 0;
+  transition: color, right 500ms;
+  &:hover {
+    color: var(--bs-teal);
+    right: 0.25rem;
   }
 }
 </style>

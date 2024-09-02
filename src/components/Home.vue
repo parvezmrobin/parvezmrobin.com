@@ -42,7 +42,12 @@
             </div>
             <h2 id="title" class="d-none d-sm-block fw-light"></h2>
             <h5 id="titleMobile" class="d-sm-none fw-light"></h5>
-            <a href="mailto:parvezmrobin@gmail.com"> parvezmrobin@gmail.com </a>
+            <p class="font-monospace">
+              parvezmrobin<span class="text-muted">[at]</span>gmail<span
+                class="text-muted"
+                >[dot]</span
+              >com
+            </p>
           </div>
           <div class="d-block d-sm-none">
             <picture>
@@ -120,12 +125,12 @@
       >
         <div class="d-flex align-items-center">
           <div class="me-2">
-            <a
-              href="mailto:parvezmrobin@gmail.com"
-              class="font-monospace text-white"
+            <span class="font-monospace"
+              >parvezmrobin<span class="text-muted">[at]</span>gmail<span
+                class="text-muted"
+                >[dot]</span
+              >com</span
             >
-              parvezmrobin@gmail.com
-            </a>
           </div>
           <div
             class="border"

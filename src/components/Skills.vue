@@ -19,24 +19,29 @@
           <span>{{ category }}</span>
 
           <button
-            class="btn text-primary btn-sm ms-auto"
+            class="btn btn-sm ms-auto"
+            :class="
+              isExpanded[category]
+                ? 'btn-outline-warning'
+                : 'btn-outline-primary'
+            "
             type="button"
             :aria-expanded="isExpanded[category]"
             :aria-controls="`#skill-${category}`"
             @click="isExpanded[category] = !isExpanded[category]"
           >
-            {{ isExpanded[category] ? "Hide" : "Show" }} Details
+            {{ isExpanded[category] ? "Hide" : "Relevant" }} Experience
           </button>
         </h5>
       </div>
 
-      <div class="">
+      <div>
         <div class="rounded">
           <div class="d-flex align-items-center flex-wrap">
             <div
               v-for="skill in tabContent.skills"
               :key="skill"
-              class="font-monospace text-nowrap me-3"
+              class="font-monospace text-nowrap me-4"
             >
               {{ skill }}
             </div>
@@ -107,6 +112,7 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
       "Bootstrap",
       "CSS3",
       "Flask",
+      "FastAPI",
     ],
     desc: [
       "I have extensive work experience in <code>Node JS</code>, <code>Express JS</code> and " +
@@ -116,7 +122,7 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
       "Alongside these most prominent technologies, I used <code>Web Socket</code> and " +
         "<code>WebRTC</code> to make a video calling service. I also developed a _novel_ " +
         "[visualization tool](https://lrwe.parvezmrobin.dev) using <code>D3</code>. " +
-        "In my research works as well as in my internship at Metabob, I used <code>Flask</code> " +
+        "During my job at Metabob and Siemens, I used <code>Flask</code> and <code>FastAPI</code> " +
         "to deploy machine learning models.",
     ],
   },

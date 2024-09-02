@@ -6,8 +6,13 @@
     maxWidth="var(--bs-breakpoint-md)"
   >
     <p class="fw-light mb-5">
-      Why don’t you send an
-      <a href="mailto:parvezmrobin@gmail.com">email</a>
+      Why don’t you send an email to
+      <span class="text-primary"
+        >parvezmrobin<span class="text-muted">[at]</span>gmail<span
+          class="text-muted"
+          >[dot]</span
+        >com</span
+      >
       and let’s talk.
       <picture>
         <source srcset="/thinking.webp" type="image/webp" />

@@ -47,7 +47,12 @@
         target="_blank"
         >LinkedIn</a
       >
-      profile. 😒
+      profile.
+      <picture>
+        <source srcset="/smirking-face.webp" type="image/webp" />
+        <source srcset="/smirking-face.gif" type="image/gif" />
+        <img src="/smirking-face.gif" alt="I Wonder!" style="height: 28px" />
+      </picture>
     </div>
   </CentralBox>
 </template>

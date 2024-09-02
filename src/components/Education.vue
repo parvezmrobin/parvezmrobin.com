@@ -2,7 +2,7 @@
   <CentralBox
     title="Education"
     :topMarginRatio="0.075"
-    maxWidth="var(--bs-breakpoint-md)"
+    maxWidth="var(--bs-breakpoint-lg)"
   >
     <div
       v-for="(school, i) in schools"
@@ -27,12 +27,17 @@
             <h5 class="card-title">
               {{ school.name }}
             </h5>
-            <h6 class="card-subtitle mb-2">{{ school.duration }}</h6>
+            <h6 class="card-subtitle mb-2">{{ school.institution }}</h6>
+            <p class="mb-2">
+              <small>{{ school.duration }}</small>
+            </p>
             <p class="card-text">
-              <span class="text-info"><em>Thesis</em>:</span>
+              <em class="text-info">Thesis</em>:
               {{ school.description }}
             </p>
-            <p class="card-text"><strong>CGPA:</strong> {{ school.cgpa }}</p>
+            <p class="card-text">
+              <em class="text-info">CGPA:</em> {{ school.cgpa }}
+            </p>
           </div>
         </div>
         <div v-if="i % 2 === 1" class="col-md-3 image-wrapper">
@@ -57,6 +62,7 @@ import CentralBox from "./CentralBox.vue";
 interface ISchool {
   images: string[];
   name: string;
+  institution: string;
   duration: string;
   description: string;
   cgpa: string;
@@ -65,25 +71,29 @@ interface ISchool {
 const schools: ISchool[] = [
   {
     images: ["/dalu.webp", "/dalu.png"],
-    name: "Dalhousie University – Master’s in Computer Science",
+    name: "Master of Science in Computer Science",
+    institution: "Dalhousie University",
     duration: "September 2021 – August 2023",
     description:
       "Comprehending Software Bugs Leveraging Code Structure in Neural Language Modelling",
-    cgpa: "4.30/4.30",
+    cgpa: "4.30 / 4.30",
   },
   {
     images: ["/ku.webp", "/ku.png"],
-    name: "Khulna University – Bachelor of Science in Computer Science and Engineering",
+    name: "Bachelor of Science in Computer Science and Engineering",
+    institution: "Khulna University",
     duration: "December 2014 – February 2019",
     description:
       "Authorship Identification of Source Code Segments Written by Multiple Authors Using Stacking Ensemble Method",
-    cgpa: "3.61/4.00",
+    cgpa: "3.61 / 4.00",
   },
 ];
 </script>
 
 <style scoped lang="scss">
 $sm: 576px;
+$md: 768px;
+$lg: 992px;
 
 ul {
   a {
@@ -99,7 +109,7 @@ ul {
     display: flex;
     align-items: center;
 
-    @media screen and (max-width: $sm - 1) {
+    @media screen and (max-width: $md - 1) {
       display: none;
     }
     img {

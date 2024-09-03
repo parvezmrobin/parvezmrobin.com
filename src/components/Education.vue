@@ -35,9 +35,6 @@
               <em class="text-info">Thesis</em>:
               {{ school.description }}
             </p>
-            <p class="card-text">
-              <em class="text-info">CGPA:</em> {{ school.cgpa }}
-            </p>
           </div>
         </div>
         <div v-if="i % 2 === 1" class="col-md-3 image-wrapper">
@@ -65,7 +62,6 @@ interface ISchool {
   institution: string;
   duration: string;
   description: string;
-  cgpa: string;
 }
 
 const schools: ISchool[] = [
@@ -76,7 +72,6 @@ const schools: ISchool[] = [
     duration: "September 2021 – August 2023",
     description:
       "Comprehending Software Bugs Leveraging Code Structure in Neural Language Modelling",
-    cgpa: "4.30 / 4.30",
   },
   {
     images: ["/ku.webp", "/ku.png"],
@@ -85,7 +80,6 @@ const schools: ISchool[] = [
     duration: "December 2014 – February 2019",
     description:
       "Authorship Identification of Source Code Segments Written by Multiple Authors Using Stacking Ensemble Method",
-    cgpa: "3.61 / 4.00",
   },
 ];
 </script>

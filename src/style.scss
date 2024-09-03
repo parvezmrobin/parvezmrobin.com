@@ -99,6 +99,7 @@ html {
 
 body {
   background: radial-gradient(ellipse at top, #02152a, #062b31, #000) scroll;
+  --bs-body-font-family: "Overlock", var(--bs-font-sans-serif);
 
   &.conic {
     background: conic-gradient(

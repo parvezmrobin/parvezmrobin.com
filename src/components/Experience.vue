@@ -60,6 +60,14 @@ const experiences: Record<string, IExperience> = {
       `Jointly developed a Matrix-Vector multiplication algorithm specific to
       symmetric matrices that is <em>40% faster</em> than the general-purpose
       algorithm.`,
+
+      `
+      Developed an integration test framework for
+      [Siemens EDA AI](https://eda.sw.siemens.com/en-US/trending-technologies/eda-ai-page/)
+      that can deploy the necessary containers (as a service) during the test
+      and tear them down after the test session is completed. This framework
+      reduced the <em>amortized</em> test setup time by <em>50%</em>.
+      `,
     ],
   },
   Metabob: {

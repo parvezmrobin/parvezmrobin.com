@@ -152,10 +152,10 @@ export default defineComponent({
       return;
     }
     const popoverEls: HTMLCollection = this.$el.querySelectorAll(
-      '[data-bs-toggle="popover"]'
+      '[data-bs-toggle="popover"]',
     );
     Array.from(popoverEls).forEach(
-      (popoverEl) => new Popover(popoverEl, { trigger: "hover focus" })
+      (popoverEl) => new Popover(popoverEl, { trigger: "hover focus" }),
     );
   },
   methods: {
@@ -163,10 +163,10 @@ export default defineComponent({
   },
 });
 </script>
+
 <style lang="scss">
-$sm: 576px;
-$md: 768px;
-$lg: 992px;
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
 
 .project {
   align-items: center;
@@ -188,7 +188,7 @@ $lg: 992px;
     border-radius: 2px;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 50%);
 
-    @media screen and (min-width: calc($lg + 1px)) {
+    @media screen and (min-width: map-get($grid-breakpoints, lg)) {
       padding: 1.5rem;
       position: relative;
       z-index: 1;
@@ -219,8 +219,9 @@ $lg: 992px;
   }
 
   .col-6:last-child {
-    @media screen and (max-width: $lg) {
-      display: none;
+    display: none;
+    @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+      display: block;
     }
 
     div {

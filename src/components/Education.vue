@@ -85,9 +85,8 @@ const schools: ISchool[] = [
 </script>
 
 <style scoped lang="scss">
-$sm: 576px;
-$md: 768px;
-$lg: 992px;
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
 
 ul {
   a {
@@ -100,11 +99,11 @@ ul {
   border: none;
   .image-wrapper {
     position: relative;
-    display: flex;
+    display: none;
     align-items: center;
 
-    @media screen and (max-width: $md - 1) {
-      display: none;
+    @media screen and (min-width: map-get($grid-breakpoints, md)) {
+      display: flex;
     }
     img {
       position: absolute;
@@ -136,7 +135,7 @@ ul {
     position: relative;
     background-color: var(--bs-purple-800);
     border-radius: 5px;
-    @media screen and (min-width: $sm) {
+    @media screen and (min-width: map-get($grid-breakpoints, sm)) {
       padding-left: 30px;
       padding-right: 30px;
     }

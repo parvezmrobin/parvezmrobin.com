@@ -68,33 +68,32 @@ const navbarPaddingTop = computed(() => {
 </script>
 
 <style lang="scss">
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
 .navbar {
   background-color: transparent;
   transition: padding-top 1s ease-in-out;
 }
 
-$md: 768px;
-$xl: 1200px;
-$xxl: 1400px;
-
-@media screen and (max-width: $xl) {
+@media screen and (max-width: map-get($grid-breakpoints, xl)) {
   .offcanvas-body {
     background-color: var(--bs-cyan-900);
   }
 }
 
-@media screen and (min-width: $md) {
+@media screen and (min-width: map-get($grid-breakpoints, md)) {
   .offcanvas-body {
     border-radius: var(--bs-border-radius-sm);
   }
 }
 
 .navbar {
-  @media screen and (min-width: $xl) {
+  @media screen and (min-width: map-get($grid-breakpoints, xl)) {
     width: calc(100% / 6);
     padding-top: v-bind("navbarPaddingTop");
   }
-  @media screen and (min-width: $xxl) {
+  @media screen and (min-width: map-get($grid-breakpoints, xxl)) {
     width: calc(100% / 12);
   }
 }
@@ -102,7 +101,9 @@ $xxl: 1400px;
 .nav-link {
   position: relative;
   right: 0;
-  transition: color, right 500ms;
+  transition:
+    color,
+    right 500ms;
   &:hover {
     color: var(--bs-teal);
     right: 0.25rem;

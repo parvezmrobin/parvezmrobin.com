@@ -7,7 +7,7 @@
       <div class="row">
         <div class="col-12">
           <div class="description mt-2">
-            <div v-html="formatString(description)"></div>
+            <div v-html="formatString(description)" />
           </div>
         </div>
         <div class="col-12">
@@ -90,10 +90,10 @@ export default defineComponent({
       return;
     }
     const popoverEls: HTMLCollection = this.$el.querySelectorAll(
-      '[data-bs-toggle="popover"]'
+      '[data-bs-toggle="popover"]',
     );
     Array.from(popoverEls).forEach(
-      (popoverEl) => new Popover(popoverEl, { trigger: "hover focus" })
+      (popoverEl) => new Popover(popoverEl, { trigger: "hover focus" }),
     );
   },
   methods: {
@@ -102,10 +102,10 @@ export default defineComponent({
   },
 });
 </script>
+
 <style lang="scss">
-$sm: 576px;
-$md: 768px;
-$lg: 992px;
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
 
 .publication {
   align-items: center;
@@ -127,7 +127,7 @@ $lg: 992px;
     border-radius: 2px;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 50%);
 
-    @media screen and (min-width: calc($lg + 1px)) {
+    @media screen and (min-width: map-get($grid-breakpoints, lg)) {
       padding: 1.5rem;
     }
   }
@@ -138,7 +138,7 @@ $lg: 992px;
   }
 
   .keywords {
-    @media screen and (min-width: $md) {
+    @media screen and (min-width: map-get($grid-breakpoints, md)) {
       flex: 1 1 0;
     }
   }

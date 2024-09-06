@@ -167,7 +167,7 @@ onMounted(() => {
       .typeString("I make machines intelligent")
       .start()
       .callFunction(({ elements }: TypewriterState) =>
-        elements.cursor.remove()
+        elements.cursor.remove(),
       );
   }
 });

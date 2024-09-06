@@ -49,7 +49,7 @@ onMounted(() => {
   for (const el of rootEls.value) {
     new Popover(
       el.querySelector('[data-bs-toggle="popover"]') as HTMLAnchorElement,
-      { trigger: "hover focus" }
+      { trigger: "hover focus" },
     );
   }
 });

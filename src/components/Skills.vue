@@ -213,8 +213,6 @@ const isExpanded = ref<Record<string, boolean>>({});
   }
 }
 
-$md: 768px;
-
 .skill.description {
   background: var(--bs-purple-900);
   padding: 10px 10px 10px 30px;

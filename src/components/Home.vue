@@ -25,7 +25,7 @@
       </div>
       <div style="max-width: 750px">
         <div class="d-flex justify-content-between align-items-center">
-          <div>
+          <div style="min-width: 200px">
             <h4 class="d-none d-sm-block fw-light">Hey! I am</h4>
             <h4 class="d-sm-none fw-light">Hey! I am</h4>
             <div class="row flex-column flex-sm-row align-items-sm-end">
@@ -42,12 +42,6 @@
             </div>
             <h2 id="title" class="d-none d-sm-block fw-light"></h2>
             <h5 id="titleMobile" class="d-sm-none fw-light"></h5>
-            <p class="font-monospace">
-              parvezmrobin<span class="text-muted">[at]</span>gmail<span
-                class="text-muted"
-                >[dot]</span
-              >com
-            </p>
           </div>
           <div class="d-block d-sm-none">
             <picture>
@@ -62,8 +56,14 @@
             </picture>
           </div>
         </div>
+        <p class="font-monospace mt-3">
+          parvezmrobin<span class="text-muted">[at]</span>gmail<span
+            class="text-muted"
+            >[dot]</span
+          >com
+        </p>
 
-        <div class="mt-4" style="text-align: justify">
+        <div class="mt-3" style="text-align: justify">
           <p>
             I am a polyglot software engineer with extensive experience in both
             software development and deep learning. I worked as a software

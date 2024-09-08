@@ -167,47 +167,8 @@ const experiences: Record<string, IExperience> = {
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 
-.nav {
-  --bs-link-color: var(--bs-teal-600);
-  --bs-link-hover-color: var(--bs-teal-400);
-}
-
-.nav-link {
-  border-left: 3px solid white;
-  white-space: nowrap;
-
-  @media screen and (max-width: map-get($grid-breakpoints, sm)) {
-    --bs-nav-link-padding-x: 0.5rem;
-    border-left: none;
-    border-bottom: 3px solid white;
-  }
-  &.active {
-    border-left: 3px solid var(--bs-success);
-    @media screen and (max-width: map-get($grid-breakpoints, sm)) {
-      border-left: none;
-      border-bottom: 3px solid var(--bs-teal);
-    }
-  }
-
-  > span {
-    position: relative;
-    left: 0;
-    top: 0;
-    transition:
-      left 500ms,
-      top 500ms;
-  }
-
-  &:hover > span {
-    left: 5px;
-    @media screen and (max-width: map-get($grid-breakpoints, sm)) {
-      left: 0;
-      top: -5px;
-    }
-  }
-}
-
 ::v-deep(.h6) {
-  color: var(--bs-info);
+  color: var(--bs-cyan-200);
+  font-weight: bold;
 }
 </style>

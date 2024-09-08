@@ -183,7 +183,7 @@ export default defineComponent({
   }
 
   .description {
-    background-color: var(--bs-indigo-700);
+    background-color: var(--bs-purple-800);
     padding: 1rem;
     border-radius: 2px;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 50%);

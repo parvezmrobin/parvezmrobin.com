@@ -6,7 +6,7 @@
   >
     <div
       class="shadow-lg rounded py-3"
-      style="background-color: var(--bs-indigo-800)"
+      style="background-color: var(--bs-purple-900)"
     >
       <div class="mx-3" style="text-align: justify">
         Parvez M Robin is a <strong>knowledgeable</strong> and
@@ -33,6 +33,52 @@
             style="width: 14px"
           />
         </picture>
+
+        <button
+          type="button"
+          class="btn ms-auto"
+          data-bs-toggle="modal"
+          data-bs-target="#deno"
+        >
+          <i class="devicon-denojs-original fs-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <div
+      id="deno"
+      class="modal fade"
+      tabindex="-1"
+      aria-labelledby="denoModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div
+          class="modal-content"
+          style="background-color: var(--bs-purple-800)"
+        >
+          <div class="modal-header">
+            <h1 id="denoModalLabel" class="modal-title fs-5">
+              Sad Story of A Dino
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p style="text-align: justify">
+              One of my friends, dino, volunteered to rearrange the contents of
+              this site. As she is a dino with a prehistoric sense of humour,
+              she didn’t catch the sarcasm in the <em>Testimonials</em> section.
+              So, she rewrote the whole thing which was really better (compared
+              to AI).
+            </p>
+            <p>Let’s keep a minute of silence for that pure little dino.</p>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -47,7 +93,7 @@
         target="_blank"
         >LinkedIn</a
       >
-      profile.
+      profile
       <picture>
         <source srcset="/smirking-face.webp" type="image/webp" />
         <source srcset="/smirking-face.gif" type="image/gif" />

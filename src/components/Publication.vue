@@ -1,6 +1,10 @@
 <template>
-  <div v-once class="row publication purple hover">
-    <div class="col">
+  <div
+    v-once
+    class="row publication mb-4"
+    style="background-color: var(--bs-purple-800)"
+  >
+    <div class="col px-md-4">
       <h4 class="fw-normal">
         {{ title }}
       </h4>
@@ -119,17 +123,6 @@ export default defineComponent({
   h4 {
     font-weight: normal;
     color: var(--bs-pink);
-  }
-
-  .description {
-    background-color: var(--bs-indigo-700);
-    padding: 1rem;
-    border-radius: 2px;
-    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 50%);
-
-    @media screen and (min-width: map-get($grid-breakpoints, lg)) {
-      padding: 1.5rem;
-    }
   }
 
   code {

@@ -32,7 +32,7 @@
               <small>{{ school.duration }}</small>
             </p>
             <p class="card-text">
-              <em class="text-info">Thesis</em>:
+              <strong class="">Thesis</strong>:
               {{ school.description }}
             </p>
           </div>

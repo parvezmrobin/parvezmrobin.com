@@ -2,10 +2,9 @@
   <CentralBox
     id="publications"
     title="Publications"
-    :topMarginRatio="0"
     maxWidth="var(--bs-breakpoint-lg)"
   >
-    <div>
+    <div style="padding: 0 12px">
       <Publication
         v-for="publication in publications"
         :key="publication.title"
@@ -85,7 +84,7 @@ const publications: IPublication[] = [
     ],
     prePrint: "https://arxiv.org/abs/2212.04584",
     demo: "https://www.youtube.com/watch?v=xga-ScvULpk",
-    prototype: "https://bugsplainer.research.cs.dal.ca/",
+    // prototype: "https://bugsplainer.research.cs.dal.ca/",
     abstract: `Software bugs claim ≈50% of development time and cost the global economy billions of dollars.
       Once a bug is reported, the assigned developer attempts to identify and understand the source
       code responsible for the bug and then corrects the code. Over the last five decades, there has

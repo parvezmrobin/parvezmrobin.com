@@ -23,7 +23,7 @@
             :class="
               isExpanded[category]
                 ? 'btn-outline-warning'
-                : 'btn-outline-primary'
+                : 'btn-outline-success'
             "
             type="button"
             :aria-expanded="isExpanded[category]"

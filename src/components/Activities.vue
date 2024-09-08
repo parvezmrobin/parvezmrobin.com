@@ -29,14 +29,14 @@ const activities: IActivity[] = [
       "Presented on <span class='cursive'>The History and Evolution of " +
       "Generative Language Models</span> at [Impact The Future]" +
       "(https://gdg.community.dev/events/details/google-gdg-saskatoon-presents-iwd-2024-lets-build-with-ai-and-impactthefuture/) " +
-      "by [Google Developers Group – Saskatoon]" +
+      "symposium by [Google Developers Group – Saskatoon]" +
       "(https://gdg.community.dev/gdg-saskatoon/).",
   },
   {
     time: "May 2022 — Apr 2024",
     text:
       "As the <span class='h6'>Vice President External Advocacy</span> in " +
-      "_Dalhousie Association of Graduate students (DAGS)_, Mainted relations " +
+      "_Dalhousie Association of Graduate students (DAGS)_, maintained relations " +
       "with several external organizations and committees including _Department " +
       "of Advaced Eduation, Nova Scotia_.",
   },
@@ -44,7 +44,7 @@ const activities: IActivity[] = [
     time: "May 2022 — Apr 2023",
     text:
       "As the <span class='h6'>Graduate Student Representative</span> in " +
-      "_Dalhousie Student Union (DSU) Council_, I ensured the decisions and " +
+      "_Dalhousie Student Union (DSU) Council_, ensured the decisions and " +
       "policies passed in the DSU are in favor of the graduate students.",
   },
   {

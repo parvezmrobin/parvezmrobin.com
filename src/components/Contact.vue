@@ -7,7 +7,7 @@
   >
     <p class="fw-light mb-5">
       Why don’t you send an email to
-      <span class="text-primary"
+      <span class="font-monospace fs-6"
         >parvezmrobin<span class="text-muted">[at]</span>gmail<span
           class="text-muted"
           >[dot]</span

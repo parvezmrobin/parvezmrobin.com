@@ -84,6 +84,7 @@
         </div>
 
         <div
+          v-show="false"
           class="mt-4"
           style="word-spacing: -0.05rem; color: var(--bs-yellow)"
         >

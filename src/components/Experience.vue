@@ -9,9 +9,11 @@
         <h5 class="fw-normal">
           <span class="text-pink">{{ experience }}</span>
         </h5>
-        <h6 class="d-flex justify-content-between">
+        <h6 class="d-flex justify-content-between align-items-baseline">
           {{ experienceDescription.position }}
-          <em class="small">{{ experienceDescription.time }}</em>
+          <em class="small text-nowrap" style="text-align: right">{{
+            experienceDescription.time
+          }}</em>
         </h6>
         <hr class="mt-0" />
       </div>
@@ -62,11 +64,24 @@ const experiences: Record<string, IExperience> = {
       algorithm.`,
 
       `
-      Developed an integration test framework for
-      [Siemens EDA AI](https://eda.sw.siemens.com/en-US/trending-technologies/eda-ai-page/)
+      For
+      [Siemens EDA AI](https://eda.sw.siemens.com/en-US/trending-technologies/eda-ai-page/),
+      developed an integration test framework
       that can deploy the necessary containers (as a service) during the test
       and tear them down after the test session is completed. This framework
       reduced the <em>amortized</em> test setup time by <em>50%</em>.
+      `,
+    ],
+  },
+  ElderBerry: {
+    position: "Software Developer (Contract)",
+    time: "December 2023 — January 2024",
+    works: [
+      `
+      For [ElderBerry](https://elderberry.care) – a platform to connect
+      caregivers with the elderly, developed the payment gateway integration
+      with <code>Stripe</code> and <code>Node.JS</code> that reduced error
+      rates compared to the existing solution by <em>90%</em>.
       `,
     ],
   },

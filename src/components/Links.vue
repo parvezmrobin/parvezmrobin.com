@@ -12,7 +12,12 @@
         :class="link.icon"
         style="font-size: 2rem"
       />
-      <img v-else :src="link.icon" :alt="link.title" style="width: 2rem" />
+      <img
+        v-else
+        :src="link.icon"
+        :alt="link.title"
+        style="height: 2rem; width: auto"
+      />
     </a>
   </div>
 </template>

@@ -100,13 +100,13 @@ const navbarPaddingTop = computed(() => {
 
 .nav-link {
   position: relative;
-  right: 0;
+  left: 0;
   transition:
     color,
-    right 500ms;
+    left 500ms;
   &:hover {
     color: var(--bs-teal);
-    right: 0.25rem;
+    left: 0.25rem;
   }
 }
 </style>

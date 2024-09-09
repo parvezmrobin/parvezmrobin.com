@@ -36,11 +36,11 @@
 
         <button
           type="button"
-          class="btn ms-auto"
+          class="btn ms-auto d-flex align-items-center"
           data-bs-toggle="modal"
           data-bs-target="#deno"
         >
-          <i class="devicon-denojs-original fs-5"></i>
+          <i class="devicon-denojs-original fs-3"></i>
         </button>
       </div>
     </div>
@@ -52,7 +52,7 @@
       aria-labelledby="denoModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-dialog-centered">
         <div
           class="modal-content"
           style="background-color: var(--bs-purple-800)"
@@ -63,7 +63,7 @@
             </h1>
             <button
               type="button"
-              class="btn-close"
+              class="btn-close btn-close-white"
               data-bs-dismiss="modal"
               aria-label="Close"
             ></button>

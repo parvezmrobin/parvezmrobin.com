@@ -24,15 +24,6 @@ interface IActivity {
 
 const activities: IActivity[] = [
   {
-    time: "Apr 2024",
-    text:
-      "Presented on <span class='cursive'>The History and Evolution of " +
-      "Generative Language Models</span> at [Impact The Future]" +
-      "(https://gdg.community.dev/events/details/google-gdg-saskatoon-presents-iwd-2024-lets-build-with-ai-and-impactthefuture/) " +
-      "symposium by [Google Developers Group – Saskatoon]" +
-      "(https://gdg.community.dev/gdg-saskatoon/).",
-  },
-  {
     time: "May 2022 — Apr 2024",
     text:
       "As the <span class='h6'>Vice President External Advocacy</span> in " +

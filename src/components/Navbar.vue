@@ -32,7 +32,15 @@
           <ul
             class="navbar-nav justify-content-end flex-grow-1 pe-3 ps-xl-3 flex-xl-column"
           >
-            <li v-for="nav in props.navs" :key="nav" class="nav-item">
+            <li
+              v-for="nav in props.navs"
+              :key="nav"
+              class="nav-item"
+              :class="{
+                'd-md-none d-xl-inline-block':
+                  nav.toLowerCase() === 'certifications',
+              }"
+            >
               <a
                 class="nav-link underline text-end"
                 :href="`#${nav.toLowerCase()}`"

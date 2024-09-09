@@ -21,6 +21,7 @@
 <script setup lang="ts">
 import Achievements from "./components/Achievements.vue";
 import Activities from "./components/Activities.vue";
+import Talks from "./components/Talks.vue";
 import Certifications from "./components/Certifications.vue";
 import Contact from "./components/Contact.vue";
 import Education from "./components/Education.vue";
@@ -38,9 +39,10 @@ const components = {
   Experience,
   Education,
   Publications,
+  Activities,
+  Talks,
   Projects,
   Achievements,
-  Activities,
   Certifications,
 };
 </script>

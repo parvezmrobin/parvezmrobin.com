@@ -26,37 +26,36 @@ const activities: IActivity[] = [
   {
     time: "May 2022 — Apr 2024",
     text:
-      "As the <span class='h6'>Vice President External Advocacy</span> in " +
+      "As the *Vice President External Advocacy* in " +
       "_Dalhousie Association of Graduate students (DAGS)_, maintained relations " +
       "with several external organizations and committees including _Department " +
-      "of Advaced Eduation, Nova Scotia_.",
+      "of Advanced Education, Nova Scotia_",
   },
   {
     time: "May 2022 — Apr 2023",
     text:
-      "As the <span class='h6'>Graduate Student Representative</span> in " +
+      "As the *Graduate Student Representative* in " +
       "_Dalhousie Student Union (DSU) Council_, ensured the decisions and " +
-      "policies passed in the DSU are in favor of the graduate students.",
+      "policies passed in the DSU are in favor of the graduate students",
   },
   {
     time: "May 2022 — Apr 2023",
     text:
-      "As the <span class='h6'>Graduate Student Representative</span> in " +
+      "As the *Graduate Student Representative* in " +
       "_Faculty of Graduate Studies (FGS) Council_ of Dalhousie University, I " +
-      "ensured the students<span class='font-monospace'>’</span> interest in " +
-      "faculty policy.",
+      "ensured the students’ interest in faculty policy",
   },
   {
     time: "2017 — 2018",
     text:
-      "Arranged a dozen sessions as the _Head of Promotion of Podium_, " +
-      "Khulna University — an organization for improving public speaking skills.",
+      "As the *Head of Promotion of Podium*, arranged a dozen sessions " +
+      "Khulna University — an organization for improving public speaking skills",
   },
   {
     time: "2018",
     text:
       "Served as the head of the souvenir committee in Khulna University " +
-      "Central Rag 2018.",
+      "Central Rag, 2018",
   },
   {
     time: "2018",
@@ -66,3 +65,9 @@ const activities: IActivity[] = [
   },
 ];
 </script>
+
+<style scoped>
+::v-deep(strong) {
+  color: var(--bs-info);
+}
+</style>

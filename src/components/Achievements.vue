@@ -6,7 +6,7 @@
           [{{ achievement.from
           }}{{ achievement.to ? ` — ${achievement.to}` : "" }}]
         </em>
-        <strong v-if="achievement.title" style="color: var(--bs-pink)">
+        <strong v-if="achievement.title" style="color: var(--bs-info)">
           {{ achievement.title }}:
         </strong>
         <span v-html="achievement.text" />
@@ -30,13 +30,13 @@ const achievements: IAchievement[] = [
     from: "Sep 2021",
     to: "Aug 2023",
     title: "Dalhousie University Scholarship",
-    text: "Awarded by the Faculty of Graduate Studies and the Faculty of Computer Science for academic results and research excellence.",
+    text: "Awarded by the Faculty of Graduate Studies and the Faculty of Computer Science for academic results and research excellence",
   },
   {
     from: "May 2022",
     to: "Apr 2023",
     title: "Mitacs Accelerate Scholarship",
-    text: "Awarded by Mitacs to research in explaining software bugs using artificial intelligence.",
+    text: "Awarded by Mitacs to research in explaining software bugs using artificial intelligence",
   },
   {
     from: "Apr 2019",
@@ -58,18 +58,7 @@ const achievements: IAchievement[] = [
     from: "Jan 2015",
     to: "Dec 2016, 2018",
     title: "Khulna University Scholarship",
-    text: "Awarded by the Computer Science and Engineering Discipline and Khulna University scholarship committee based on academic excellence.",
+    text: "Awarded by the Computer Science and Engineering Discipline and Khulna University scholarship committee based on academic excellence",
   },
 ];
 </script>
-
-<style scoped lang="scss">
-ul {
-  li {
-    margin-bottom: 0.5rem;
-  }
-  a {
-    color: var(--bs-cyan);
-  }
-}
-</style>

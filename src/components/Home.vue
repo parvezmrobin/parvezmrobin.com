@@ -199,7 +199,7 @@ a {
   flex-grow: 1;
   max-width: 7.5rem;
   height: 0;
-  margin-top: 1.25rem;
+  margin-top: calc(1rem + 1px);
   margin-right: 1rem;
 }
 

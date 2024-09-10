@@ -65,20 +65,19 @@
 
         <div class="mt-3" style="text-align: justify">
           <p>
-            I am a polyglot software engineer with extensive experience in both
-            software development and deep learning. I worked as a software
-            engineer for more than three years with hands-on experience in
-            <code>C++</code>, <code>Go</code>, <code>Python</code>, and
-            <code>TypeScript</code>.
+            As a polyglot software engineer with a strong background in software
+            development and machine learning, my experience includes firsthand
+            work with <code>C++</code>, <code>Go</code>, <code>Python</code>,
+            and <code>TypeScript</code> for over three years.
           </p>
           <p>
-            Currently, I am working as a Machine Learning Engineer at
+            Currently, I am a machine learning engineer at
             <a
               href="https://eda.sw.siemens.com/en-US/trending-technologies/eda-ai-page/"
               target="_blank"
               >Siemens EDA AI</a
             >
-            – building next generation AI platform for Electronic Design
+            – creating next generation AI platform for Electronic Design
             Automation (EDA).
           </p>
         </div>

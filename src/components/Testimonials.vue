@@ -68,8 +68,8 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">
-            <p style="text-align: justify">
+          <div class="modal-body" style="text-align: justify">
+            <p>
               One of my friends, dino, volunteered to rearrange the contents of
               this site. As she is a dino with a prehistoric sense of humour,
               she didn’t catch the sarcasm in the <em>Testimonials</em> section.

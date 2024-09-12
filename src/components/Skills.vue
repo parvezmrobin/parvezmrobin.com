@@ -19,7 +19,7 @@
           <span>{{ category }}</span>
 
           <button
-            class="btn btn-sm ms-auto"
+            class="btn btn-sm dropdown-toggle ms-auto"
             :class="
               isExpanded[category]
                 ? 'btn-outline-warning'
@@ -193,6 +193,16 @@ const isExpanded = ref<Record<string, boolean>>({});
 </script>
 
 <style scoped lang="scss">
+.dropdown-toggle {
+  &::after {
+    vertical-align: 0.125rem;
+  }
+  &.btn-outline-warning::after {
+    border-top: 0;
+    border-bottom: 0.3rem solid;
+  }
+}
+
 :deep(a) {
   color: var(--bs-teal);
 }

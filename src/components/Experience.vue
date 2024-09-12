@@ -39,6 +39,7 @@
 </template>
 
 <script lang="ts" setup>
+import { onBeforeMount, reactive } from "vue";
 import { formatString } from "../util";
 import CentralBox from "./CentralBox.vue";
 
@@ -134,19 +135,17 @@ const experiences: Record<string, IExperience> = {
     ],
   },
 
-  "Festive.Rocks": {
+  "Festive.Rocks": reactive({
     position: "Co-founder and Tech Lead ",
     time: "January 2023 — Present",
     works: [
       "Created a low latency, high-performance website to run on slow internet " +
         "regions for the target market.",
-      "Seamlessly hosted two full-sold events with great customer satisfaction, " +
-        "which resulted in getting 3 more big events in the coming months.",
       "Led a team of four developers to complete a fully featured web application " +
         "within three months while maintaining very high code quality and more " +
         "than 90% test coverage.",
     ],
-  },
+  }),
   "Dalhousie University": {
     position: "Teaching Assistant",
     time: "September 2021 — December 2022",
@@ -161,6 +160,25 @@ const experiences: Record<string, IExperience> = {
     ],
   },
 };
+
+onBeforeMount(async () => {
+  try {
+    const res = await fetch(
+      `https://api.festive.rocks/api/feed/count?Verified=1&StartBefore=${new Date().toISOString()}`,
+    );
+    const resBody = await res.json();
+    experiences["Festive.Rocks"].works.splice(
+      1,
+      0,
+      `
+      Seamlessly hosted
+      [${resBody["Total"]} events](https://festive.rocks/feed/past?Verified=1)
+      with great customer satisfaction.`,
+    );
+  } catch (e) {
+    console.error(e);
+  }
+});
 </script>
 
 <style scoped lang="scss">

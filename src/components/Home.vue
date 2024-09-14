@@ -4,10 +4,7 @@
       class="d-flex flex-column flex-lg-row justify-content-center align-items-center"
       style="min-height: 100vh"
     >
-      <div
-        class="d-none d-sm-block position-relative me-lg-5 mb-2 mb-lg-0"
-        style="margin-top: 4rem"
-      >
+      <div class="d-none d-md-block position-relative me-5">
         <picture>
           <source type="image/webp" srcset="/propic.webp" />
           <source type="image/jpeg" srcset="/propic.jpg" />
@@ -24,7 +21,7 @@
         />
       </div>
       <div style="max-width: 750px">
-        <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
           <div style="min-width: 200px">
             <h4 class="d-none d-sm-block fw-light">Hey! I am</h4>
             <h4 class="d-sm-none fw-light">Hey! I am</h4>
@@ -33,17 +30,15 @@
                 <div class="d-none d-sm-block display-2">Parvez M Robin</div>
                 <div class="d-sm-none display-5">Parvez M Robin</div>
               </div>
-              <div class="col-auto">
-                <div class="d-none d-sm-block h2 fw-light ms-sm-2 pb-1">
-                  (He/Him)
-                </div>
-                <div class="d-sm-none h5 fw-light ms-sm-2 pb-1">(He/Him)</div>
+              <div class="col-md-auto">
+                <h2 class="d-none d-md-block ms-2">(He/Him)</h2>
+                <h5 class="d-md-none">(He/Him)</h5>
               </div>
             </div>
             <h2 id="title" class="d-none d-sm-block fw-light"></h2>
             <h5 id="titleMobile" class="d-sm-none fw-light"></h5>
           </div>
-          <div class="d-block d-sm-none">
+          <div class="d-block d-md-none mt-3">
             <picture>
               <source type="image/webp" srcset="/propic.webp" />
               <source type="image/jpeg" srcset="/propic.jpg" />
@@ -51,7 +46,7 @@
                 src="/propic.jpg"
                 alt="It's me"
                 class="rounded-circle"
-                style="width: 100%"
+                style="width: 100%; max-width: 200px"
               />
             </picture>
           </div>

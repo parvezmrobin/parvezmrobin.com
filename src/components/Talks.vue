@@ -6,25 +6,28 @@
     maxWidth="var(--bs-breakpoint-md)"
   >
     <ul class="triangle">
-      <li v-for="(activity, i) in talks" v-once :key="i">
-        <em class="text-secondary me-1">[{{ activity.time }}]</em>
-        <span class="cursive">{{ activity.title }}</span> on
-        <a :href="activity.eventLink" target="_blank">{{ activity.event }}</a>
-        <template v-if="activity.organizer">
+      <li v-for="(talk, i) in talks" v-once :key="i">
+        <em class="text-secondary me-1">[{{ talk.time }}]</em>
+        <span class="cursive">{{ talk.title }}</span> on
+        <a v-if="talk.eventLink" :href="talk.eventLink" target="_blank">{{
+          talk.event
+        }}</a>
+        <template v-else>{{ talk.event }}</template>
+        <template v-if="talk.organizer">
           organized by
           <a
-            v-if="activity.organizerLink"
-            :href="activity.organizerLink"
+            v-if="talk.organizerLink"
+            :href="talk.organizerLink"
             target="_blank"
-            >{{ activity.organizer }}</a
+            >{{ talk.organizer }}</a
           >
-          <span v-else>{{ activity.organizer }}</span>
+          <span v-else>{{ talk.organizer }}</span>
         </template>
-        <template v-if="activity.location">
-          held in <em>{{ activity.location }}</em></template
+        <template v-if="talk.location">
+          held in <em>{{ talk.location }}</em></template
         >.&nbsp;&nbsp;<a
-          v-if="activity.slide"
-          :href="activity.slide"
+          v-if="talk.slide"
+          :href="talk.slide"
           target="_blank"
           class="btn btn-success d-inline"
           style="
@@ -47,7 +50,7 @@ interface ITalk {
   time: string;
   title: string;
   event: string;
-  eventLink: string;
+  eventLink?: string;
   organizer?: string;
   organizerLink?: string;
   location?: string;
@@ -95,6 +98,34 @@ const talks: ITalk[] = [
     location: "Melbourne, Australia",
     slide:
       "https://docs.google.com/presentation/d/1Zxq5ljogHL7lbpIAKkCQFU7MqQixBiCB/edit?usp=sharing&ouid=105783071308124321683&rtpof=true&sd=true",
+  },
+  {
+    time: "February 2023",
+    title:
+      "Explaining Software Bugs Leveraging Code Structures in Language Modeling",
+    event: "Systems Cluster Research Day",
+    organizer: "Systems Research Cluster",
+    organizerLink:
+      "https://www.dal.ca/faculty/computerscience/systems-networks-security.html",
+    location: "Dalhousie University, NS, Canada",
+    slide:
+      "https://docs.google.com/presentation/d/1Zxq5ljogHL7lbpIAKkCQFU7MqQixBiCB/edit?usp=sharing&ouid=105783071308124321683&rtpof=true&sd=true",
+  },
+  {
+    time: "November 2020",
+    title: "TypeScript for Browsers",
+    event: "In-house workshop",
+    organizer: "Nerddevs Ltd",
+    slide:
+      "https://docs.google.com/presentation/d/1MBUAmGVOydHNAvQ-eQpJI5Qtaayw-LqBGbidM1CCEhk/edit?usp=sharing",
+  },
+  {
+    time: "October 2020",
+    title: "Micro-frontends with Vue JS and Backbone.js",
+    event: "In-house workshop",
+    organizer: "Nerddevs Ltd",
+    slide:
+      "https://docs.google.com/presentation/d/1oZ_M9wRDsQH2Apa4End4Ngd65OXLr6odrcea2YUb8ME/edit?usp=sharing",
   },
   {
     time: "December 2019",

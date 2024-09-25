@@ -54,14 +54,14 @@ const activities: IActivity[] = [
   {
     time: "2018",
     text:
-      "Served as the head of the souvenir committee in Khulna University " +
+      "Served as the *Head of the Souvenir Committee* in Khulna University " +
       "Central Rag, 2018",
   },
   {
     time: "2018",
     text:
       "Managed official website of CSE discipline, Khulna University, and " +
-      "corresponding computer club — CLUSTER as the _IT secretary of CLUSTER_.",
+      "corresponding computer club — CLUSTER as the *IT secretary of CLUSTER*.",
   },
 ];
 </script>

@@ -166,7 +166,6 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
       "Google Cloud Platform",
       "Amazon Web Service",
       "Microsoft Azure",
-      "git",
       "Linux",
     ],
     desc: [

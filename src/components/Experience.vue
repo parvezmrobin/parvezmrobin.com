@@ -1,52 +1,73 @@
 <template>
   <CentralBox title="Experience" maxWidth="var(--bs-breakpoint-lg)">
-    <div
+    <div class="form-check form-switch">
+      <input
+        id="show-minor-employments"
+        v-model="showMinorEmployments"
+        class="form-check-input"
+        type="checkbox"
+        role="switch"
+      />
+      <label class="form-check-label" for="show-minor-employments"
+        >Show Minor Employments</label
+      >
+    </div>
+    <template
       v-for="(experienceDescription, experience) in experiences"
       :key="experience"
-      class="row pt-4 hover purple rounded"
     >
-      <div class="d-md-none">
-        <h5 class="fw-normal">
-          <span class="text-pink">{{ experience }}</span>
-        </h5>
-        <h6 class="d-flex justify-content-between align-items-baseline">
-          {{ experienceDescription.position }}
-          <em class="small text-nowrap" style="text-align: right">{{
-            experienceDescription.time
-          }}</em>
-        </h6>
-        <hr class="mt-0" />
-      </div>
+      <Transition name="slide-fade">
+        <div
+          v-if="showMinorEmployments || !experienceDescription.isMinor"
+          class="row pt-4 hover purple rounded"
+        >
+          <div class="d-md-none">
+            <h5 class="fw-normal">
+              <span class="text-pink">{{ experience }}</span>
+            </h5>
+            <h6 class="d-flex justify-content-between align-items-baseline">
+              {{ experienceDescription.position }}
+              <em class="small text-nowrap" style="text-align: right">{{
+                experienceDescription.time
+              }}</em>
+            </h6>
+            <hr class="mt-0" />
+          </div>
 
-      <div class="col col-3 d-none d-md-block">
-        <h4 class="fw-normal text-pink">{{ experience }}</h4>
-        <h6 class="fw-normal">{{ experienceDescription.position }}</h6>
-        <p class="small">
-          <em>{{ experienceDescription.time }}</em>
-        </p>
-      </div>
-      <div class="col col-md-9">
-        <ul class="triangle">
-          <li
-            v-for="(work, i) in experienceDescription.works"
-            :key="i"
-            v-html="formatString(work)"
-          />
-        </ul>
-      </div>
-    </div>
+          <div class="col col-3 d-none d-md-block">
+            <h4 class="fw-normal text-pink">{{ experience }}</h4>
+            <h6 class="fw-normal">{{ experienceDescription.position }}</h6>
+            <p class="small">
+              <em>{{ experienceDescription.time }}</em>
+            </p>
+          </div>
+          <div class="col col-md-9">
+            <ul class="triangle">
+              <li
+                v-for="(work, i) in experienceDescription.works"
+                :key="i"
+                v-html="formatString(work)"
+              />
+            </ul>
+          </div>
+        </div>
+      </Transition>
+    </template>
   </CentralBox>
 </template>
 
 <script lang="ts" setup>
-import { onBeforeMount, reactive } from "vue";
+import { onBeforeMount, reactive, ref } from "vue";
 import { formatString } from "../util";
 import CentralBox from "./CentralBox.vue";
+
+const showMinorEmployments = ref(false);
 
 interface IExperience {
   position: string;
   time: string;
   works: string[];
+  isMinor?: true;
 }
 
 const experiences: Record<string, IExperience> = {
@@ -83,6 +104,7 @@ const experiences: Record<string, IExperience> = {
       rates compared to the existing solution by <em>90%</em>.
       `,
     ],
+    isMinor: true,
   },
   Metabob: {
     position: "Research Intern",
@@ -156,6 +178,7 @@ const experiences: Record<string, IExperience> = {
       "<span class='h6'>Software Development</span>: Taking labs and helping the students in resolving issues " +
         "regarding version controlling, test driven development, code smells, refactoring, and more",
     ],
+    isMinor: true,
   },
 };
 
@@ -186,5 +209,19 @@ onBeforeMount(async () => {
 ::v-deep(.h6) {
   color: var(--bs-cyan-200);
   font-weight: bold;
+}
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateY(20px);
+  opacity: 0;
 }
 </style>

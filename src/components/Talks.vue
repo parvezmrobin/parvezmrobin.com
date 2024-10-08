@@ -59,6 +59,17 @@ interface ITalk {
 
 const talks: ITalk[] = [
   {
+    time: "October 2024",
+    title: "Intelligent Software For Future Space",
+    event: "2024 NASA International Space Apps Challenge",
+    eventLink:
+      "https://www.spaceappschallenge.org/nasa-space-apps-2024/2024-local-events/saskatoon/?tab=details",
+    organizer: "NASA ft. The University of Saskatchewan Space Design Team",
+    organizerLink: "https://www.spaceappschallenge.org/",
+    slide:
+      "https://docs.google.com/presentation/d/1cfSMEffdzqRV3TSVy61nrMFE9cdoBkEc/edit?usp=sharing&ouid=105783071308124321683&rtpof=true&sd=true",
+  },
+  {
     time: "April 2024",
     title: "The History and Evolution of Generative Language Models",
     event: "IWD 2024: Let's build with AI and #ImpactTheFuture",
@@ -110,22 +121,6 @@ const talks: ITalk[] = [
     location: "Dalhousie University, NS, Canada",
     slide:
       "https://docs.google.com/presentation/d/1Zxq5ljogHL7lbpIAKkCQFU7MqQixBiCB/edit?usp=sharing&ouid=105783071308124321683&rtpof=true&sd=true",
-  },
-  {
-    time: "November 2020",
-    title: "TypeScript for Browsers",
-    event: "In-house workshop",
-    organizer: "Nerddevs Ltd",
-    slide:
-      "https://docs.google.com/presentation/d/1MBUAmGVOydHNAvQ-eQpJI5Qtaayw-LqBGbidM1CCEhk/edit?usp=sharing",
-  },
-  {
-    time: "October 2020",
-    title: "Micro-frontends with Vue JS and Backbone.js",
-    event: "In-house workshop",
-    organizer: "Nerddevs Ltd",
-    slide:
-      "https://docs.google.com/presentation/d/1oZ_M9wRDsQH2Apa4End4Ngd65OXLr6odrcea2YUb8ME/edit?usp=sharing",
   },
   {
     time: "December 2019",

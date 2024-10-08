@@ -67,11 +67,9 @@ const experiences: Record<string, IExperience> = {
       `
       For
       [Siemens EDA AI](https://eda.sw.siemens.com/en-US/trending-technologies/eda-ai-page/),
-      developed an integration test framework
-      that can deploy the necessary containers (as a service) during the test
-      and tear them down after the test session is completed. This framework
-      reduced the <em>amortized</em> test setup time by <em>50%</em>.
-      `,
+      developed a sparse pipeline (using <code>ElasticSearch</code>), and hybrid
+      rerank pipeline (<code>ElasticSearch</code> & <code>Milvus</code>) for
+      searching relevant documents.`,
     ],
   },
   ElderBerry: {

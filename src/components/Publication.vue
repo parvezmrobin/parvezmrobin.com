@@ -23,6 +23,26 @@
             </div>
             <div class="col-auto">
               <div class="btn-group" role="group">
+                <a
+                  v-if="googleScholar"
+                  class="btn btn-outline-primary"
+                  :href="googleScholar"
+                  target="_blank"
+                  data-bs-toggle="popover"
+                  data-bs-content="Google Scholar"
+                  aria-label="Google Scholar"
+                  style="
+                    white-space: nowrap;
+                    text-transform: capitalize;
+                    --bs-btn-border-radius: 3px;
+                  "
+                >
+                  <img
+                    src="https://scholar.google.com/favicon.ico"
+                    alt="Google Scholar"
+                    style="height: 1.5rem; width: auto"
+                  />
+                </a>
                 <template v-for="attr in ['prePrint', 'demo', 'prototype']">
                   <a
                     v-if="$attrs[attr]"
@@ -70,6 +90,7 @@ export type IPublication = {
   demo?: string;
   prototype?: string;
   abstract: string;
+  googleScholar?: string;
 };
 
 export default defineComponent({
@@ -87,9 +108,13 @@ export default defineComponent({
       required: true,
       type: Array as PropType<string[]>,
     },
+    googleScholar: {
+      default: undefined,
+      type: String,
+    },
   },
   emits: ["show:abstract"],
-  mounted(): void {
+  mounted() {
     if (this.$el === null) {
       return;
     }
@@ -122,7 +147,7 @@ export default defineComponent({
 
   h4 {
     font-weight: normal;
-    color: var(--bs-pink);
+    color: var(--bs-cyan);
   }
 
   code {

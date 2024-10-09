@@ -85,6 +85,8 @@ const publications: IPublication[] = [
     prePrint: "https://arxiv.org/abs/2212.04584",
     demo: "https://www.youtube.com/watch?v=xga-ScvULpk",
     // prototype: "https://bugsplainer.research.cs.dal.ca/",
+    googleScholar:
+      "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ZfEcKyYAAAAJ&citation_for_view=ZfEcKyYAAAAJ:d1gkVwhDpl0C",
     abstract: `Software bugs claim ≈50% of development time and cost the global economy billions of dollars.
       Once a bug is reported, the assigned developer attempts to identify and understand the source
       code responsible for the bug and then corrects the code. Over the last five decades, there has
@@ -118,6 +120,8 @@ const publications: IPublication[] = [
       "Transformers",
     ],
     prePrint: "https://arxiv.org/abs/2312.11889",
+    googleScholar:
+      "https://scholar.google.ca/citations?view_op=view_citation&hl=en&citation_for_view=ZfEcKyYAAAAJ:UeHWp8X0CEIC",
     abstract: `Software defects consume 40% of the total budget in software development and cost the global
       economy billions of dollars every year. Unfortunately, despite the use of many software
       quality assurance (SQA) practices in software development (e.g., code review, continuous
@@ -138,6 +142,26 @@ const publications: IPublication[] = [
       ranking defective lines higher.`,
   },
   {
+    title:
+      "Authorship Identification of Source Code Segments Written by Multiple Authors Using Stacking Ensemble Method",
+    description:
+      "*Parvez Mahbub*, Naz Zarreen Oishie and S. M. Rafizul Haque, In Proceeding " +
+      "of the 22<sup>nd</sup> International Conference on Computer and Information " +
+      "Technology (ICCIT), 2019, pp. 1-6",
+    keywords: [
+      "Source Code Authorship Identification",
+      "Deep Neural Network",
+      "Random Forest",
+      "Support Vector Machine",
+      "Stacking Ensemble",
+    ],
+    prePrint: "https://arxiv.org/abs/2212.05610",
+    googleScholar:
+      "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ZfEcKyYAAAAJ&citation_for_view=ZfEcKyYAAAAJ:u5HHmVD_uO8C",
+    abstract:
+      "Source code segment authorship identification is the task of identifying the author of a source code segment through supervised learning. It has vast importance in plagiarism detection, digital forensics, and several other law enforcement issues. However, when a source code segment is written by multiple authors, typical author identification methods no longer work. Here, an author identification technique, capable of predicting the authorship of source code segments, even in case of multiple authors, has been proposed which uses stacking ensemble classifier. This proposed technique is built upon several deep neural networks, random forests and support vector machine classifiers. It has been shown that for identifying the author-group, a single classification technique is no longer sufficient and using a deep neural network based stacking ensemble method can enhance the accuracy significantly. Performance of the proposed technique has been compared with some existing methods which only deal with the source code segments written exactly by a single author. Despite the harder task of authorship identification for source code segments written by multiple authors, our proposed technique has achieved promising results evident by the identification accuracy, compared to the related works which only deal with code segments written by a single author.",
+  },
+  {
     title: "Defectors: A Large, Diverse Python Dataset for Defect Prediction",
     description:
       "*Parvez Mahbub*, Ohiduzzaman Shuvo and M. Masudur Rahman, In Proceeding " +
@@ -151,6 +175,8 @@ const publications: IPublication[] = [
       "Software Maintenance",
     ],
     prePrint: "https://arxiv.org/abs/2303.04738",
+    googleScholar:
+      "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ZfEcKyYAAAAJ&citation_for_view=ZfEcKyYAAAAJ:9yKSN-GCB0IC",
     abstract:
       "Defect prediction has been a popular research topic where " +
       "machine learning (ML) and deep learning (DL) have found numerous " +
@@ -185,6 +211,8 @@ const publications: IPublication[] = [
     ],
     demo: "https://youtu.be/xga-ScvULpk",
     prePrint: "https://arxiv.org/abs/2308.12267",
+    googleScholar:
+      "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ZfEcKyYAAAAJ&citation_for_view=ZfEcKyYAAAAJ:2osOgNQ5qMEC",
     abstract:
       `Software bugs cost the global economy billions of dollars each year and take up ≈50% of the development time.
 Once a bug is reported, the assigned developer attempts to identify and understand the source code responsible for the bug and then corrects the code.
@@ -193,24 +221,6 @@ However, there has been little research on automatically explaining the bugs to 
 In this paper, we propose Bugsplainer, a novel web-based debugging solution, that generates natural language explanations for software bugs by learning from a large corpus of bug-fix commits.
 Bugsplainer leverages code structures to reason about a bug and employs the fine-tuned version of a text generation model -- CodeT5 -- to generate the explanations.` +
       "Tool video: https://youtu.be/xga-ScvULpk",
-  },
-  {
-    title:
-      "Authorship Identification of Source Code Segments Written by Multiple Authors Using Stacking Ensemble Method",
-    description:
-      "*Parvez Mahbub*, Naz Zarreen Oishie and S. M. Rafizul Haque, In Proceeding " +
-      "of the 22<sup>nd</sup> International Conference on Computer and Information " +
-      "Technology (ICCIT), 2019, pp. 1-6",
-    keywords: [
-      "Source Code Authorship Identification",
-      "Deep Neural Network",
-      "Random Forest",
-      "Support Vector Machine",
-      "Stacking Ensemble",
-    ],
-    prePrint: "https://arxiv.org/abs/2212.05610",
-    abstract:
-      "Source code segment authorship identification is the task of identifying the author of a source code segment through supervised learning. It has vast importance in plagiarism detection, digital forensics, and several other law enforcement issues. However, when a source code segment is written by multiple authors, typical author identification methods no longer work. Here, an author identification technique, capable of predicting the authorship of source code segments, even in case of multiple authors, has been proposed which uses stacking ensemble classifier. This proposed technique is built upon several deep neural networks, random forests and support vector machine classifiers. It has been shown that for identifying the author-group, a single classification technique is no longer sufficient and using a deep neural network based stacking ensemble method can enhance the accuracy significantly. Performance of the proposed technique has been compared with some existing methods which only deal with the source code segments written exactly by a single author. Despite the harder task of authorship identification for source code segments written by multiple authors, our proposed technique has achieved promising results evident by the identification accuracy, compared to the related works which only deal with code segments written by a single author.",
   },
   {
     title:
@@ -227,6 +237,8 @@ Bugsplainer leverages code structures to reason about a bug and employs the fine
       "Software Maintenance",
     ],
     prePrint: "https://arxiv.org/abs/2303.04738",
+    googleScholar:
+      "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ZfEcKyYAAAAJ&citation_for_view=ZfEcKyYAAAAJ:u-x6o8ySG0sC",
     abstract: `Review comments are one of the main building
     blocks of modern code reviews. Manually writing code review
     comments could be time-consuming and technically challenging.

@@ -39,11 +39,11 @@
         <div class="rounded">
           <div class="d-flex align-items-center flex-wrap">
             <div
-              v-for="skill in tabContent.skills"
+              v-for="(skill, i) in tabContent.skills"
               :key="skill"
-              class="font-monospace text-nowrap me-4"
+              class="font-monospace text-nowrap me-3"
             >
-              {{ skill }}
+              {{ skill }}{{ i < tabContent.skills.length - 1 ? "," : "" }}
             </div>
           </div>
         </div>
@@ -103,6 +103,30 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
       my coding skill.`,
     ],
   },
+  "Artificial Intelligence": {
+    skills: [
+      "Neural Networks",
+      "Transformers",
+      "Large Language Models",
+      "Retrieval Augmented Generation",
+      "Transfer Learning",
+      "Ensemble Learning",
+      "Unsupervised Learning",
+      "Natural Language Processing",
+    ],
+    desc: [
+      "I have a deep dive into machine learning and deep learning during my research " +
+        "internship at [Metabob](https://metabob.com/). This internship is part of my " +
+        "[Mitacs](https://www.mitacs.ca/en/programs/accelerate) scholarship which aims to " +
+        "explain software bugs in natural language. The research domain includes software " +
+        "engineering, deep learning and natural language processing. I further sharpen my " +
+        "knowledge while teaching in the _Process of Data_ Science course.",
+
+      "One of the early recognition of my Data Science skill is placing among the top 15 teams " +
+        "in Datathon Bangladesh, 2019 — the biggest data-centric competition in the country. " +
+        "I have several relevant certification from Coursera (see [Certifications](#certifications)).",
+    ],
+  },
   "Web Technology": {
     skills: [
       "Node JS",
@@ -135,29 +159,6 @@ const tabContents: Record<string, { skills: string[]; desc: string[] }> = {
         "<code>PostgreSQL</code> as the database system. I have led a team to develop the " +
         "[official website](https://new.cseku.ac.bd/) of the CSE Department of Khulna University, " +
         "Bangladesh, which uses <code>MySQL</code> as the database system.",
-    ],
-  },
-  "Machine Learning": {
-    skills: [
-      "Neural Networks",
-      "Transformers",
-      "Recurrent Neural Networks",
-      "Transfer Learning",
-      "Ensemble Learning",
-      "Unsupervised Learning",
-      "Natural Language Processing",
-    ],
-    desc: [
-      "I have a deep dive into machine learning and deep learning during my research " +
-        "internship at [Metabob](https://metabob.com/). This internship is part of my " +
-        "[Mitacs](https://www.mitacs.ca/en/programs/accelerate) scholarship which aims to " +
-        "explain software bugs in natural language. The research domain includes software " +
-        "engineering, deep learning and natural language processing. I further sharpen my " +
-        "knowledge while teaching in the _Process of Data_ Science course.",
-
-      "One of the early recognition of my Data Science skill is placing among the top 15 teams " +
-        "in Datathon Bangladesh, 2019 — the biggest data-centric competition in the country. " +
-        "I have several relevant certification from Coursera (see [Certifications](#certifications)).",
     ],
   },
   "Tools & Platform": {

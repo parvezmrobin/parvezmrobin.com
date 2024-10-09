@@ -78,7 +78,7 @@ const talks: ITalk[] = [
     organizer: "Google Developers Group – Saskatoon",
     organizerLink: "https://gdg.community.dev/gdg-saskatoon",
     slide:
-      "https://docs.google.com/presentation/d/1Hz5772Tx8wANapDiHfk0mn80XJq_dEuI/edit?usp=sharing&ouid=105783071308124321683&rtpof=true&sd=true",
+      "https://docs.google.com/presentation/d/1MbUaFKLrVV104JytnmzCNMuRakC3fYYS/edit?usp=sharing&ouid=105783071308124321683&rtpof=true&sd=true",
   },
   {
     time: "December 2023",

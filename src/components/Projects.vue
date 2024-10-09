@@ -6,11 +6,26 @@
         :key="project.title"
         v-bind="project"
       />
+
+      <div
+        v-if="totalProjects !== undefined"
+        class="d-flex justify-content-center mt-4"
+      >
+        <a
+          target="_blank"
+          class="btn btn-info d-flex align-items-center"
+          href="https://github.com/parvezmrobin?tab=repositories"
+        >
+          <i class="devicon-github-plain me-2 mb-1 fs-5" />
+          See {{ totalProjects - projects.length }} more projects on GitHub
+        </a>
+      </div>
     </div>
   </CentralBox>
 </template>
 
 <script lang="ts" setup>
+import { ref } from "vue";
 import CentralBox from "./CentralBox.vue";
 import Project, { IProject } from "./Project.vue";
 
@@ -78,4 +93,12 @@ const projects: IProject[] = [
     images: ["/ku-website.webp", "/ku-website.png"],
   },
 ];
+
+const totalProjects = ref<number>();
+
+fetch("https://api.github.com/users/parvezmrobin/repos?per_page=100")
+  .then((res) => res.json())
+  .then((data) => {
+    totalProjects.value = data.length;
+  });
 </script>

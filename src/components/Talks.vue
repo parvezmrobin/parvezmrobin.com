@@ -60,6 +60,15 @@ interface ITalk {
 const talks: ITalk[] = [
   {
     time: "October 2024",
+    title: "Containerization and Why Should I Care",
+    event: "CMPT 370: Intermediate Software Engineering program",
+    organizer: "Department of Computer Science and Dr. Zadia Codabux",
+    location: "University of Saskatchewan",
+    slide:
+      "https://docs.google.com/presentation/d/1-ftOOS9yq6-ctNEsNzwMO4vhEgx34kYp/edit?usp=sharing&ouid=105783071308124321683&rtpof=true&sd=true",
+  },
+  {
+    time: "October 2024",
     title: "Intelligent Software For Future Space",
     event: "2024 NASA International Space Apps Challenge",
     eventLink:

@@ -43,11 +43,18 @@
           </div>
           <div class="col col-md-9">
             <ul class="triangle">
-              <li
+              <template
                 v-for="(work, i) in experienceDescription.works"
                 :key="i"
-                v-html="formatString(work)"
-              />
+              >
+                <li
+                  v-show="
+                    showMinorEmployments ||
+                    !experienceDescription.minorWorkIndices?.includes(i)
+                  "
+                  v-html="formatString(work)"
+                />
+              </template>
             </ul>
           </div>
         </div>
@@ -68,6 +75,7 @@ interface IExperience {
   time: string;
   works: string[];
   isMinor?: true;
+  minorWorkIndices?: number[];
 }
 
 const experiences: Record<string, IExperience> = {
@@ -153,6 +161,7 @@ const experiences: Record<string, IExperience> = {
       "Hosted two in-house workshops on ‘Modern Web Development with Vue JS’ " +
         "and ‘Sustainable Architecture with TypeScript’.",
     ],
+    minorWorkIndices: [3, 4],
   },
 
   "Festive.Rocks": reactive({

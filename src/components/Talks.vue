@@ -59,6 +59,18 @@ interface ITalk {
 
 const talks: ITalk[] = [
   {
+    time: "November 2024",
+    title: "Retrieval-Augmented Generation (RAG)",
+    event: "DevFest 2024",
+    eventLink:
+      "https://gdg.community.dev/events/details/google-gdg-saskatoon-presents-devfest-2024-gdg-saskatoon/",
+    organizer: "Google Developers Group – Saskatoon",
+    organizerLink: "https://gdg.community.dev/gdg-saskatoon/",
+    location: "University of Saskatchewan",
+    slide:
+      "https://docs.google.com/presentation/d/10-77mPM3VtF0HfFuuuCqESdLAeORwMJl/edit?usp=sharing&ouid=105783071308124321683&rtpof=true&sd=true",
+  },
+  {
     time: "October 2024",
     title: "Containerization and Why Should I Care",
     event: "CMPT 370: Intermediate Software Engineering program",
@@ -116,18 +128,6 @@ const talks: ITalk[] = [
     event: "International Conference on Software Engineering (ICSE) 2023",
     eventLink: "https://conf.researchr.org/home/icse-2023",
     location: "Melbourne, Australia",
-    slide:
-      "https://docs.google.com/presentation/d/1Zxq5ljogHL7lbpIAKkCQFU7MqQixBiCB/edit?usp=sharing&ouid=105783071308124321683&rtpof=true&sd=true",
-  },
-  {
-    time: "February 2023",
-    title:
-      "Explaining Software Bugs Leveraging Code Structures in Language Modeling",
-    event: "Systems Cluster Research Day",
-    organizer: "Systems Research Cluster",
-    organizerLink:
-      "https://www.dal.ca/faculty/computerscience/systems-networks-security.html",
-    location: "Dalhousie University, NS, Canada",
     slide:
       "https://docs.google.com/presentation/d/1Zxq5ljogHL7lbpIAKkCQFU7MqQixBiCB/edit?usp=sharing&ouid=105783071308124321683&rtpof=true&sd=true",
   },

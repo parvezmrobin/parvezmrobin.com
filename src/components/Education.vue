@@ -34,6 +34,11 @@
             <p class="card-text">
               <strong class="">Thesis</strong>:
               {{ school.description }}
+              <br />
+              <strong class="">Supervisor</strong>:
+              <a :href="school.supervisorUrl" target="_blank">
+                {{ school.supervisor }}
+              </a>
             </p>
           </div>
         </div>
@@ -62,6 +67,8 @@ interface ISchool {
   institution: string;
   duration: string;
   description: string;
+  supervisor: string;
+  supervisorUrl: string;
 }
 
 const schools: ISchool[] = [
@@ -72,6 +79,9 @@ const schools: ISchool[] = [
     duration: "September 2021 – August 2023",
     description:
       "Comprehending Software Bugs Leveraging Code Structure in Neural Language Modelling",
+    supervisor: "Masud Rahman",
+    supervisorUrl:
+      "https://scholar.google.ca/citations?user=9SrqOewAAAAJ&hl=en",
   },
   {
     images: ["/ku.webp", "/ku.png"],
@@ -80,6 +90,9 @@ const schools: ISchool[] = [
     duration: "December 2014 – February 2019",
     description:
       "Authorship Identification of Source Code Segments Written by Multiple Authors Using Stacking Ensemble Method",
+    supervisor: "S.M. Rafizul Haque",
+    supervisorUrl:
+      "https://theorg.com/org/precision-ai/org-chart/dr-s-m-rafizul-haque",
   },
 ];
 </script>

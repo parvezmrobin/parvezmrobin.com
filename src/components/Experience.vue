@@ -8,10 +8,11 @@
         type="checkbox"
         role="switch"
       />
-      <label class="form-check-label" for="show-minor-employments"
-        >Show Minor Employments</label
-      >
+      <label class="form-check-label" for="show-minor-employments">
+        Show Minor Employments
+      </label>
     </div>
+
     <template
       v-for="(experienceDescription, experience) in experiences"
       :key="experience"
@@ -85,9 +86,9 @@ const experiences: Record<string, IExperience> = {
     works: [
       `For
       [Analog FastSPICE](https://eda.sw.siemens.com/en-US/ic/analog-fastspice/)
-      – the fasted nanometer circuit verification platform, developed a
-      stamping algorithm that takes up to <em>4 times less</em> memory in
-      multithreaded runs.`,
+      – the fasted nanometer circuit verification platform, developed an
+      [<span style="color: var(--bs-body-color)">element stamping algorithm</span>](https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119078388.app2)
+      that takes up to <em>4 times less</em> memory in multithreaded runs.`,
 
       `Jointly developed a Matrix-Vector multiplication algorithm specific to
       symmetric matrices that is <em>40% faster</em> than the general-purpose
@@ -131,18 +132,20 @@ const experiences: Record<string, IExperience> = {
     position: "Software Engineer",
     time: "March 2019 — July 2021",
     works: [
-      `Led the architected and development of [Daency](https://daency.com/), an
+      `Led the architected and development of
+       [Daency](https://www.crunchbase.com/organization/daency), an
        online platform to learn dancing interactively. The tech stack was
        <code>TypeScript</code>, <code>Express JS</code>, <code>Vue JS</code>,
        <code>Mongo DB</code>, and <code>Docker</code>. Also integrated and
-       maintained [WebRTC](https://agora.io), [AWS](https://aws.amazon.com),
-       [GCP](https://cloud.google.com/),
+       maintained [WebRTC](https://agora.io),
+       [AWS](https://aws.amazon.com) (S3 + Cloudflare),
+       [GCP](https://cloud.google.com/) (Authentication),
        [Push Notification](https://www.pubnub.com/),
        [Stripe](https://stripe.com/), [Task Queue](https://docs.bullmq.io/)
        (<code>redis</code>) and various other services. Collaborated with the
        stakeholders to engineer requirements and plan sprints in the agile
        process with a globally distributed team, while reducing requirement
-       changes during sprints from ≈ 30% to < 5%.`,
+       changes during sprints from ≈&nbsp;30% to <&nbsp;5%.`,
       `In [Bikribatta](https://www.bikribatta.com/) inventory solution,
        *architected* accounts, reports, and employee management components.
        Written a stock management microservice using <code>Golang</code> that

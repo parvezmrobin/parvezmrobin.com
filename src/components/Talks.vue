@@ -66,7 +66,7 @@ const talks: ITalk[] = [
       "https://gdg.community.dev/events/details/google-gdg-saskatoon-presents-devfest-2024-gdg-saskatoon/",
     organizer: "Google Developers Group – Saskatoon",
     organizerLink: "https://gdg.community.dev/gdg-saskatoon/",
-    location: "University of Saskatchewan",
+    location: "University of Saskatchewan, Canada",
     slide:
       "https://docs.google.com/presentation/d/10-77mPM3VtF0HfFuuuCqESdLAeORwMJl/edit?usp=sharing&ouid=105783071308124321683&rtpof=true&sd=true",
   },
@@ -75,7 +75,7 @@ const talks: ITalk[] = [
     title: "Containerization and Why Should I Care",
     event: "CMPT 370: Intermediate Software Engineering program",
     organizer: "Department of Computer Science and Dr. Zadia Codabux",
-    location: "University of Saskatchewan",
+    location: "University of Saskatchewan, Canada",
     slide:
       "https://docs.google.com/presentation/d/1-ftOOS9yq6-ctNEsNzwMO4vhEgx34kYp/edit?usp=sharing&ouid=105783071308124321683&rtpof=true&sd=true",
   },

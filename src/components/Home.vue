@@ -179,7 +179,7 @@ a {
 }
 
 .rounded-circle {
-  border: 10px solid #0c2a3a;
+  border: 10px solid var(--bg-light);
 }
 
 .bg-circle {

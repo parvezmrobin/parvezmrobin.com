@@ -11,16 +11,15 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div
         id="offcanvasNavbar"
         class="offcanvas offcanvas-end"
         tabindex="-1"
         aria-labelledby="offcanvasNavbarLabel"
+        style="--bs-offcanvas-color: transparent"
       >
-        <div
-          class="offcanvas-header justify-content-end"
-          style="background-color: var(--bs-cyan-900)"
-        >
+        <div class="offcanvas-header justify-content-end">
           <button
             type="button"
             class="btn-close btn-close-white"
@@ -49,6 +48,23 @@
                 {{ nav }}
               </a>
             </li>
+
+            <li
+              class="nav-item d-md-none d-lg-inline-block text-end color-choice"
+            >
+              <button
+                v-for="color in colors"
+                :key="color"
+                class="btn"
+                :title="color"
+                :style="{
+                  backgroundColor: `var(--bg-${color}-default)`,
+                  borderRadius: '4px',
+                  marginTop: '14px',
+                }"
+                @click="setColor(color)"
+              ></button>
+            </li>
           </ul>
         </div>
       </div>
@@ -62,17 +78,30 @@ import { computed, onMounted } from "vue";
 import { inHomePage } from "../util";
 
 const props = defineProps<{ navs: string[] }>();
+
+const colors = ["blue", "green", "red", "yellow", "lime", "puple"];
+
 let offCanvasInstance: Offcanvas;
 onMounted(() => {
   offCanvasInstance = new Offcanvas("#offcanvasNavbar");
 });
+
 function hideOffcanvas() {
   offCanvasInstance.hide();
 }
 
+// noinspection JSUnusedGlobalSymbols
 const navbarPaddingTop = computed(() => {
   return inHomePage.value ? "calc(50vh - 160px)" : "1.5rem";
 });
+
+function setColor(color: string) {
+  const body = window.document.querySelector("body");
+  if (body) {
+    body.classList.remove(...colors);
+    body.classList.add(color);
+  }
+}
 </script>
 
 <style lang="scss">
@@ -85,8 +114,9 @@ const navbarPaddingTop = computed(() => {
 }
 
 @media screen and (max-width: map-get($grid-breakpoints, xl)) {
+  .offcanvas-header,
   .offcanvas-body {
-    background-color: var(--bs-cyan-900);
+    background-color: var(--bg-default);
   }
 }
 
@@ -115,6 +145,14 @@ const navbarPaddingTop = computed(() => {
   &:hover {
     color: var(--bs-teal);
     left: 0.25rem;
+  }
+}
+
+.color-choice {
+  @media screen and (min-width: map-get($grid-breakpoints, xl)) {
+    position: fixed;
+    top: 0;
+    right: 0;
   }
 }
 </style>

@@ -98,17 +98,55 @@ html {
 }
 
 body {
-  background: radial-gradient(ellipse at top, #02152a, #062b31, #000) scroll;
+  --bg-blue-light: #062b31;
+  --bg-blue-default: #02152a;
+  --bg-blue-dark: #00151f;
+
+  --bg-green-light: #06312b;
+  --bg-green-default: #022a15;
+  --bg-green-dark: #001f15;
+
+  --bg-red-light: #31062b;
+  --bg-red-default: #2a0215;
+  --bg-red-dark: #1f0015;
+
+  --bg-yellow-light: #312b06;
+  --bg-yellow-default: #2a1502;
+  --bg-yellow-dark: #1f1500;
+
+  --bg-lime-light: #2b3106;
+  --bg-lime-default: #152a02;
+  --bg-lime-dark: #151f00;
+
+  --bg-puple-light: #2b0631;
+  --bg-puple-default: #15022a;
+  --bg-puple-dark: #15001f;
+
+  --bg-light: var(--bg-blue-light);
+  --bg-default: var(--bg-blue-dark);
+  --bg-dark: var(--bg-blue-dark);
+
+  $colors: "red", "green", "blue", "yellow", "lime", "puple";
+  @each $color in $colors {
+    &.#{$color} {
+      --bg-light: var(--bg-#{$color}-light);
+      --bg-default: var(--bg-#{$color}-default);
+      --bg-dark: var(--bg-#{$color}-dark);
+    }
+  }
+
+
+  background: radial-gradient(ellipse at top, var(--bg-default), var(--bg-light), #000) scroll;
   --bs-body-font-family: "Overlock", var(--bs-font-sans-serif);
 
   &.conic {
     background: conic-gradient(
         from -90deg at 50% 120%,
-        #02152a,
-        #062b31 45deg,
-        #00151f 90deg,
-        #062b31 135deg,
-        #02152a 180deg
+        var(--bg-default),
+        var(--bg-light) 45deg,
+        var(--bg-dark) 90deg,
+        var(--bg-light) 135deg,
+        var(--bg-default) 180deg
     ) fixed;
   }
 }

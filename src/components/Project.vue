@@ -11,69 +11,57 @@
           </div>
         </div>
         <div class="col-12 col-md-4 col-lg-12">
-          <div class="mt-2">
-            <code v-for="t in tech" :key="t" class="me-3">{{ t }}</code>
+          <div class="mt-3 mb-2 d-flex align-items-center flex-wrap">
+            <code v-for="t in tech" :key="t" class="me-3">
+              <i
+                class="me-1"
+                :class="getIconClasses(t)"
+                style="margin-top: 3px"
+              />
+              {{ t }}
+            </code>
           </div>
 
-          <div class="icons mt-2">
+          <div class="btn-group mt-2">
             <a
               v-if="github"
               :href="github"
               target="_blank"
+              class="btn btn-dark"
               aria-label="Visit GitHub Repository"
             >
-              <i
-                class="devicon-github-plain me-2"
-                data-bs-toggle="popover"
-                data-bs-content="Visit GitHub Repository"
-              />
+              <i class="devicon-github-plain" />
+              Github
             </a>
             <a
               v-if="frontend"
               :href="frontend"
               target="_blank"
+              class="btn btn-dark"
               aria-label="Visit Frontend Repository"
             >
-              <i
-                class="devicon-github-plain me-2"
-                data-bs-toggle="popover"
-                data-bs-content="Visit Frontend Repository"
-              />
+              <i class="devicon-github-plain" />
+              Frontend
             </a>
             <a
               v-if="backend"
               :href="backend"
               target="_blank"
-              style="position: relative"
+              class="btn btn-dark"
               aria-label="Visit Backend Repository"
             >
-              <i
-                class="devicon-github-plain me-2"
-                data-bs-toggle="popover"
-                data-bs-content="Visit Backend Repository"
-              />
-              <i
-                class="devicon-scala-plain fs-4"
-                style="
-                  color: var(--bs-green);
-                  position: absolute;
-                  right: 2px;
-                  bottom: -5px;
-                  pointer-events: none;
-                "
-              />
+              <i class="devicon-github-plain" />
+              Backend
             </a>
             <a
               v-if="web"
               :href="web"
               target="_blank"
+              class="btn btn-success"
               aria-label="Visit Live Website"
             >
-              <i
-                class="devicon-firefox-plain"
-                data-bs-toggle="popover"
-                data-bs-content="Visit Live Website"
-              />
+              <i class="devicon-chrome-plain" />
+              Website
             </a>
           </div>
         </div>
@@ -160,6 +148,11 @@ export default defineComponent({
   },
   methods: {
     formatString,
+    getIconClasses(tech: string) {
+      const lemma = tech.replace("-", "").toLowerCase();
+
+      return `devicon-${lemma}-original devicon-${lemma}-plain colored`;
+    },
   },
 });
 </script>
@@ -199,8 +192,15 @@ export default defineComponent({
   }
 
   code {
-    color: var(--bs-body-bg);
+    transition: background-color 0.5s;
+    color: var(--bs-body-color);
     display: inline-flex;
+    border-radius: 2px;
+    padding: 0 2px;
+
+    &:hover {
+      background-color: rgba(var(--bs-primary-rgb), 0.5);
+    }
   }
 
   .icons {

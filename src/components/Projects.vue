@@ -36,14 +36,7 @@ const projects: IProject[] = [
       "A react app backed by Express JS and Mongo DB to facilitate cricket scoring with " +
       "heavy customization support. It is hosted with Netlify (frontend), Amazon EC2 (backend), " +
       "MongoDB Atlas (database), and Circle CI (deployment).",
-    tech: [
-      "Node JS",
-      "Express JS",
-      "React",
-      "JavaScript",
-      "MongoDB",
-      "Circle CI",
-    ],
+    tech: ["NodeJS", "Express", "React", "JavaScript", "MongoDB"],
     frontend: "https://github.com/parvezmrobin/jhijhi-frontend",
     backend: "https://github.com/parvezmrobin/jhijhi-backend",
     web: "https://jhijhi.parvezmrobin.dev/",
@@ -57,14 +50,14 @@ const projects: IProject[] = [
       "It visually explains the localization process gradually at document-to-document, " +
       "document-to-word and finally word-to-word level.",
     tech: [
-      "Vue JS",
-      "D3",
+      "Python",
+      "VueJS",
+      "D3JS",
       "TypeScript",
       "Flask",
       "scikit-learn",
       "Word Embedding",
       "NLTK",
-      "Python",
     ],
     github: "https://github.com/parvezmrobin/visualize-lrwe",
     web: "https://lrwe.parvezmrobin.dev/",

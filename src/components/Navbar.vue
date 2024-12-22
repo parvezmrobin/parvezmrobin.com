@@ -63,11 +63,10 @@
                 :title="`${color} theme`"
                 :style="{
                   backgroundColor: `var(--bg-${color}-default)`,
-                  borderRadius: '4px',
                   marginTop: '14px',
                 }"
                 @click="setColor(color)"
-              ></button>
+              />
             </li>
           </ul>
         </div>
@@ -163,6 +162,20 @@ function setColor(color: string) {
     position: fixed;
     top: 0;
     right: 0;
+  }
+
+  button {
+    border-radius: 0;
+
+    &:first-child {
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+    }
+
+    &:last-child {
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
   }
 }
 </style>

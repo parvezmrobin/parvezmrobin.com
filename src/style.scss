@@ -118,15 +118,15 @@ body {
   --bg-lime-default: #152a02;
   --bg-lime-dark: #151f00;
 
-  --bg-puple-light: #2b0631;
-  --bg-puple-default: #15022a;
-  --bg-puple-dark: #15001f;
+  --bg-purple-light: #2b0631;
+  --bg-purple-default: #15022a;
+  --bg-purple-dark: #15001f;
 
   --bg-light: var(--bg-blue-light);
   --bg-default: var(--bg-blue-dark);
   --bg-dark: var(--bg-blue-dark);
 
-  $colors: "red", "green", "blue", "yellow", "lime", "puple";
+  $colors: "red", "green", "blue", "yellow", "lime", "purple";
   @each $color in $colors {
     &.#{$color} {
       --bg-light: var(--bg-#{$color}-light);

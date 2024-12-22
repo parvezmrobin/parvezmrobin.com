@@ -55,8 +55,12 @@
               <button
                 v-for="color in colors"
                 :key="color"
+                ref="offCanvasEl"
                 class="btn"
-                :title="color"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                :data-bs-title="`${color} theme`"
+                :title="`${color} theme`"
                 :style="{
                   backgroundColor: `var(--bg-${color}-default)`,
                   borderRadius: '4px',
@@ -73,17 +77,23 @@
 </template>
 
 <script lang="ts" setup>
-import { Offcanvas } from "bootstrap";
-import { computed, onMounted } from "vue";
+import { Offcanvas, Tooltip } from "bootstrap";
+import { computed, onMounted, ref } from "vue";
 import { inHomePage } from "../util";
 
 const props = defineProps<{ navs: string[] }>();
 
-const colors = ["blue", "green", "red", "yellow", "lime", "puple"];
+const colors = ["blue", "green", "red", "yellow", "lime", "purple"];
 
 let offCanvasInstance: Offcanvas;
+const offCanvasEl = ref<HTMLButtonElement[]>([]);
+
 onMounted(() => {
   offCanvasInstance = new Offcanvas("#offcanvasNavbar");
+
+  for (const el of offCanvasEl.value) {
+    new Tooltip(el, { trigger: "hover" });
+  }
 });
 
 function hideOffcanvas() {

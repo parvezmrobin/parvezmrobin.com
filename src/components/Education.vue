@@ -12,9 +12,7 @@
         type="checkbox"
         role="switch"
       />
-      <label class="form-check-label" for="show-schools">
-        Have time to kill?
-      </label>
+      <label class="form-check-label" for="show-schools"> Show Schools </label>
     </div>
 
     <div

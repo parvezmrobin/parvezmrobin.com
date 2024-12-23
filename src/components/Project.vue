@@ -30,7 +30,7 @@
               class="btn btn-dark"
               aria-label="Visit GitHub Repository"
             >
-              <i class="devicon-github-plain" />
+              <i class="devicon-github-plain" style="font-size: 18px" />
               Github
             </a>
             <a
@@ -40,7 +40,7 @@
               class="btn btn-dark"
               aria-label="Visit Frontend Repository"
             >
-              <i class="devicon-github-plain" />
+              <i class="devicon-github-plain" style="font-size: 18px" />
               Frontend
             </a>
             <a
@@ -50,7 +50,7 @@
               class="btn btn-dark"
               aria-label="Visit Backend Repository"
             >
-              <i class="devicon-github-plain" />
+              <i class="devicon-github-plain" style="font-size: 18px" />
               Backend
             </a>
             <a
@@ -60,7 +60,12 @@
               class="btn btn-success"
               aria-label="Visit Live Website"
             >
-              <i class="devicon-chrome-plain" />
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/chrome/chrome-original.svg"
+                height="18"
+                alt="chrome"
+                style="margin-bottom: 4px"
+              />
               Website
             </a>
           </div>

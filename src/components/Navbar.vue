@@ -86,6 +86,8 @@ const props = defineProps<{ navs: string[] }>();
 
 const colors = ["purple", "indigo", "blue", "teal", "green", "lime"];
 
+setColor(colors[Math.floor(Math.random() * 4)]);
+
 let offCanvasInstance: Offcanvas;
 const offCanvasEl = ref<HTMLButtonElement[]>([]);
 

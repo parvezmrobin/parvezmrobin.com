@@ -22,7 +22,7 @@
       :class="{ reverse: i % 2 }"
     >
       <Transition name="slide-fade">
-        <div v-if="!school.isSchool || showSchools" class="row g-0">
+        <div v-show="!school.isSchool || showSchools" class="row g-0">
           <div v-if="i % 2 === 0" class="col-md-3 image-wrapper">
             <picture class="img-fluid rounded-start">
               <source

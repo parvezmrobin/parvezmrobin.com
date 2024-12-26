@@ -19,7 +19,7 @@
     >
       <Transition name="slide-fade">
         <div
-          v-if="showMinorEmployments || !experienceDescription.isMinor"
+          v-show="showMinorEmployments || !experienceDescription.isMinor"
           class="row pt-4 hover purple rounded"
         >
           <div class="d-md-none">

@@ -49,24 +49,26 @@
               </a>
             </li>
 
-            <li
-              class="nav-item d-md-none d-lg-inline-block text-end color-choice"
-            >
-              <button
-                v-for="color in colors"
-                :key="color"
-                ref="offCanvasEl"
-                class="btn"
-                data-bs-toggle="tooltip"
-                data-bs-placement="bottom"
-                :data-bs-title="`${color} theme`"
-                :title="`${color} theme`"
-                :style="{
-                  backgroundColor: `var(--bg-${color}-default)`,
-                  marginTop: '14px',
-                }"
-                @click="setColor(color)"
-              />
+            <li class="nav-item d-md-none d-lg-inline-block text-end">
+              <div
+                class="color-choice btn-group rounded-1 border border-1 border-secondary"
+                style="margin-top: 13px"
+              >
+                <button
+                  v-for="color in colors"
+                  :key="color"
+                  ref="offCanvasEl"
+                  class="btn"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                  :data-bs-title="`${ucFirst(color)} Theme`"
+                  :title="`${ucFirst(color)} Theme`"
+                  :style="{
+                    backgroundColor: `var(--bg-${color}-default)`,
+                  }"
+                  @click="setColor(color)"
+                />
+              </div>
             </li>
           </ul>
         </div>
@@ -110,6 +112,10 @@ function setColor(color: string) {
     body.classList.remove(...colors);
     body.classList.add(color);
   }
+}
+
+function ucFirst(str: string) {
+  return str[0].toUpperCase() + str.slice(1);
 }
 </script>
 
@@ -162,20 +168,6 @@ function setColor(color: string) {
     position: fixed;
     top: 0;
     right: 0;
-  }
-
-  button {
-    border-radius: 0;
-
-    &:first-child {
-      border-top-left-radius: 2px;
-      border-bottom-left-radius: 2px;
-    }
-
-    &:last-child {
-      border-top-right-radius: 2px;
-      border-bottom-right-radius: 2px;
-    }
   }
 }
 </style>

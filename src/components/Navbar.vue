@@ -84,7 +84,7 @@ import { inHomePage } from "../util";
 
 const props = defineProps<{ navs: string[] }>();
 
-const colors = ["blue", "green", "red", "yellow", "lime", "purple"];
+const colors = ["purple", "indigo", "blue", "teal", "green", "lime"];
 
 let offCanvasInstance: Offcanvas;
 const offCanvasEl = ref<HTMLButtonElement[]>([]);

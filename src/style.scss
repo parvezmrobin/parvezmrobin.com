@@ -94,39 +94,43 @@ $spacers: (
 }
 
 html {
-  background:  #041818;
+  background: #041818;
 }
 
 body {
-  --bg-blue-light: #062b31;
-  --bg-blue-default: #02152a;
-  --bg-blue-dark: #00151f;
+  --light-sl: 78%, 12%;
+  --default-sl: 91%, 8%;
+  --dark-sl: 100%, 6%;
 
-  --bg-green-light: #06312b;
-  --bg-green-default: #022a15;
-  --bg-green-dark: #001f15;
+  --bg-lime-light: hsl(70, var(--light-sl));
+  --bg-lime-default: hsl(60, var(--default-sl));
+  --bg-lime-dark: hsl(80, var(--dark-sl));
 
-  --bg-red-light: #31062b;
-  --bg-red-default: #2a0215;
-  --bg-red-dark: #1f0015;
+  --bg-green-light: hsl(130, var(--light-sl));
+  --bg-green-default: hsl(120, var(--default-sl));
+  --bg-green-dark: hsl(140, var(--dark-sl));
 
-  --bg-yellow-light: #312b06;
-  --bg-yellow-default: #2a1502;
-  --bg-yellow-dark: #1f1500;
+  --bg-teal-light: hsl(190, var(--light-sl));
+  --bg-teal-default: hsl(210, var(--default-sl));
+  --bg-teal-dark: hsl(200, var(--dark-sl));
 
-  --bg-lime-light: #2b3106;
-  --bg-lime-default: #152a02;
-  --bg-lime-dark: #151f00;
+  --bg-blue-light: hsl(210, var(--light-sl));
+  --bg-blue-default: hsl(240, var(--default-sl));
+  --bg-blue-dark: hsl(230, var(--dark-sl));
 
-  --bg-purple-light: #2b0631;
-  --bg-purple-default: #15022a;
-  --bg-purple-dark: #15001f;
+  --bg-indigo-light: hsl(250, var(--light-sl));
+  --bg-indigo-default: hsl(270, var(--default-sl));
+  --bg-indigo-dark: hsl(260, var(--dark-sl));
 
-  --bg-light: var(--bg-blue-light);
-  --bg-default: var(--bg-blue-dark);
-  --bg-dark: var(--bg-blue-dark);
+  --bg-purple-light: hsl(280, var(--light-sl));
+  --bg-purple-default: hsl(300, var(--default-sl));
+  --bg-purple-dark: hsl(290, var(--dark-sl));
 
-  $colors: "red", "green", "blue", "yellow", "lime", "purple";
+  --bg-light: var(--bg-teal-light);
+  --bg-default: var(--bg-teal-dark);
+  --bg-dark: var(--bg-teal-dark);
+
+  $colors: "lime", "green", "blue", "indigo", "purple", "teal";
   @each $color in $colors {
     &.#{$color} {
       --bg-light: var(--bg-#{$color}-light);
@@ -250,6 +254,7 @@ body {
 
 .hover {
   transition: background-color 1s;
+
   &.purple {
     &:hover {
       background-color: rgb(from var(--bs-purple-800) r g b / .75)

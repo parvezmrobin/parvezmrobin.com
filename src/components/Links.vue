@@ -16,7 +16,7 @@
         v-else
         :src="link.icon"
         :alt="link.title"
-        style="height: 2rem; width: auto"
+        style="height: 2rem; width: auto; border-radius: 3px"
       />
     </a>
   </div>
@@ -28,24 +28,29 @@ import { onMounted, ref } from "vue";
 
 const links = [
   {
-    icon: "devicon-github-original",
-    title: "GitHub",
-    link: "https://github.com/parvezmrobin",
-  },
-  {
-    icon: "devicon-linkedin-plain",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg",
     title: "LinkedIn",
     link: "https://www.linkedin.com/in/parvezmrobin/",
   },
   {
-    icon: "https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png",
-    title: "LeetCode",
-    link: "https://leetcode.com/parvezmrobin/",
+    icon: "https://miro.medium.com/v2/resize:fit:64/format:webp/1*psYl0y9DUzZWtHzFJLIvTw.png",
+    title: "Medium",
+    link: "https://medium.com/@parvezmrobin",
   },
   {
     icon: "https://scholar.google.com/favicon.ico",
     title: "Google Scholar",
     link: "https://scholar.google.com/citations?user=ZfEcKyYAAAAJ",
+  },
+  {
+    icon: "devicon-github-original",
+    title: "GitHub",
+    link: "https://github.com/parvezmrobin",
+  },
+  {
+    icon: "https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png",
+    title: "LeetCode",
+    link: "https://leetcode.com/parvezmrobin/",
   },
 ];
 

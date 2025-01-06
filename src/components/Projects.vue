@@ -79,7 +79,7 @@ const projects: IProject[] = [
   {
     title: "Official Website of CSE Discipline, Khulna University",
     description:
-      "Led team to renovate the official website of the Compute Science and" +
+      "Led team to renovate the official website of the Compute Science and " +
       "Engineering Discipline, Khulna University, Bangladesh.",
     tech: ["PHP", "Bootstrap", "MySQL"],
     web: "https://cseku.ac.bd/",

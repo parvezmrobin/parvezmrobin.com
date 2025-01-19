@@ -36,7 +36,7 @@
         <div class="modal-body" style="text-align: justify">
           <p>
             <strong>Abstract:</strong>
-            {{ selectedPublication?.abstract }}
+            <span v-html="selectedPublication?.abstract" />
           </p>
         </div>
       </div>
@@ -70,7 +70,7 @@ const publications: IPublication[] = [
     title:
       "Explaining Software Bugs Leveraging Code Structures in Neural Machine Translation",
     description:
-      "*Parvez Mahbub*, Ohiduzzaman Shuvo and M. Masudur Rahman, In Proceeding " +
+      "*Parvez Mahbub*, Ohiduzzaman Shuvo and M.&nbsp;Masudur Rahman, In Proceeding " +
       "of The 45<sup>th</sup> IEEE/ACM International Conference on Software Engineering " +
       "(ICSE), 2023, pp. 640–652, Melbourne, Australia, May 2023",
     keywords: [
@@ -106,7 +106,7 @@ const publications: IPublication[] = [
     title:
       "Predicting Line-Level Defects by Capturing Code Contexts with Hierarchical Transformers",
     description:
-      "*Parvez Mahbub* and M. Masudur Rahman, In Proceeding " +
+      "*Parvez Mahbub* and M.&nbsp;Masudur Rahman, In Proceeding " +
       "of The 31<sup>st</sup> IEEE International Conference on Software Analysis, Evolution and " +
       "Reengineering (SANER), 2024, pp. 12, Rovaniemi, Finland, March 2024 (to appear)",
     keywords: [
@@ -145,7 +145,7 @@ const publications: IPublication[] = [
     title:
       "Authorship Identification of Source Code Segments Written by Multiple Authors Using Stacking Ensemble Method",
     description:
-      "*Parvez Mahbub*, Naz Zarreen Oishie and S. M. Rafizul Haque, In Proceeding " +
+      "*Parvez Mahbub*, Naz Zarreen Oishie and S.&nbsp;M.&nbsp;Rafizul Haque, In Proceeding " +
       "of the 22<sup>nd</sup> International Conference on Computer and Information " +
       "Technology (ICCIT), 2019, pp. 1-6",
     keywords: [
@@ -164,7 +164,7 @@ const publications: IPublication[] = [
   {
     title: "Defectors: A Large, Diverse Python Dataset for Defect Prediction",
     description:
-      "*Parvez Mahbub*, Ohiduzzaman Shuvo and M. Masudur Rahman, In Proceeding " +
+      "*Parvez Mahbub*, Ohiduzzaman Shuvo and M.&nbsp;Masudur Rahman, In Proceeding " +
       "of The 20<sup>th</sup> Mining Software Repositories " +
       "(MSR), 2023, pp. 393-397, Melbourne, Australia, May 2023",
     keywords: [
@@ -197,7 +197,7 @@ const publications: IPublication[] = [
     title:
       "Bugsplainer: Leveraging Code Structures to Explain Software Bugs with Neural Machine Translation",
     description:
-      "*Parvez Mahbub*, M. Masudur Rahman, Ohiduzzaman Shuvo and Avinash Gopal, In Proceeding " +
+      "*Parvez Mahbub*, M.&nbsp;Masudur Rahman, Ohiduzzaman Shuvo and Avinash Gopal, In Proceeding " +
       "of The 39<sup>th</sup> IEEE International Conference on Software Maintenance and Evolution " +
       "(ICSME 2023), 2023, pp. 6, Bogotá, Colombia, October 2023",
     keywords: [
@@ -224,11 +224,51 @@ Bugsplainer leverages code structures to reason about a bug and employs the fine
   },
   {
     title:
+      "Improved Detection and Diagnosis of Faults in Deep Neural Networks Using Hierarchical and Explainable Classification",
+    description:
+      "Sigma Jahan, Mehil B. Shah, *Parvez Mahbub* and M.&nbsp;Masudur Rahman, In Proceeding " +
+      "of The 47<sup>th</sup> International Conference on Software Engineering " +
+      "(ICSE), 2025, pp. 13, Ottowa, Ontario, Canada, April 2025 (To appear)",
+    keywords: [
+      "Software Engineering",
+      "Deep Neural Networks",
+      "Dynamic Analysis",
+      "Model Fault",
+      "Static Analysis",
+      "Training Fault",
+    ],
+    abstract: `Deep Neural Networks (DNN) have found numerous applications in
+    various domains, including fraud detection, medical diagnosis, facial
+    recognition, and autonomous driving. However, DNN-based systems often suffer
+    from reliability issues due to their inherent complexity and the stochastic
+    nature of their underlying models.
+    Unfortunately, existing techniques to detect faults in DNN programs are
+    either limited by the types of faults (e.g., hyper-parameter or layer) they
+    support or the kind of information (e.g., dynamic or static) they use.
+    As a result, they might fall short of comprehensively detecting and
+    diagnosing the faults. In this paper, we present DEFault (Detect and Explain
+    Fault) -- a novel technique to detect and diagnose faults in DNN programs.
+    It first captures dynamic (i.e., runtime) features during model training and
+    leverages a hierarchical classification approach to detect all major fault
+    categories from the literature. Then, it captures static features (e.g.,
+    layer types) from DNN programs and leverages explainable AI methods (e.g.,
+    SHAP) to narrow down the root cause of the fault. We train and evaluate
+    DEFault on a large, diverse dataset of ≈&nbsp;14.5K DNN programs and
+    further validate our technique using a benchmark dataset of 52 real-life
+    faulty DNN programs. Our approach achieves ≈&nbsp;94% recall in
+    detecting real-world faulty DNN programs and ≈&nbsp;63% recall in
+    diagnosing the root causes of the faults, demonstrating 3.92%--11.54%
+    higher performance than that of state-of-the-art techniques. Thus, DEFault
+    has the potential to significantly improve the reliability of DNN programs
+    by effectively detecting and diagnosing the faults.`,
+  },
+  {
+    title:
       "Recommending Code Reviews Leveraging Code Changes with Structured Information Retrieval",
     description:
-      "Ohiduzzaman Shuvo, *Parvez Mahbub* and M. Masudur Rahman, In Proceeding " +
+      "Ohiduzzaman Shuvo, *Parvez Mahbub* and M.&nbsp;Masudur Rahman, In Proceeding " +
       "of The 39<sup>th</sup> International Conference on Software Maintenance and Evolution " +
-      "(ICSME), 2023, pp. 12, Bogotá, Colombia, October 2023 (To appear)",
+      "(ICSME), 2023, pp. 194-206, Bogotá, Colombia, October 2023",
     keywords: [
       "Software Engineering",
       "Code Reviews",

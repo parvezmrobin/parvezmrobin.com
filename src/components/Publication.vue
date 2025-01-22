@@ -160,5 +160,9 @@ export default defineComponent({
       flex: 1 1 0;
     }
   }
+
+  strong {
+    color: var(--bs-pink);
+  }
 }
 </style>

@@ -237,6 +237,7 @@ Bugsplainer leverages code structures to reason about a bug and employs the fine
       "Static Analysis",
       "Training Fault",
     ],
+    prePrint: "https://arxiv.org/abs/2501.12560",
     abstract: `Deep Neural Networks (DNN) have found numerous applications in
     various domains, including fraud detection, medical diagnosis, facial
     recognition, and autonomous driving. However, DNN-based systems often suffer

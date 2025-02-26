@@ -84,22 +84,41 @@ const experiences: Record<string, IExperience> = {
     position: "Software Developer",
     time: "March 2024 — Present",
     works: [
-      `For
+      `
+      For
       [Analog FastSPICE](https://eda.sw.siemens.com/en-US/ic/analog-fastspice/)
-      – the fasted nanometer circuit verification platform, developed an
-      [<span style="color: var(--bs-body-color)">element stamping algorithm</span>](https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119078388.app2)
-      that takes up to <em>4 times less</em> memory in multithreaded runs.`,
-
-      `Jointly developed a Matrix-Vector multiplication algorithm specific to
-      symmetric matrices that is <em>40% faster</em> than the general-purpose
-      algorithm.`,
+      – the fasted nanometer circuit verification platform:
+      <ul>
+        <li>
+          Developed an
+          [<span style="color: var(--bs-body-color)">element stamping algorithm</span>](https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119078388.app2)
+          that takes up to <em>4 times less</em> memory in multithreaded runs.
+        </li>
+        <li>
+          Jointly developed a Matrix-Vector multiplication algorithm specific to
+          symmetric matrices that is <em>40% faster</em> than the general-purpose
+          algorithm.
+        </li>
+      </ul>
+      `,
 
       `
       For
-      [Siemens EDA AI](https://eda.sw.siemens.com/en-US/trending-technologies/eda-ai-page/),
-      developed a sparse pipeline (using <code>ElasticSearch</code>), and hybrid
-      rerank pipeline (<code>ElasticSearch</code> & <code>Milvus</code>) for
-      searching relevant documents.`,
+      [Siemens EDA AI](https://eda.sw.siemens.com/en-US/trending-technologies/eda-ai-page/):
+      <ul>
+        <li>
+          Developed a hybrid rerank
+          [RAG](https://aws.amazon.com/what-is/retrieval-augmented-generation/)
+          pipeline for searching relevant documents using both semantic and
+          keyword-based search (<code>ElasticSearch</code> & <code>Milvus</code>).
+        </li>
+        <li>
+          Architected and developed an Auth service that facilitates multiple
+          authentication backends (e.g., OAuth, LDAP) and multiple authorization
+          schemes (RBAC, ABAC).
+        </li>
+      </ul>
+      `,
     ],
   },
   ElderBerry: {
@@ -132,26 +151,40 @@ const experiences: Record<string, IExperience> = {
     position: "Software Engineer",
     time: "March 2019 — July 2021",
     works: [
-      `Led the architected and development of
-       [Daency](https://www.crunchbase.com/organization/daency), an
-       online platform to learn dancing interactively. The tech stack was
-       <code>TypeScript</code>, <code>Express JS</code>, <code>Vue JS</code>,
-       <code>Mongo DB</code>, and <code>Docker</code>. Also integrated and
-       maintained [WebRTC](https://agora.io),
-       [AWS](https://aws.amazon.com) (S3 + Cloudflare),
-       [GCP](https://cloud.google.com/) (Authentication),
-       [Push Notification](https://www.pubnub.com/),
-       [Stripe](https://stripe.com/), [Task Queue](https://docs.bullmq.io/)
-       (<code>redis</code>) and various other services. Collaborated with the
-       stakeholders to engineer requirements and plan sprints in the agile
-       process with a globally distributed team, while reducing requirement
-       changes during sprints from ≈&nbsp;30% to <&nbsp;5%.`,
-      `In [Bikribatta](https://www.bikribatta.com/) inventory solution,
-       *architected* accounts, reports, and employee management components.
-       Written a stock management microservice using <code>Golang</code> that
-       reduces the latency 10X. Further, built a desktop app for the Point of
-       Sales component using [Electron](https://www.electronjs.org/), which also
-       works in offline mode with an eventual consistency scheme.`,
+      `
+      In [Daency](https://www.crunchbase.com/organization/daency), an
+      online platform to learn dancing interactively:
+      <ul>
+        <li>
+          Led the architecture and development where used
+          <code>TypeScript</code>, <code>Express JS</code>, <code>Vue JS</code>,
+          <code>Mongo DB</code>, and <code>Docker</code> as the tech stack.
+        </li>
+        <li>
+          Integrated and maintained [WebRTC](https://agora.io),
+          [AWS](https://aws.amazon.com) (S3 + Cloudflare),
+          [GCP](https://cloud.google.com/) (Authentication),
+          [Push Notification](https://www.pubnub.com/),
+          [Stripe](https://stripe.com/), [Task Queue](https://docs.bullmq.io/)
+          (<code>redis</code>) and various other services.
+        </li>
+        <li>
+          Collaborated with the stakeholders to engineer requirements and plan
+          sprints in the agile process with a globally distributed team, while
+          reducing requirement changes during sprints from ≈&nbsp;30% to <&nbsp;5%.
+        </li>
+      </ul>`,
+
+      `In [Bikribatta](https://www.bikribatta.com/) inventory solution:<br>
+      <ul>
+        <li>*Architected* accounts, reports, and employee management components.</li>
+        <li>Written a stock management microservice using <code>Golang</code> that
+          reduces the latency 10X.</li>
+        <li>Built a desktop app for the Point of
+          Sales component using [Electron](https://www.electronjs.org/), which also
+       works in offline mode with an eventual consistency scheme.</li>
+       </ul>`,
+
       `Migrated the subscription backend of
        [Wonster Words](https://apps.apple.com/us/app/wonster-words-learning-games/id881119321)
        iOS app store game from <code>node.js</code> to <code>ASP.Net</code>
@@ -235,5 +268,12 @@ onBeforeMount(async () => {
 .slide-fade-leave-to {
   transform: translateY(20px);
   opacity: 0;
+}
+
+::v-deep(ul) ul {
+  padding-left: 1rem;
+  li::marker {
+    content: "–";
+  }
 }
 </style>

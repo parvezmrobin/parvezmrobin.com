@@ -8,10 +8,14 @@
     <ul class="triangle">
       <li v-for="(talk, i) in talks" v-once :key="i">
         <em class="text-secondary me-1">[{{ talk.time }}]</em>
-        <span class="cursive">{{ talk.title }}</span> on
-        <a v-if="talk.eventLink" :href="talk.eventLink" target="_blank">{{
-          talk.event
-        }}</a>
+        <span class="cursive text-info">{{ talk.title }}</span> on
+        <a
+          v-if="talk.eventLink"
+          :href="talk.eventLink"
+          target="_blank"
+          class="text-body"
+          >{{ talk.event }}</a
+        >
         <template v-else>{{ talk.event }}</template>
         <template v-if="talk.organizer">
           organized by
@@ -29,14 +33,14 @@
           v-if="talk.slide"
           :href="talk.slide"
           target="_blank"
-          class="btn btn-success d-inline"
+          class="btn btn-outline-secondary d-inline"
           style="
             --bs-btn-padding-y: 0;
             --bs-border-radius: 0.25rem;
             --bs-btn-line-height: 1;
           "
           aria-label="View Slide"
-          >Slide</a
+          >View Slide</a
         >
       </li>
     </ul>
@@ -144,3 +148,9 @@ const talks: ITalk[] = [
   },
 ];
 </script>
+
+<style scoped>
+ul.triangle li {
+  margin-bottom: 1rem;
+}
+</style>

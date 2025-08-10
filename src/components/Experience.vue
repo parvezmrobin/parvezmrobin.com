@@ -94,11 +94,6 @@ const experiences: Record<string, IExperience> = {
           [<span style="color: var(--bs-body-color)">element stamping algorithm</span>](https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119078388.app2)
           that takes up to <em>4 times less</em> memory in multithreaded runs.
         </li>
-        <li>
-          Jointly developed a Matrix-Vector multiplication algorithm specific to
-          symmetric matrices that is <em>40% faster</em> than the general-purpose
-          algorithm.
-        </li>
       </ul>
       `,
 
@@ -110,12 +105,20 @@ const experiences: Record<string, IExperience> = {
           Developed a hybrid rerank
           [RAG](https://aws.amazon.com/what-is/retrieval-augmented-generation/)
           pipeline for searching relevant documents using both semantic and
-          keyword-based search (<code>ElasticSearch</code> & <code>Milvus</code>).
+          keyword-based search (<code>OpenSearch</code> & <code>Milvus</code>).
         </li>
         <li>
-          Architected and developed an Auth service that facilitates multiple
+          Architected and jointly developed an Auth service that facilitates multiple
           authentication backends (e.g., OAuth, LDAP) and multiple authorization
           schemes (RBAC, ABAC).
+        </li>
+        <li>
+          Jointly architected and developed an on-premise LLM fine-tuning
+          platform based on <code>PyTorch</code>, <code>transformers</code>,
+          and <code>PEFT</code> libraries supporting several fine-tuning methods
+          (e.g., [LoRA](https://arxiv.org/abs/2106.09685),
+          [QLoRA](https://arxiv.org/abs/2305.14314)) and task types (e.g.,
+          sequence classification, next word prediction, question answering).
         </li>
       </ul>
       `,

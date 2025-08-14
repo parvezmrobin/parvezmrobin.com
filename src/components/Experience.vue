@@ -87,11 +87,11 @@ const experiences: Record<string, IExperience> = {
       `
       For
       [Analog FastSPICE](https://eda.sw.siemens.com/en-US/ic/analog-fastspice/)
-      – the fasted nanometer circuit verification platform:
+      – the fastest nanometer circuit verification platform:
       <ul>
         <li>
           Developed an
-          [<span style="color: var(--bs-body-color)">element stamping algorithm</span>](https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119078388.app2)
+          [!element stamping algorithm](https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119078388.app2)
           that takes up to <em>4 times less</em> memory in multithreaded runs.
         </li>
       </ul>
@@ -103,7 +103,7 @@ const experiences: Record<string, IExperience> = {
       <ul>
         <li>
           Developed a hybrid rerank
-          [RAG](https://aws.amazon.com/what-is/retrieval-augmented-generation/)
+          [!RAG](https://aws.amazon.com/what-is/retrieval-augmented-generation/)
           pipeline for searching relevant documents using both semantic and
           keyword-based search (<code>OpenSearch</code> & <code>Milvus</code>).
         </li>
@@ -116,9 +116,9 @@ const experiences: Record<string, IExperience> = {
           Jointly architected and developed an on-premise LLM fine-tuning
           platform based on <code>PyTorch</code>, <code>transformers</code>,
           and <code>PEFT</code> libraries supporting several fine-tuning methods
-          (e.g., [LoRA](https://arxiv.org/abs/2106.09685),
-          [QLoRA](https://arxiv.org/abs/2305.14314)) and task types (e.g.,
-          sequence classification, next word prediction, question answering).
+          (e.g., [!LoRA](https://arxiv.org/abs/2106.09685),
+          [!QLoRA](https://arxiv.org/abs/2305.14314)) and task types (e.g.,
+          sequence classification, [!causal LM](https://huggingface.co/docs/transformers/en/tasks/language_modeling#causal-language-modeling), question answering).
         </li>
       </ul>
       `,
@@ -164,11 +164,11 @@ const experiences: Record<string, IExperience> = {
           <code>Mongo DB</code>, and <code>Docker</code> as the tech stack.
         </li>
         <li>
-          Integrated and maintained [WebRTC](https://agora.io),
-          [AWS](https://aws.amazon.com) (S3 + Cloudflare),
-          [GCP](https://cloud.google.com/) (Authentication),
-          [Push Notification](https://www.pubnub.com/),
-          [Stripe](https://stripe.com/), [Task Queue](https://docs.bullmq.io/)
+          Integrated and maintained [!WebRTC](https://agora.io),
+          [!AWS](https://aws.amazon.com) (S3 + Cloudflare),
+          [!GCP](https://cloud.google.com/) (Authentication),
+          [!Push Notification](https://www.pubnub.com/),
+          [!Stripe](https://stripe.com/), [!Task Queue](https://docs.bullmq.io/)
           (<code>redis</code>) and various other services.
         </li>
         <li>
@@ -184,17 +184,17 @@ const experiences: Record<string, IExperience> = {
         <li>Written a stock management microservice using <code>Golang</code> that
           reduces the latency 10X.</li>
         <li>Built a desktop app for the Point of
-          Sales component using [Electron](https://www.electronjs.org/), which also
+          Sales component using [!Electron](https://www.electronjs.org/), which also
        works in offline mode with an eventual consistency scheme.</li>
        </ul>`,
 
       `Migrated the subscription backend of
-       [Wonster Words](https://apps.apple.com/us/app/wonster-words-learning-games/id881119321)
+       [!Wonster Words](https://apps.apple.com/us/app/wonster-words-learning-games/id881119321)
        iOS app store game from <code>node.js</code> to <code>ASP.Net</code>
        using Microsoft Azure
-       [FaaS](https://azure.microsoft.com/en-us/services/functions/),
-       [Cosmos DB](https://azure.microsoft.com/en-us/services/cosmos-db/),
-       and [Queue Storage](https://azure.microsoft.com/en-us/services/storage/queues/).`,
+       [!FaaS](https://azure.microsoft.com/en-us/services/functions/),
+       [!Cosmos DB](https://azure.microsoft.com/en-us/services/cosmos-db/),
+       and [!Queue Storage](https://azure.microsoft.com/en-us/services/storage/queues/).`,
       "Contributed to several in-house [React Native](https://reactnative.dev/) " +
         "based mobile applications.",
       "Hosted two in-house workshops on ‘Modern Web Development with Vue JS’ " +

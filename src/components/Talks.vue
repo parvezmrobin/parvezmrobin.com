@@ -9,12 +9,8 @@
       <li v-for="(talk, i) in talks" v-once :key="i">
         <em class="text-secondary me-1">[{{ talk.time }}]</em>
         <span class="cursive text-info">{{ talk.title }}</span> on
-        <a
-          v-if="talk.eventLink"
-          :href="talk.eventLink"
-          target="_blank"
-          class="text-body"
-          >{{ talk.event }}</a
+        <a v-if="talk.eventLink" :href="talk.eventLink" target="_blank"
+          ><span style="color: var(--bs-body-color)">{{ talk.event }}</span></a
         >
         <template v-else>{{ talk.event }}</template>
         <template v-if="talk.organizer">
@@ -23,7 +19,9 @@
             v-if="talk.organizerLink"
             :href="talk.organizerLink"
             target="_blank"
-            >{{ talk.organizer }}</a
+            ><span style="color: var(--bs-body-color)">{{
+              talk.organizer
+            }}</span></a
           >
           <span v-else>{{ talk.organizer }}</span>
         </template>

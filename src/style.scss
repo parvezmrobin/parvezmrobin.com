@@ -66,7 +66,6 @@ $spacers: (
 
 // 8. Add additional custom code here
 
-@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
 
 :root {
   @each $bp, $value in $grid-breakpoints {
@@ -262,8 +261,10 @@ body {
   }
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Modern&display=swap');
+
 .cursive {
-  font-family: "Salsa", cursive;
+  font-family: "Playwrite US Modern", cursive;
   font-weight: 400;
   font-style: normal;
 }

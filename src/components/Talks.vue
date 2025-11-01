@@ -61,6 +61,18 @@ interface ITalk {
 
 const talks: ITalk[] = [
   {
+    time: "October 2025",
+    title: "Performance Efficient Fine-Tuning",
+    event: "DevFest 2025",
+    eventLink:
+      "https://gdg.community.dev/events/details/google-gdg-saskatoon-presents-devfest-saskatoon-2025-code-connect-create/",
+    organizer: "Google Developers Group – Saskatoon",
+    organizerLink: "https://gdg.community.dev/gdg-saskatoon/",
+    location: "University of Saskatchewan, Canada",
+    slide:
+      "https://docs.google.com/presentation/d/1Xnfq9wN8HXdeoNimrjPZbVjwFENOe9cz",
+  },
+  {
     time: "November 2024",
     title: "Retrieval-Augmented Generation (RAG)",
     event: "DevFest 2024",
@@ -70,7 +82,7 @@ const talks: ITalk[] = [
     organizerLink: "https://gdg.community.dev/gdg-saskatoon/",
     location: "University of Saskatchewan, Canada",
     slide:
-      "https://docs.google.com/presentation/d/10-77mPM3VtF0HfFuuuCqESdLAeORwMJl/edit?usp=sharing&ouid=105783071308124321683&rtpof=true&sd=true",
+      "https://docs.google.com/presentation/d/10-77mPM3VtF0HfFuuuCqESdLAeORwMJl",
   },
   {
     time: "October 2024",
@@ -79,7 +91,7 @@ const talks: ITalk[] = [
     organizer: "Department of Computer Science and Dr. Zadia Codabux",
     location: "University of Saskatchewan, Canada",
     slide:
-      "https://docs.google.com/presentation/d/1-ftOOS9yq6-ctNEsNzwMO4vhEgx34kYp/edit?usp=sharing&ouid=105783071308124321683&rtpof=true&sd=true",
+      "https://docs.google.com/presentation/d/1-ftOOS9yq6-ctNEsNzwMO4vhEgx34kYp",
   },
   {
     time: "October 2024",
@@ -90,7 +102,7 @@ const talks: ITalk[] = [
     organizer: "NASA ft. The University of Saskatchewan Space Design Team",
     organizerLink: "https://www.spaceappschallenge.org/",
     slide:
-      "https://docs.google.com/presentation/d/1cfSMEffdzqRV3TSVy61nrMFE9cdoBkEc/edit?usp=sharing&ouid=105783071308124321683&rtpof=true&sd=true",
+      "https://docs.google.com/presentation/d/1cfSMEffdzqRV3TSVy61nrMFE9cdoBkEc",
   },
   {
     time: "April 2024",
@@ -101,7 +113,7 @@ const talks: ITalk[] = [
     organizer: "Google Developers Group – Saskatoon",
     organizerLink: "https://gdg.community.dev/gdg-saskatoon",
     slide:
-      "https://docs.google.com/presentation/d/1MbUaFKLrVV104JytnmzCNMuRakC3fYYS/edit?usp=sharing&ouid=105783071308124321683&rtpof=true&sd=true",
+      "https://docs.google.com/presentation/d/1MbUaFKLrVV104JytnmzCNMuRakC3fYYS",
   },
   {
     time: "December 2023",
@@ -121,7 +133,7 @@ const talks: ITalk[] = [
     eventLink: "https://conf.researchr.org/home/msr-2023",
     location: "Melbourne, Australia",
     slide:
-      "https://docs.google.com/presentation/d/1Q9HoTP7wJM-g0uCoUnUfLqwY4-49Cmt8/edit?usp=sharing&ouid=105783071308124321683&rtpof=true&sd=true",
+      "https://docs.google.com/presentation/d/1Q9HoTP7wJM-g0uCoUnUfLqwY4-49Cmt8",
   },
   {
     time: "May 2023",
@@ -131,7 +143,7 @@ const talks: ITalk[] = [
     eventLink: "https://conf.researchr.org/home/icse-2023",
     location: "Melbourne, Australia",
     slide:
-      "https://docs.google.com/presentation/d/1Zxq5ljogHL7lbpIAKkCQFU7MqQixBiCB/edit?usp=sharing&ouid=105783071308124321683&rtpof=true&sd=true",
+      "https://docs.google.com/presentation/d/1Zxq5ljogHL7lbpIAKkCQFU7MqQixBiCB",
   },
   {
     time: "December 2019",
@@ -142,7 +154,7 @@ const talks: ITalk[] = [
     eventLink: "https://iccit.org.bd/2019/",
     location: "Dhaka, Bangladesh",
     slide:
-      "https://docs.google.com/presentation/d/1Om6nNTnU6y9VbMYe1N3Q66B-bBEyJXQr/edit?usp=sharing&ouid=105783071308124321683&rtpof=true&sd=true",
+      "https://docs.google.com/presentation/d/1Om6nNTnU6y9VbMYe1N3Q66B-bBEyJXQr",
   },
 ];
 </script>

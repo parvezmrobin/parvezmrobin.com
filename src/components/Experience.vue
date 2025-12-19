@@ -120,6 +120,12 @@ const experiences: Record<string, IExperience> = {
           [!QLoRA](https://arxiv.org/abs/2305.14314)) and task types (e.g.,
           sequence classification, [!causal LM](https://huggingface.co/docs/transformers/en/tasks/language_modeling#causal-language-modeling), question answering).
         </li>
+        <li>
+          Developed an [!MCP tool](https://modelcontextprotocol.io/specification/2025-11-25/server/tools)
+          to search all existing tools, which reduces hallucination during MCP
+          tool calls by ≈&nbsp;90% when the number of available tools is more
+          than 20.
+        </li>
       </ul>
       `,
     ],

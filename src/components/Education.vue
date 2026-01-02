@@ -44,13 +44,17 @@
                 <small>{{ school.duration }}</small>
               </p>
               <p class="card-text">
-                <template v-if="school.description">
-                  <strong class="">Thesis</strong>:
-                  {{ school.description }}
+                <template v-if="school.thesis">
+                  <strong>Thesis</strong>:
+                  {{ school.thesis }}
                 </template>
+                <template v-if="school.thesisUrl">
+                  [<a :href="school.thesisUrl" target="_blank">Read</a
+                  >]</template
+                >
                 <template v-if="school.supervisor">
                   <br />
-                  <strong class="">Supervisor</strong>:
+                  <strong>Supervisor</strong>:
                   <a :href="school.supervisorUrl" target="_blank">
                     {{ school.supervisor }}
                   </a>
@@ -86,7 +90,8 @@ interface ISchool {
   name: string;
   institution: string;
   duration: string;
-  description?: string;
+  thesis?: string;
+  thesisUrl?: string;
   supervisor?: string;
   supervisorUrl?: string;
   isSchool?: true;
@@ -98,8 +103,9 @@ const schools: ISchool[] = [
     name: "Master of Science in Computer Science",
     institution: "Dalhousie University",
     duration: "September 2021 – August 2023",
-    description:
+    thesis:
       "Comprehending Software Bugs Leveraging Code Structure in Neural Language Modelling",
+    thesisUrl: "https://hdl.handle.net/10222/82871",
     supervisor: "Masud Rahman",
     supervisorUrl:
       "https://scholar.google.ca/citations?user=9SrqOewAAAAJ&hl=en",
@@ -109,8 +115,9 @@ const schools: ISchool[] = [
     name: "Bachelor of Science in Computer Science and Engineering",
     institution: "Khulna University",
     duration: "January 2015 – February 2019",
-    description:
+    thesis:
       "Authorship Identification of Source Code Segments Written by Multiple Authors Using Stacking Ensemble Method",
+    thesisUrl: "/undergrad-thesis.pdf",
     supervisor: "S.M. Rafizul Haque",
   },
   {

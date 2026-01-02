@@ -49,12 +49,39 @@
                 :key="i"
               >
                 <li
-                  v-show="
-                    showMinorEmployments ||
-                    !experienceDescription.minorWorkIndices?.includes(i)
-                  "
+                  v-if="typeof work === 'string'"
                   v-html="formatString(work)"
                 />
+                <Transition v-else-if="'activity' in work" name="slide-fade">
+                  <p
+                    v-show="showMinorEmployments || !work.isMinor"
+                    v-html="formatString(work.activity)"
+                  />
+                </Transition>
+                <div v-else v-show="showMinorEmployments || !work.isMinor">
+                  <span v-html="formatString(work.header)" />
+                  <ul>
+                    <template
+                      v-for="activity in work.activities"
+                      :key="activity"
+                    >
+                      <li
+                        v-if="typeof activity === 'string'"
+                        v-html="formatString(activity)"
+                      />
+                      <Transition
+                        v-else-if="'activity' in activity"
+                        name="slide-fade"
+                      >
+                        <li
+                          v-show="showMinorEmployments || !activity.isMinor"
+                          v-html="formatString(activity.activity)"
+                        />
+                      </Transition>
+                      <li v-else style="color: red">TOO NESTED</li>
+                    </template>
+                  </ul>
+                </div>
               </template>
             </ul>
           </div>
@@ -65,18 +92,29 @@
 </template>
 
 <script lang="ts" setup>
-import { onBeforeMount, reactive, ref } from "vue";
+import { onBeforeMount, ref } from "vue";
 import { formatString } from "../util";
 import CentralBox from "./CentralBox.vue";
 
 const showMinorEmployments = ref(false);
 
+type RecursiveWork =
+  | string
+  | {
+      isMinor?: true;
+      activity: string;
+    }
+  | {
+      isMinor?: true;
+      header: string;
+      activities: RecursiveWork[];
+    };
+
 interface IExperience {
   position: string;
   time: string;
-  works: string[];
+  works: RecursiveWork[];
   isMinor?: true;
-  minorWorkIndices?: number[];
 }
 
 const experiences: Record<string, IExperience> = {
@@ -84,50 +122,66 @@ const experiences: Record<string, IExperience> = {
     position: "Software Developer",
     time: "March 2024 — Present",
     works: [
-      `
+      {
+        header: `
       For
       [Analog FastSPICE](https://eda.sw.siemens.com/en-US/ic/analog-fastspice/)
       – the fastest nanometer circuit verification platform:
-      <ul>
-        <li>
-          Developed an
-          [!element stamping algorithm](https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119078388.app2)
-          that takes up to <em>4 times less</em> memory in multithreaded runs.
-        </li>
-      </ul>
       `,
 
-      `
-      For
-      [Siemens EDA AI](https://eda.sw.siemens.com/en-US/trending-technologies/eda-ai-page/):
-      <ul>
-        <li>
+        activities: [
+          `
+      Developed an
+          [!element stamping algorithm](https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119078388.app2)
+          that takes up to <em>4 times less</em> memory in multithreaded runs.
+      `,
+        ],
+      },
+      {
+        header: `
+        For
+        [Siemens EDA AI](https://eda.sw.siemens.com/en-US/trending-technologies/eda-ai-page/):
+        `,
+        activities: [
+          `
           Developed a hybrid rerank
           [!RAG](https://aws.amazon.com/what-is/retrieval-augmented-generation/)
           pipeline for searching relevant documents using both semantic and
           keyword-based search (<code>OpenSearch</code> & <code>Milvus</code>).
-        </li>
-        <li>
+          `,
+          `
           Architected and jointly developed an Auth service that facilitates multiple
           authentication backends (e.g., OAuth, LDAP) and multiple authorization
           schemes (RBAC, ABAC).
-        </li>
-        <li>
-          Jointly architected and developed an on-premise LLM fine-tuning
-          platform based on <code>PyTorch</code>, <code>transformers</code>,
-          and <code>PEFT</code> libraries supporting several fine-tuning methods
-          (e.g., [!LoRA](https://arxiv.org/abs/2106.09685),
-          [!QLoRA](https://arxiv.org/abs/2305.14314)) and task types (e.g.,
-          sequence classification, [!causal LM](https://huggingface.co/docs/transformers/en/tasks/language_modeling#causal-language-modeling), question answering).
-        </li>
-        <li>
+          `,
+          `
           Developed an [!MCP tool](https://modelcontextprotocol.io/specification/2025-11-25/server/tools)
           to search all existing tools, which reduces hallucination during MCP
           tool calls by ≈&nbsp;90% when the number of available tools is more
           than 20.
-        </li>
-      </ul>
-      `,
+          `,
+          {
+            isMinor: true,
+            activity: `
+              Jointly architected and developed an on-premise LLM fine-tuning
+              platform based on <code>PyTorch</code>, <code>transformers</code>,
+              and <code>PEFT</code> libraries supporting several fine-tuning
+              methods (e.g., [!LoRA](https://arxiv.org/abs/2106.09685),
+              [!QLoRA](https://arxiv.org/abs/2305.14314)) and task types (e.g.,
+              sequence classification, [!causal LM](https://huggingface.co/docs/transformers/en/tasks/language_modeling#causal-language-modeling), question answering).
+              `,
+          },
+          {
+            isMinor: true,
+            activity: `
+              Developed a CI/CD pipeline with automated unit tests, static
+              analysis, four different deployments based on Podman, Docker,
+              Kubernetes & Helm, and nightly stress and performance
+              benchmarking.
+              `,
+          },
+        ],
+      },
     ],
   },
   ElderBerry: {
@@ -151,65 +205,94 @@ const experiences: Record<string, IExperience> = {
         "bugs in natural language using cutting-edge deep learning techniques. " +
         "A recent developer survey shows that our developed tool can provide 43% " +
         "more accurate and 40% concise explanations of bugs (see [Publications](#publications)).",
-      "Developed a web application backed by state-of-the-art language model to " +
-        "explain defective source code using Python, Flask, PyTorch, and Vue JS " +
-        "(see [Demo](https://www.youtube.com/watch?v=xga-ScvULpk)).",
+      {
+        isMinor: true,
+        activity:
+          "Developed a web application backed by state-of-the-art language model to " +
+          "explain defective source code using Python, Flask, PyTorch, and Vue JS " +
+          "(see [Demo](https://www.youtube.com/watch?v=xga-ScvULpk)).",
+      },
     ],
   },
   NerdDevs: {
     position: "Software Engineer",
     time: "March 2019 — July 2021",
     works: [
-      `
-      In [Daency](https://www.crunchbase.com/organization/daency), an
-      online platform to learn dancing interactively:
-      <ul>
-        <li>
+      {
+        header: `
+        In [Daency](https://www.crunchbase.com/organization/daency), an
+        online platform to learn dancing interactively:
+        `,
+        activities: [
+          `
           Led the architecture and development where used
           <code>TypeScript</code>, <code>Express JS</code>, <code>Vue JS</code>,
           <code>Mongo DB</code>, and <code>Docker</code> as the tech stack.
-        </li>
-        <li>
+          `,
+          `
           Integrated and maintained [!WebRTC](https://agora.io),
           [!AWS](https://aws.amazon.com) (S3 + Cloudflare),
           [!GCP](https://cloud.google.com/) (Authentication),
           [!Push Notification](https://www.pubnub.com/),
           [!Stripe](https://stripe.com/), [!Task Queue](https://docs.bullmq.io/)
           (<code>redis</code>) and various other services.
-        </li>
-        <li>
+          `,
+          `
           Collaborated with the stakeholders to engineer requirements and plan
           sprints in the agile process with a globally distributed team, while
           reducing requirement changes during sprints from ≈&nbsp;30% to <&nbsp;5%.
-        </li>
-      </ul>`,
-
-      `In [Bikribatta](https://www.bikribatta.com/) inventory solution:<br>
-      <ul>
-        <li>*Architected* accounts, reports, and employee management components.</li>
-        <li>Written a stock management microservice using <code>Golang</code> that
-          reduces the latency 10X.</li>
-        <li>Built a desktop app for the Point of
+          `,
+        ],
+      },
+      {
+        isMinor: true,
+        header: `
+        In [Bikribatta](https://www.bikribatta.com/) inventory solution:
+        `,
+        activities: [
+          `*Architected* accounts, reports, and employee management components.`,
+          `Written a stock management microservice using <code>Golang</code> that
+          reduces the latency 10X.`,
+          `Built a desktop app for the Point of
           Sales component using [!Electron](https://www.electronjs.org/), which also
-       works in offline mode with an eventual consistency scheme.</li>
-       </ul>`,
-
-      `Migrated the subscription backend of
-       [!Wonster Words](https://apps.apple.com/us/app/wonster-words-learning-games/id881119321)
-       iOS app store game from <code>node.js</code> to <code>ASP.Net</code>
-       using Microsoft Azure
-       [!FaaS](https://azure.microsoft.com/en-us/services/functions/),
-       [!Cosmos DB](https://azure.microsoft.com/en-us/services/cosmos-db/),
-       and [!Queue Storage](https://azure.microsoft.com/en-us/services/storage/queues/).`,
-      "Contributed to several in-house [React Native](https://reactnative.dev/) " +
-        "based mobile applications.",
-      "Hosted two in-house workshops on ‘Modern Web Development with Vue JS’ " +
-        "and ‘Sustainable Architecture with TypeScript’.",
+       works in offline mode with an eventual consistency scheme.`,
+        ],
+      },
+      {
+        header: `
+          Migrated the subscription backend of
+          [!Wonster Words](https://apps.apple.com/us/app/wonster-words-learning-games/id881119321)
+          iOS app store game from <code>node.js</code> to <code>ASP.Net</code>
+          `,
+        activities: [
+          `Used a [!Queue Storage](https://azure.microsoft.com/en-us/services/storage/queues/)
+          and Azure
+          [!FaaS](https://azure.microsoft.com/en-us/services/functions/) to
+          handle event streams from the iOS app to analyze user behaviour and
+          handle subscription jobs, storing the results in a
+          [!Cosmos DB](https://azure.microsoft.com/en-us/services/cosmos-db/).
+          `,
+          `Reduced the failure rate by ≈ 10% and overall system latency by 
+          ≈&nbsp;30%.
+          `,
+        ],
+      },
+      {
+        isMinor: true,
+        activity:
+          "Contributed to several in-house [React Native](https://reactnative.dev/) " +
+          "based mobile applications.",
+      },
+      {
+        isMinor: true,
+        activity:
+          "Hosted two in-house workshops on ‘Modern Web Development with Vue JS’ " +
+          "and ‘Sustainable Architecture with TypeScript’.",
+      },
     ],
-    minorWorkIndices: [3, 4],
   },
 
-  "Festive.Rocks": reactive({
+  "Festive.Rocks": {
     position: "Co-founder and Tech Lead ",
     time: "January 2023 — Present",
     works: [
@@ -219,7 +302,7 @@ const experiences: Record<string, IExperience> = {
         "within three months while maintaining very high code quality and more " +
         "than 90% test coverage.",
     ],
-  }),
+  },
   "Dalhousie University": {
     position: "Teaching Assistant",
     time: "September 2021 — December 2022",

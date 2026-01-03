@@ -2,14 +2,14 @@
   <CentralBox title="Experience" maxWidth="var(--bs-breakpoint-lg)">
     <div class="form-check form-switch">
       <input
-        id="show-minor-employments"
-        v-model="showMinorEmployments"
+        id="show-minor"
+        v-model="showMinor"
         class="form-check-input"
         type="checkbox"
         role="switch"
       />
-      <label class="form-check-label" for="show-minor-employments">
-        Show Minor Employments
+      <label class="form-check-label" for="show-minor">
+        Show Minor Items
       </label>
     </div>
 
@@ -19,7 +19,7 @@
     >
       <Transition name="slide-fade">
         <div
-          v-show="showMinorEmployments || !experienceDescription.isMinor"
+          v-show="showMinor || !experienceDescription.isMinor"
           class="row pt-4 hover purple rounded"
         >
           <div class="d-md-none">
@@ -54,11 +54,11 @@
                 />
                 <Transition v-else-if="'activity' in work" name="slide-fade">
                   <p
-                    v-show="showMinorEmployments || !work.isMinor"
+                    v-show="showMinor || !work.isMinor"
                     v-html="formatString(work.activity)"
                   />
                 </Transition>
-                <div v-else v-show="showMinorEmployments || !work.isMinor">
+                <div v-else v-show="showMinor || !work.isMinor">
                   <span v-html="formatString(work.header)" />
                   <ul>
                     <template
@@ -74,7 +74,7 @@
                         name="slide-fade"
                       >
                         <li
-                          v-show="showMinorEmployments || !activity.isMinor"
+                          v-show="showMinor || !activity.isMinor"
                           v-html="formatString(activity.activity)"
                         />
                       </Transition>
@@ -96,7 +96,7 @@ import { onBeforeMount, ref } from "vue";
 import { formatString } from "../util";
 import CentralBox from "./CentralBox.vue";
 
-const showMinorEmployments = ref(false);
+const showMinor = ref(false);
 
 type RecursiveWork =
   | string
